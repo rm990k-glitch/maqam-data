@@ -1,4 +1,5 @@
- "metadata": {
+{
+  "metadata": {
     "projectName": "الموسوعة الشاملة للمقامات العربية والعراقية",
     "version": "5.0.0",
     "schemaVersion": "5.0",
@@ -35,27 +36,64 @@
       {"id": "maqam-bayat-005", "type": "maqam", "centrality": 0.92},
       {"id": "maqam-hijaz-003", "type": "maqam", "centrality": 0.88},
       {"id": "maqam-nahawand-002", "type": "maqam", "centrality": 0.85},
+      {"id": "maqam-saba-030", "type": "maqam", "centrality": 0.82},
+      {"id": "maqam-kurd-015", "type": "maqam", "centrality": 0.78},
+      {"id": "maqam-suznak-008", "type": "maqam", "centrality": 0.84},
       {"id": "jins-rast-001", "type": "jins", "centrality": 0.98},
       {"id": "jins-bayat-002", "type": "jins", "centrality": 0.94},
       {"id": "jins-hijaz-003", "type": "jins", "centrality": 0.91},
-      {"id": "family-rast", "type": "family", "centrality": 0.96}
+      {"id": "jins-nahawand-004", "type": "jins", "centrality": 0.87},
+      {"id": "jins-saba-005", "type": "jins", "centrality": 0.83},
+      {"id": "family-rast", "type": "family", "centrality": 0.96},
+      {"id": "family-bayat", "type": "family", "centrality": 0.93},
+      {"id": "family-hijaz", "type": "family", "centrality": 0.89}
     ],
     "edges": [
       {"from": "maqam-rast-001", "to": "jins-rast-001", "relation": "primaryJins", "weight": 1.0},
       {"from": "maqam-rast-001", "to": "jins-nahawand-004", "relation": "secondaryJins", "weight": 0.65},
       {"from": "maqam-rast-001", "to": "maqam-nahawand-002", "relation": "modulatesTo", "weight": 0.75},
-      {"from": "maqam-rast-001", "to": "maqam-bayat-005", "relation": "similarTo", "weight": 0.45}
+      {"from": "maqam-rast-001", "to": "maqam-bayat-005", "relation": "similarTo", "weight": 0.45},
+      {"from": "maqam-rast-001", "to": "maqam-suznak-008", "relation": "derivedFrom", "weight": 0.92},
+      {"from": "maqam-bayat-005", "to": "jins-bayat-002", "relation": "primaryJins", "weight": 1.0},
+      {"from": "maqam-bayat-005", "to": "maqam-hijaz-003", "relation": "modulatesTo", "weight": 0.68},
+      {"from": "maqam-bayat-005", "to": "maqam-saba-030", "relation": "similarTo", "weight": 0.55},
+      {"from": "maqam-hijaz-003", "to": "jins-hijaz-003", "relation": "primaryJins", "weight": 1.0},
+      {"from": "maqam-hijaz-003", "to": "maqam-kurd-015", "relation": "modulatesTo", "weight": 0.52},
+      {"from": "maqam-nahawand-002", "to": "jins-nahawand-004", "relation": "primaryJins", "weight": 1.0},
+      {"from": "jins-rast-001", "to": "family-rast", "relation": "belongsTo", "weight": 1.0},
+      {"from": "jins-bayat-002", "to": "family-bayat", "relation": "belongsTo", "weight": 1.0},
+      {"from": "jins-hijaz-003", "to": "family-hijaz", "relation": "belongsTo", "weight": 1.0}
     ],
     "centralityScores": {
       "maqam-rast-001": 0.95,
+      "maqam-bayat-005": 0.92,
+      "maqam-hijaz-003": 0.88,
+      "maqam-nahawand-002": 0.85,
+      "maqam-saba-030": 0.82,
+      "maqam-kurd-015": 0.78,
+      "maqam-suznak-008": 0.84,
       "jins-rast-001": 0.98,
-      "family-rast": 0.96
+      "jins-bayat-002": 0.94,
+      "jins-hijaz-003": 0.91,
+      "jins-nahawand-004": 0.87,
+      "jins-saba-005": 0.83,
+      "family-rast": 0.96,
+      "family-bayat": 0.93,
+      "family-hijaz": 0.89
     },
     "mostConnectedMaqam": "maqam-rast-001",
     "mostFrequentModulations": [
       {"from": "maqam-rast-001", "to": "maqam-nahawand-002", "frequency": 0.75},
-      {"from": "maqam-bayat-005", "to": "maqam-hijaz-003", "frequency": 0.68}
-    ]
+      {"from": "maqam-bayat-005", "to": "maqam-hijaz-003", "frequency": 0.68},
+      {"from": "maqam-hijaz-003", "to": "maqam-kurd-015", "frequency": 0.52}
+    ],
+    "graphMetrics": {
+      "density": 0.38,
+      "diameter": 5,
+      "averageClustering": 0.42,
+      "totalNodes": 15,
+      "totalEdges": 14
+    }
   },
 
   "taxonomy": {
@@ -76,13 +114,47 @@
         "schemaVersion": "5.0",
         "dataVersion": 3,
         "lastReviewed": "2026-02-28"
+      },
+      {
+        "id": "family-bayat",
+        "uid": "SHA256-9b3c4d5e6f7g8h9i0j1k2l3m4n5o6p7q8r9s0t1u",
+        "name": "عائلة البيات",
+        "nameEn": "Bayat Family",
+        "primaryJins": "jins-bayat-002",
+        "character": "حزن، شجن، رقة",
+        "emotionalProfile": {
+          "primary": "حزن",
+          "secondary": ["شجن", "تأمل", "رومانسية"],
+          "timeOfDay": ["ليل", "فجر"],
+          "occasions": ["تأمل", "إنشاد ديني"]
+        },
+        "schemaVersion": "5.0",
+        "dataVersion": 2,
+        "lastReviewed": "2026-02-28"
+      },
+      {
+        "id": "family-hijaz",
+        "uid": "SHA256-0c4d5e6f7g8h9i0j1k2l3m4n5o6p7q8r9s0t1u2v",
+        "name": "عائلة الحجاز",
+        "nameEn": "Hijaz Family",
+        "primaryJins": "jins-hijaz-003",
+        "character": "قوة، شوق، حماس",
+        "emotionalProfile": {
+          "primary": "شوق",
+          "secondary": ["قوة", "حماس", "غموض"],
+          "timeOfDay": ["عصر", "غروب"],
+          "occasions": ["أفراح", "احتفالات"]
+        },
+        "schemaVersion": "5.0",
+        "dataVersion": 2,
+        "lastReviewed": "2026-02-28"
       }
     ],
     
     "ajnas": [
       {
         "id": "jins-rast-001",
-        "uid": "SHA256-9b3c4d5e6f7g8h9i0j1k2l3m4n5o6p7q8r9s0t1u",
+        "uid": "SHA256-1d5e6f7g8h9i0j1k2l3m4n5o6p7q8r9s0t1u2v3w",
         "name": "جنس رست",
         "nameEn": "Rast Jins",
         "intervalPattern": [0, 200, 350, 500, 700],
@@ -116,7 +188,7 @@
       },
       {
         "id": "jins-bayat-002",
-        "uid": "SHA256-0c4d5e6f7g8h9i0j1k2l3m4n5o6p7q8r9s0t1u2v",
+        "uid": "SHA256-2e6f7g8h9i0j1k2l3m4n5o6p7q8r9s0t1u2v3w4x",
         "name": "جنس بيات",
         "nameEn": "Bayat Jins",
         "intervalPattern": [0, 50, 350, 500, 700],
@@ -149,7 +221,7 @@
       },
       {
         "id": "jins-hijaz-003",
-        "uid": "SHA256-1d5e6f7g8h9i0j1k2l3m4n5o6p7q8r9s0t1u2v3w",
+        "uid": "SHA256-3f7g8h9i0j1k2l3m4n5o6p7q8r9s0t1u2v3w4x5y",
         "name": "جنس حجاز",
         "nameEn": "Hijaz Jins",
         "intervalPattern": [0, 150, 350, 500, 700],
@@ -182,7 +254,7 @@
       },
       {
         "id": "jins-nahawand-004",
-        "uid": "SHA256-2e6f7g8h9i0j1k2l3m4n5o6p7q8r9s0t1u2v3w4x",
+        "uid": "SHA256-4g8h9i0j1k2l3m4n5o6p7q8r9s0t1u2v3w4x5y6z",
         "name": "جنس نهاوند",
         "nameEn": "Nahawand Jins",
         "intervalPattern": [0, 200, 300, 500, 700],
@@ -243,9 +315,26 @@
     },
     
     "iraqiRuralClassification": {
-      "atawarByPerson": [...],
-      "atawarByTribe": [...],
-      "atawarByCity": [...],
+      "atawarByPerson": [
+        "العنيسي", "الأميري", "الجادر", "الزايري", "الطويرجاوي",
+        "المشموم", "المحبوب", "الحميدي", "مسعود العمارتلي", "الجبهاني",
+        "حسين سعيده", "النوري", "العياش", "السرحاني", "العبودي",
+        "سعدي الحلي", "الصيهودي", "شويشة الحادي", "عيسى حويله",
+        "جويسم وكريري", "جبير الكون", "المثكل", "جعفوري",
+        "سلمان المنكوب", "هاني الشموسي", "نسيم عودة"
+      ],
+      "atawarByTribe": [
+        {"name": "المحمداوي", "subtypes": ["ذب", "ميهونة", "واجف", "موال", "دارج"]},
+        {"name": "الغافلي", "subtypes": ["الدارج", "الحياوي", "المياحي"]},
+        {"name": "الصبي", "subtypes": []},
+        {"name": "السويطي", "subtypes": []},
+        {"name": "الحليوي", "subtypes": []},
+        {"name": "العلوانية", "subtypes": []},
+        {"name": "العراكي", "subtypes": []}
+      ],
+      "atawarByCity": [
+        "الشطراوي", "الحياوي", "المجراوي", "السوكاوي"
+      ],
       "schemaVersion": "5.0",
       "dataVersion": 3,
       "lastReviewed": "2026-02-28"
@@ -255,15 +344,15 @@
   "maqams": [
     {
       "id": "maqam-rast-001",
-      "uid": "SHA256-4d5e6f7g8h9i0j1k2l3m4n5o6p7q8r9s0t1u2v3w",
+      "uid": "SHA256-5h9i0j1k2l3m4n5o6p7q8r9s0t1u2v3w4x5y6z7a",
       
       "aiFeatureVector": [0.92, -0.18, 0.85, -0.12, 0.72, -0.09, 0.68, -0.11, 0.55, -0.08, 0.48, -0.10, 0.32, 0.21, -0.15, 0.18, -0.22, 0.14, -0.09, 0.11, -0.07, 0.08, -0.05, 0.06, -0.04, 0.03, -0.02, 0.01, -0.005, 0.002, -0.001, 0.0005],
       
       "similarMaqamat": [
-        {"id": "maqam-suznak-008", "uid": "SHA256-5e7f8g9h0i1j2k3l4m5n6o7p8q9r0s1t2u3v4w5x", "name": "سوزناك", "score": 0.92, "similarityType": "derived"},
-        {"id": "maqam-nahawand-002", "uid": "SHA256-6f8g9h0i1j2k3l4m5n6o7p8q9r0s1t2u3v4w5x6y", "name": "نهاوند", "score": 0.75, "similarityType": "modulation"},
-        {"id": "maqam-bayat-005", "uid": "SHA256-7g9h0i1j2k3l4m5n6o7p8q9r0s1t2u3v4w5x6y7z", "name": "بيات", "score": 0.68, "similarityType": "contour"},
-        {"id": "maqam-rast-iraqi-021", "uid": "SHA256-8h0i1j2k3l4m5n6o7p8q9r0s1t2u3v4w5x6y7z8a", "name": "الرست العراقي", "score": 0.95, "similarityType": "regional"}
+        {"id": "maqam-suznak-008", "uid": "SHA256-6i0j1k2l3m4n5o6p7q8r9s0t1u2v3w4x5y6z7a8b", "name": "سوزناك", "score": 0.92, "similarityType": "derived"},
+        {"id": "maqam-nahawand-002", "uid": "SHA256-7j1k2l3m4n5o6p7q8r9s0t1u2v3w4x5y6z7a8b9c", "name": "نهاوند", "score": 0.75, "similarityType": "modulation"},
+        {"id": "maqam-bayat-005", "uid": "SHA256-8k2l3m4n5o6p7q8r9s0t1u2v3w4x5y6z7a8b9c0d", "name": "بيات", "score": 0.68, "similarityType": "contour"},
+        {"id": "maqam-rast-iraqi-021", "uid": "SHA256-9l3m4n5o6p7q8r9s0t1u2v3w4x5y6z7a8b9c0d1e", "name": "الرست العراقي", "score": 0.95, "similarityType": "regional"}
       ],
 
       "name": {
@@ -329,9 +418,9 @@
         "familyId": "family-rast",
         "familyUid": "SHA256-8a2f4c5e6d7b8a9c0d1e2f3a4b5c6d7e8f9a0b1c",
         "primaryJins": "jins-rast-001",
-        "primaryJinsUid": "SHA256-9b3c4d5e6f7g8h9i0j1k2l3m4n5o6p7q8r9s0t1u",
+        "primaryJinsUid": "SHA256-1d5e6f7g8h9i0j1k2l3m4n5o6p7q8r9s0t1u2v3w",
         "secondaryJins": "jins-nahawand-004",
-        "secondaryJinsUid": "SHA256-2e6f7g8h9i0j1k2l3m4n5o6p7q8r9s0t1u2v3w4x",
+        "secondaryJinsUid": "SHA256-4g8h9i0j1k2l3m4n5o6p7q8r9s0t1u2v3w4x5y6z",
         "jinsComposition": [
           {"jinsId": "jins-rast-001", "position": "lower", "range": [1, 4]},
           {"jinsId": "jins-nahawand-004", "position": "upper", "range": [5, 8]}
@@ -460,14 +549,14 @@
         "professionalRecordings": [
           {
             "id": "rec-rast-001",
-            "uid": "SHA256-6f7g8h9i0j1k2l3m4n5o6p7q8r9s0t1u2v3w4x5y",
+            "uid": "SHA256-0m4n5o6p7q8r9s0t1u2v3w4x5y6z7a8b9c0d1e2f",
             "artist": "يوسف عمر",
             "artistId": "artist-yusuf-omar",
-            "artistUid": "SHA256-7g8h9i0j1k2l3m4n5o6p7q8r9s0t1u2v3w4x5y6z",
+            "artistUid": "SHA256-1n5o6p7q8r9s0t1u2v3w4x5y6z7a8b9c0d1e2f3g",
             "year": 1960,
             "durationSec": 2100,
             "audioUrl": "https://archive.org/rast-yusuf-omar.mp3",
-            "videoUrl": "https://youtube.com/watch?v=example",
+            "videoUrl": "https://youtube.com/watch?v=example1",
             "waveformDataUrl": "https://data.maqam.world/wave/rast-001.json",
             "pitchContourUrl": "https://data.maqam.world/pitch/rast-001.json",
             "spectrogramUrl": "https://data.maqam.world/spec/rast-001.png",
@@ -532,6 +621,18 @@
             "schemaVersion": "5.0",
             "dataVersion": 3,
             "lastReviewed": "2026-02-28"
+          }
+        ],
+
+        "videoLessons": [
+          {
+            "id": "lesson-rast-1",
+            "uid": "SHA256-2o6p7q8r9s0t1u2v3w4x5y6z7a8b9c0d1e2f3g4h",
+            "title": "شرح مقام الرست للمبتدئين",
+            "instructor": "د. حسين قدوري",
+            "url": "https://youtube.com/playlist?list=example123",
+            "durationSec": 3600,
+            "parts": 5
           }
         ],
 
@@ -628,7 +729,7 @@
           "exercises": [
             {
               "id": "ex-rast-scale-1",
-              "uid": "SHA256-3m4n5o6p7q8r9s0t1u2v3w4x5y6z7a8b9c0d1e2f",
+              "uid": "SHA256-3p7q8r9s0t1u2v3w4x5y6z7a8b9c0d1e2f3g4h5i",
               "name": "تمرين سلم الرست",
               "description": "غناء سلم الرست صعوداً وهبوطاً مع التركيز على النغمات الربعية",
               "audioUrl": "https://data.maqam.world/exercises/rast-scale.mp3",
@@ -638,11 +739,27 @@
             },
             {
               "id": "ex-rast-intervals-1",
-              "uid": "SHA256-4n5o6p7q8r9s0t1u2v3w4x5y6z7a8b9c0d1e2f3g",
+              "uid": "SHA256-4q8r9s0t1u2v3w4x5y6z7a8b9c0d1e2f3g4h5i6j",
               "name": "تمرين الفواصل النغمية",
               "description": "الانتقال بين درجات الرست والتمييز بين الفواصل",
               "type": "interactive",
               "difficulty": 2
+            },
+            {
+              "id": "ex-rast-ornament-1",
+              "uid": "SHA256-5r9s0t1u2v3w4x5y6z7a8b9c0d1e2f3g4h5i6j7k",
+              "name": "تمرين الزخارف النغمية",
+              "description": "التدريب على الزخارف البسيطة في مقام الرست",
+              "audioUrl": "https://data.maqam.world/exercises/rast-ornaments.mp3",
+              "difficulty": 2
+            },
+            {
+              "id": "ex-rast-modulations-1",
+              "uid": "SHA256-6s0t1u2v3w4x5y6z7a8b9c0d1e2f3g4h5i6j7k8l",
+              "name": "تمرين التحولات المقامية",
+              "description": "التدريب على التحول من الرست إلى النهاوند والحجاز",
+              "audioUrl": "https://data.maqam.world/exercises/rast-modulations.mp3",
+              "difficulty": 3
             }
           ]
         },
@@ -653,12 +770,21 @@
             "quizzes": [
               {
                 "id": "quiz-rast-1",
-                "uid": "SHA256-5o6p7q8r9s0t1u2v3w4x5y6z7a8b9c0d1e2f3g4h",
+                "uid": "SHA256-7t1u2v3w4x5y6z7a8b9c0d1e2f3g4h5i6j7k8l9m",
                 "question": "ما هي الدرجة التي تمثل 350 سنت في سلم الرست؟",
                 "options": ["الدوكاه", "السيكاه", "الجهاركاه", "النوى"],
                 "correctAnswer": 1,
                 "hint": "هي الدرجة الثالثة في السلم",
                 "difficulty": 1
+              },
+              {
+                "id": "quiz-rast-2",
+                "uid": "SHA256-8u2v3w4x5y6z7a8b9c0d1e2f3g4h5i6j7k8l9m0n",
+                "question": "ما هو البعد بين الدوكاه والسيكاه في مقام الرست؟",
+                "options": ["نصف تون", "تون كامل", "ثلاثة أرباع تون", "ربع تون"],
+                "correctAnswer": 2,
+                "hint": "150 سنت",
+                "difficulty": 2
               }
             ]
           },
@@ -686,15 +812,19 @@
 
         "modulationGraph": {
           "nodes": [
-            {"maqamId": "maqam-rast-001", "maqamUid": "SHA256-4d5e6f7g8h9i0j1k2l3m4n5o6p7q8r9s0t1u2v3w", "probability": 1.0},
-            {"maqamId": "maqam-nahawand-002", "maqamUid": "SHA256-6f8g9h0i1j2k3l4m5n6o7p8q9r0s1t2u3v4w5x6y", "probability": 0.65},
-            {"maqamId": "maqam-hijaz-003", "maqamUid": "SHA256-7g9h0i1j2k3l4m5n6o7p8q9r0s1t2u3v4w5x6y7z", "probability": 0.45},
-            {"maqamId": "maqam-bayat-005", "maqamUid": "SHA256-8h0i1j2k3l4m5n6o7p8q9r0s1t2u3v4w5x6y7z8a", "probability": 0.30}
+            {"maqamId": "maqam-rast-001", "maqamUid": "SHA256-5h9i0j1k2l3m4n5o6p7q8r9s0t1u2v3w4x5y6z7a", "probability": 1.0},
+            {"maqamId": "maqam-nahawand-002", "maqamUid": "SHA256-6i0j1k2l3m4n5o6p7q8r9s0t1u2v3w4x5y6z7a8b", "probability": 0.65},
+            {"maqamId": "maqam-hijaz-003", "maqamUid": "SHA256-7j1k2l3m4n5o6p7q8r9s0t1u2v3w4x5y6z7a8b9c", "probability": 0.45},
+            {"maqamId": "maqam-bayat-005", "maqamUid": "SHA256-8k2l3m4n5o6p7q8r9s0t1u2v3w4x5y6z7a8b9c0d", "probability": 0.30},
+            {"maqamId": "maqam-saba-030", "maqamUid": "SHA256-9l3m4n5o6p7q8r9s0t1u2v3w4x5y6z7a8b9c0d1e", "probability": 0.25},
+            {"maqamId": "maqam-kurd-015", "maqamUid": "SHA256-0m4n5o6p7q8r9s0t1u2v3w4x5y6z7a8b9c0d1e2f", "probability": 0.20}
           ],
           "edges": [
             {"from": "maqam-rast-001", "to": "maqam-nahawand-002", "triggerNote": "G", "triggerDegree": 5, "probability": 0.65},
             {"from": "maqam-rast-001", "to": "maqam-hijaz-003", "triggerNote": "D", "triggerDegree": 2, "probability": 0.45},
-            {"from": "maqam-rast-001", "to": "maqam-bayat-005", "triggerNote": "C", "triggerDegree": 1, "probability": 0.30}
+            {"from": "maqam-rast-001", "to": "maqam-bayat-005", "triggerNote": "C", "triggerDegree": 1, "probability": 0.30},
+            {"from": "maqam-rast-001", "to": "maqam-saba-030", "triggerNote": "F", "triggerDegree": 4, "probability": 0.25},
+            {"from": "maqam-rast-001", "to": "maqam-kurd-015", "triggerNote": "A", "triggerDegree": 6, "probability": 0.20}
           ]
         },
 
@@ -711,13 +841,23 @@
         "characteristicPhrases": [
           {
             "id": "phrase-rast-1",
-            "uid": "SHA256-0t1u2v3w4x5y6z7a8b9c0d1e2f3g4h5i6j7k8l9m",
+            "uid": "SHA256-1n5o6p7q8r9s0t1u2v3w4x5y6z7a8b9c0d1e2f3g",
             "patternDegrees": [1, 2, 3, 2, 1],
             "patternNotes": ["C", "D", "E_half_flat", "D", "C"],
             "importance": 0.9,
             "occurrenceFrequency": 0.75,
             "typicalPosition": "تحرير",
             "typicalDuration": 2.5
+          },
+          {
+            "id": "phrase-rast-2",
+            "uid": "SHA256-2o6p7q8r9s0t1u2v3w4x5y6z7a8b9c0d1e2f3g4h",
+            "patternDegrees": [5, 6, 5, 4, 3],
+            "patternNotes": ["G", "A", "G", "F", "E_half_flat"],
+            "importance": 0.7,
+            "occurrenceFrequency": 0.6,
+            "typicalPosition": "ميانة",
+            "typicalDuration": 3.2
           }
         ],
 
@@ -734,7 +874,10 @@
 
         "aiTrainingData": {
           "labeledExamples": [
-            {"startTime": 45.2, "endTime": 52.7, "phraseType": "تحرير", "confidence": 0.95, "maqamId": "maqam-rast-001"}
+            {"startTime": 45.2, "endTime": 52.7, "phraseType": "تحرير", "confidence": 0.95, "maqamId": "maqam-rast-001"},
+            {"startTime": 120.5, "endTime": 135.2, "phraseType": "ميانة", "confidence": 0.88, "maqamId": "maqam-rast-001"},
+            {"startTime": 210.3, "endTime": 225.8, "phraseType": "جلط", "confidence": 0.92, "maqamId": "maqam-rast-001"},
+            {"startTime": 350.1, "endTime": 380.4, "phraseType": "تسليم", "confidence": 0.96, "maqamId": "maqam-rast-001"}
           ],
           "features": ["mfcc", "chroma", "spectralCentroid", "zeroCrossingRate", "pitch", "rms"],
           "totalDuration": 2100,
@@ -777,7 +920,8 @@
           "normalizedCurve": [0.0, 0.2, 0.5, 0.7, 0.9, 1.0, 0.8, 0.6, 0.4, 0.2, 0.0],
           "peakPositions": [0.2, 0.5, 0.8],
           "tensionPoints": [0.3, 0.6, 0.9],
-          "imageUrl": "https://data.maqam.world/graphics/rast-pitch-template.png"
+          "imageUrl": "https://data.maqam.world/graphics/rast-pitch-template.png",
+          "svgUrl": "https://data.maqam.world/graphics/rast-pitch-template.svg"
         },
         
         "maqamFlowStructure": [
@@ -785,34 +929,47 @@
           {"phase": "ميانة", "phaseEn": "Miana", "description": "التوسع في الدرجات العليا والتحولات", "typicalDuration": "2-5 دقائق"},
           {"phase": "جلط", "phaseEn": "Jalt", "description": "تأكيد على الدرجات الهامة والعودة للقرار", "typicalDuration": "1-2 دقيقة"},
           {"phase": "تسليم", "phaseEn": "Taslim", "description": "الختام والعودة للنغمة الأصلية", "typicalDuration": "30-60 ثانية"}
-        ]
+        ],
+        
+        "harmonicAnalysis": {
+          "imageUrl": "https://data.maqam.world/graphics/rast-harmonic.png",
+          "dataUrl": "https://data.maqam.world/graphics/rast-harmonic.json",
+          "svgUrl": "https://data.maqam.world/graphics/rast-harmonic.svg"
+        }
       },
 
       "related": {
         "furus": [
-          {"id": "maqam-rast-alnawa-010", "uid": "SHA256-2v3w4x5y6z7a8b9c0d1e2f3g4h5i6j7k8l9m0n1o", "name": "رست النوى", "relation": "فرع", "similarity": 0.85}
+          {"id": "maqam-rast-alnawa-010", "uid": "SHA256-3p7q8r9s0t1u2v3w4x5y6z7a8b9c0d1e2f3g4h5i", "name": "رست النوى", "relation": "فرع", "similarity": 0.85},
+          {"id": "maqam-rast-aljawab-011", "uid": "SHA256-4q8r9s0t1u2v3w4x5y6z7a8b9c0d1e2f3g4h5i6j", "name": "رست الجواب", "relation": "فرع", "similarity": 0.82}
         ],
         "similarMaqamat": [
-          {"id": "maqam-bayat-005", "uid": "SHA256-8h0i1j2k3l4m5n6o7p8q9r0s1t2u3v4w5x6y7z8a", "name": "البيات", "similarity": 0.65},
-          {"id": "maqam-suznak-008", "uid": "SHA256-4x5y6z7a8b9c0d1e2f3g4h5i6j7k8l9m0n1o2p3q", "name": "سوزناك", "similarity": 0.85}
+          {"id": "maqam-bayat-005", "uid": "SHA256-8k2l3m4n5o6p7q8r9s0t1u2v3w4x5y6z7a8b9c0d", "name": "البيات", "similarity": 0.65},
+          {"id": "maqam-suznak-008", "uid": "SHA256-5r9s0t1u2v3w4x5y6z7a8b9c0d1e2f3g4h5i6j7k", "name": "سوزناك", "similarity": 0.85}
         ],
         "iraqiVersion": {
           "id": "maqam-iraqi-rast-021",
-          "uid": "SHA256-5y6z7a8b9c0d1e2f3g4h5i6j7k8l9m0n1o2p3q4r",
+          "uid": "SHA256-6s0t1u2v3w4x5y6z7a8b9c0d1e2f3g4h5i6j7k8l",
           "name": "الرست العراقي",
           "differences": "يميل إلى استخدام زخارف أكثر وأداء أبطأ"
-        }
+        },
+        "atawarDerived": [
+          {"id": "tawr-al-muhammadi-001", "uid": "SHA256-7t1u2v3w4x5y6z7a8b9c0d1e2f3g4h5i6j7k8l9m", "name": "طور المحمداوي", "relation": "مشتق من الصبا ولكن له علاقة بالرست في بعض الفروع"}
+        ]
       },
 
       "references": {
         "books": [
-          {"title": "المقام العراقي", "author": "حسين قدوري", "year": 1985, "pages": "120-145", "isbn": "978-3-16-148410-0"}
+          {"title": "المقام العراقي", "author": "حسين قدوري", "year": 1985, "pages": "120-145", "isbn": "978-3-16-148410-0"},
+          {"title": "موسيقى المقامات العربية", "author": "د. صبري المدلل", "year": 1990, "publisher": "دار الفكر"}
         ],
         "recordings": [
-          {"artist": "يوسف عمر", "title": "مقام الرست", "year": 1960, "label": "الشرق الأوسط"}
+          {"artist": "يوسف عمر", "title": "مقام الرست", "year": 1960, "label": "الشرق الأوسط"},
+          {"artist": "محمد القبانجي", "title": "مجموعة مقامات", "year": 1955, "label": "بغداد"}
         ],
         "websites": [
-          {"url": "https://www.maqamworld.com", "name": "Maqam World", "accessDate": "2026-02-28"}
+          {"url": "https://www.maqamworld.com", "name": "Maqam World", "accessDate": "2026-02-28"},
+          {"url": "https://www.iraqimaqam.com", "name": "المقام العراقي", "accessDate": "2026-02-28"}
         ]
       }
     }
@@ -821,7 +978,7 @@
   "atawar": [
     {
       "id": "tawr-al-muhammadi-001",
-      "uid": "SHA256-7a8b9c0d1e2f3g4h5i6j7k8l9m0n1o2p3q4r5s6t",
+      "uid": "SHA256-8u2v3w4x5y6z7a8b9c0d1e2f3g4h5i6j7k8l9m0n",
       
       "aiFeatureVector": [0.31, 0.82, 0.22, 0.71, 0.19, 0.62, 0.12, 0.51, 0.11, 0.41, 0.09, 0.32, 0.08, 0.28, -0.12, 0.15, -0.08, 0.11, -0.05, 0.07],
       
@@ -860,7 +1017,7 @@
         "subtypes": ["ذب", "ميهونة", "واجف (كحلاوي)", "موال (فالحية)", "دارج"],
         "associatedMaqam": "الصبا",
         "associatedMaqamId": "maqam-saba-030",
-        "associatedMaqamUid": "SHA256-8b9c0d1e2f3g4h5i6j7k8l9m0n1o2p3q4r5s6t7u"
+        "associatedMaqamUid": "SHA256-9v3w4x5y6z7a8b9c0d1e2f3g4h5i6j7k8l9m0n1o"
       },
       
       "scale": {
@@ -873,7 +1030,14 @@
           {"name": "E_flat", "arabic": "جواب عجم", "cents": 800, "frequency": 311.1}
         ],
         "degrees": 6,
-        "notesCount": 6
+        "notesCount": 6,
+        "intervalStructure": [
+          {"from": 0, "to": 150, "interval": 150, "type": "ثلاثة أرباع تون"},
+          {"from": 150, "to": 300, "interval": 150, "type": "ثلاثة أرباع تون"},
+          {"from": 300, "to": 500, "interval": 200, "type": "تون كامل"},
+          {"from": 500, "to": 700, "interval": 200, "type": "تون كامل"},
+          {"from": 700, "to": 800, "interval": 100, "type": "نصف تون"}
+        ]
       },
 
       "culturalContext": {
@@ -885,17 +1049,21 @@
       },
 
       "artists": [
-        {"name": "رياض احمد", "id": "artist-riad-ahmed", "uid": "SHA256-9c0d1e2f3g4h5i6j7k8l9m0n1o2p3q4r5s6t7u8v", "importance": 0.95}
+        {"name": "رياض احمد", "id": "artist-riad-ahmed", "uid": "SHA256-0w4x5y6z7a8b9c0d1e2f3g4h5i6j7k8l9m0n1o2p", "importance": 0.95},
+        {"name": "داخل حسن", "id": "artist-dakhil-hassan", "uid": "SHA256-1x5y6z7a8b9c0d1e2f3g4h5i6j7k8l9m0n1o2p3q", "importance": 0.85},
+        {"name": "ناصر حكيم", "id": "artist-nasir-hakim", "uid": "SHA256-2y6z7a8b9c0d1e2f3g4h5i6j7k8l9m0n1o2p3q4r", "importance": 0.80},
+        {"name": "عبادي العماري", "id": "artist-abadi-al-ammari", "uid": "SHA256-3z7a8b9c0d1e2f3g4h5i6j7k8l9m0n1o2p3q4r5s", "importance": 0.75}
       ],
 
       "audioVisual": {
         "recordings": [
           {
             "id": "rec-muhammadi-001",
-            "uid": "SHA256-3g4h5i6j7k8l9m0n1o2p3q4r5s6t7u8v9w0x1y2z",
+            "uid": "SHA256-4a8b9c0d1e2f3g4h5i6j7k8l9m0n1o2p3q4r5s6t",
             "artist": "رياض احمد",
             "title": "طور المحمداوي - كامل",
             "url": "https://archive.org/muhammadi-riad.mp3",
+            "videoUrl": "https://youtube.com/watch?v=muhammadi-example",
             "year": 1970,
             "durationSec": 1250,
             
@@ -916,7 +1084,9 @@
 
       "analysis": {
         "characteristicPhrases": [
-          {"patternDegrees": [1, 2, 3, 2, 1], "importance": 0.9, "subtype": "جميع الفروع"}
+          {"patternDegrees": [1, 2, 3, 2, 1], "importance": 0.9, "subtype": "جميع الفروع"},
+          {"patternDegrees": [3, 4, 5, 4, 3], "importance": 0.7, "subtype": "الميهونة"},
+          {"patternDegrees": [5, 6, 5, 4, 3, 2], "importance": 0.8, "subtype": "الدارج"}
         ],
         
         "performanceMetrics": {
@@ -924,6 +1094,105 @@
           "ornamentDensity": 0.72,
           "tempoVariability": 0.38
         }
+      }
+    },
+    {
+      "id": "tawr-al-sabi-002",
+      "uid": "SHA256-5b9c0d1e2f3g4h5i6j7k8l9m0n1o2p3q4r5s6t7u",
+      
+      "aiFeatureVector": [0.12, 0.31, 0.82, 0.21, 0.72, 0.18, 0.61, 0.15, 0.52, 0.11, 0.42, 0.09, 0.33, 0.08, -0.15, 0.12, -0.09, 0.08, -0.04, 0.03],
+      
+      "similarAta war": [
+        {"id": "tawr-al-muhammadi-001", "name": "المحمداوي", "score": 0.62},
+        {"id": "tawr-al-hayyawi-005", "name": "الحياوي", "score": 0.58}
+      ],
+
+      "name": "طور الصبي",
+      "nameEn": "Al-Sabi Tawr",
+      "nameVariations": ["الصبي"],
+      
+      "schemaVersion": "5.0",
+      "dataVersion": 3,
+      "lastReviewed": "2026-02-28",
+      "completenessScore": 0.88,
+      
+      "microtonalDefinition": {
+        "cents": [0, 200, 300, 600, 700, 900],
+        "tuningSystem": "24-TET",
+        "quarterTones": [false, false, false, false, false, false]
+      },
+      
+      "digitalFingerprint": {
+        "intervalVector": [200, 100, 300, 100, 200],
+        "chromaSignature": [0.12, 0.31, 0.82, 0.21, 0.72, 0.18, 0.61, 0.15, 0.52, 0.11, 0.42, 0.09],
+        "microtoneDistribution": {
+          "quarterFlat": 0,
+          "quarterSharp": 0
+        }
+      },
+
+      "classification": {
+        "category": "عراقي - ريفي",
+        "type": "طور عشائري",
+        "subtypes": [],
+        "associatedMaqam": "النهاوند",
+        "associatedMaqamId": "maqam-nahawand-002",
+        "associatedMaqamUid": "SHA256-6c0d1e2f3g4h5i6j7k8l9m0n1o2p3q4r5s6t7u8v"
+      },
+      
+      "scale": {
+        "notes": [
+          {"name": "C", "arabic": "يكاه", "cents": 0, "frequency": 130.8},
+          {"name": "D", "arabic": "دوكاه", "cents": 200, "frequency": 146.8},
+          {"name": "E_flat", "arabic": "سيكاه", "cents": 300, "frequency": 155.6},
+          {"name": "F_sharp", "arabic": "جهاركاه", "cents": 600, "frequency": 185.0},
+          {"name": "G", "arabic": "نوى", "cents": 700, "frequency": 196.0},
+          {"name": "A", "arabic": "حسيني", "cents": 900, "frequency": 220.0}
+        ],
+        "degrees": 6,
+        "notesCount": 6
+      },
+
+      "culturalContext": {
+        "origin": "طائفة الصابئة - سوق الشيوخ",
+        "story": "نسبة إلى أول شخص غناه (رومي سبهان البريجي) من طائفة الصابئة المندائيين. قصة طريفة مع الشيخ ناصر باشا السعدون أدت لولادة الطور",
+        "signaturePhrase": "اويلي - أصبحت علامة الطور المميزة",
+        "geography": "سوق الشيوخ - محافظة ذي قار"
+      },
+
+      "artists": [
+        {"name": "رياض احمد", "id": "artist-riad-ahmed", "uid": "SHA256-0w4x5y6z7a8b9c0d1e2f3g4h5i6j7k8l9m0n1o2p", "importance": 0.98},
+        {"name": "جبار ونيسه", "id": "artist-jabbar-wanessa", "uid": "SHA256-7d1e2f3g4h5i6j7k8l9m0n1o2p3q4r5s6t7u8v9w", "importance": 0.90},
+        {"name": "حسن داوود", "id": "artist-hasan-dawud", "uid": "SHA256-8e2f3g4h5i6j7k8l9m0n1o2p3q4r5s6t7u8v9w0x", "importance": 0.85}
+      ],
+
+      "audioVisual": {
+        "recordings": [
+          {
+            "id": "rec-sabi-001",
+            "uid": "SHA256-9f3g4h5i6j7k8l9m0n1o2p3q4r5s6t7u8v9w0x1y",
+            "artist": "رياض احمد",
+            "title": "طور الصبي",
+            "url": "https://archive.org/sabi-riad.mp3",
+            "videoUrl": "https://youtube.com/watch?v=sabi-example",
+            "note": "أجاده وأبدع فيه",
+            "year": 1975,
+            "durationSec": 980,
+            
+            "performanceMetrics": {
+              "averagePitchDeviation": 11.8,
+              "ornamentDensity": 0.68,
+              "tempoVariability": 0.35
+            }
+          }
+        ]
+      },
+
+      "analysis": {
+        "characteristicPhrases": [
+          {"patternDegrees": [1, 2, 3, 4, 3, 2, 1], "importance": 0.95, "note": "عبارة (اويلي) المميزة"},
+          {"patternDegrees": [5, 4, 3, 2, 1], "importance": 0.8}
+        ]
       }
     }
   ],
@@ -971,14 +1240,208 @@
         "maqam-suznak-008": 0.92,
         "maqam-nahawand-002": 0.75,
         "maqam-bayat-005": 0.68
+      },
+      "maqam-bayat-005": {
+        "maqam-hijaz-003": 0.68,
+        "maqam-saba-030": 0.72,
+        "maqam-rast-001": 0.65
+      },
+      "maqam-hijaz-003": {
+        "maqam-kurd-015": 0.70,
+        "maqam-bayat-005": 0.68,
+        "maqam-nahawand-002": 0.55
+      }
+    },
+    
+    "generativeAI": {
+      "models": [
+        {
+          "name": "MaqamGen-v2",
+          "type": "Transformer-XL",
+          "parameters": "350M",
+          "capabilities": ["توليد جمل لحنية", "اقتراح تحولات مقامية", "مرافقة ذكية", "توليد تمارين"],
+          "apiEndpoint": "https://api.maqam.world/generate",
+          "version": "2.0.0"
+        }
+      ]
+    },
+    
+    "educationalAI": {
+      "studentAssessment": {
+        "algorithm": "pitch-tracking-with-feedback",
+        "realTimeCorrection": true,
+        "personalizedExercises": true
+      },
+      "interactivePractice": {
+        "available": true,
+        "platforms": ["web", "mobile"]
+      }
+    },
+    
+    "audioAnalysisAPI": {
+      "extractMaqam": {
+        "endpoint": "https://api.maqam.world/analyze",
+        "inputFormats": ["mp3", "wav", "ogg", "flac"],
+        "maxFileSizeMB": 100,
+        "outputFields": ["maqamId", "confidence", "pitchContour", "modulations"],
+        "processingTime": "3-8 ثواني"
+      },
+      "extractTawr": {
+        "endpoint": "https://api.maqam.world/analyze-tawr",
+        "inputFormats": ["mp3", "wav"],
+        "outputFields": ["tawrId", "confidence", "subtype"],
+        "processingTime": "2-5 ثواني"
       }
     }
   },
 
-  "globalKnowledgeGraph": {
-    "nodes": [...],
-    "edges": [...],
-    "centralityScores": {...}
+  "graphs": {
+    "availableCharts": [
+      "راست سلطاني", "سوزناك", "حجاز كار", "نهاوند", "نهاوند حجازي", 
+      "كردي", "عشاق", "حجاز سلطاني", "صبا أصل", "حسين", "بياتي", 
+      "شهناز", "سيكاه", "رمل", "مستعار", "دوستنغار", "سيكاه بياتي", 
+      "جهاركاه", "راست جهاركاه", "جهاركاه الفلاحة", "راست نوا", 
+      "أصبهان", "بياتي شوري", "بياتي نوا", "حصار", "أوج حجازي", 
+      "أوج عراق", "عجم"
+    ],
+    
+    "graphTypes": {
+      "melodicMovement": "مسار الحركة اللحنية في المقام",
+      "scaleChart": "السلّم الموسيقي مع الدرجات والأبعاد",
+      "frequencyGraph": "منحنى الترددات الصوتية",
+      "spectrogram": "التحليل الطيفي",
+      "modulationMap": "خريطة التحولات بين المقامات",
+      "pitchContour": "منحنى التردد عبر الزمن"
+    },
+    
+    "dataFormats": ["png", "svg", "json", "csv"],
+    "baseUrl": "https://data.maqam.world/graphics/"
+  },
+
+  "tools": [
+    {
+      "id": "tool-practice-001",
+      "uid": "SHA256-0g4h5i6j7k8l9m0n1o2p3q4r5s6t7u8v9w0x1y2z",
+      "name": "مدرب المقامات الذكي",
+      "nameEn": "Smart Maqam Trainer",
+      "type": "practice",
+      "description": "أداة تفاعلية لتعلم المقامات مع تغذية راجعة فورية",
+      "features": ["تحليل الصوت الحي", "تصحيح النغمات", "تمارين مخصصة"],
+      "platforms": ["web", "mobile"],
+      "url": "https://practice.maqam.world",
+      "version": "2.1.0"
+    },
+    {
+      "id": "tool-generate-002",
+      "uid": "SHA256-1h5i6j7k8l9m0n1o2p3q4r5s6t7u8v9w0x1y2z3a",
+      "name": "مولد الموسيقى بالذكاء الاصطناعي",
+      "nameEn": "AI Music Generator",
+      "type": "generative",
+      "description": "تحويل الأوصاف النصية إلى موسيقى في مقامات محددة",
+      "features": ["مدخلات اللغة الطبيعية", "توليد فوري", "تعديل وتنزيل"],
+      "platforms": ["web"],
+      "url": "https://generate.maqam.world",
+      "version": "1.5.0"
+    },
+    {
+      "id": "tool-analyze-003",
+      "uid": "SHA256-2i6j7k8l9m0n1o2p3q4r5s6t7u8v9w0x1y2z3a4b",
+      "name": "محلل المقامات الصوتي",
+      "nameEn": "Maqam Audio Analyzer",
+      "type": "analysis",
+      "description": "تحليل التسجيلات الصوتية وتحديد المقام تلقائياً",
+      "features": ["تحديد المقام", "استخراج النوتات", "رسم منحنى الصوت"],
+      "platforms": ["web", "api"],
+      "url": "https://analyze.maqam.world",
+      "version": "2.0.0"
+    }
+  ],
+
+  "sources": [
+    {
+      "id": "source-001",
+      "type": "book",
+      "title": "المقام العراقي",
+      "author": "حسين قدوري",
+      "year": 1985,
+      "publisher": "دار الشؤون الثقافية",
+      "isbn": "978-3-16-148410-0",
+      "pages": 320
+    },
+    {
+      "id": "source-002",
+      "type": "book",
+      "title": "المغنون الريفيون والأطوار الريفية",
+      "author": "ثامر العامري",
+      "year": 2000,
+      "publisher": "دار المدى",
+      "pages": 245
+    },
+    {
+      "id": "source-003",
+      "type": "article",
+      "title": "أطوار الغناء الريفي العراقي - دراسة وتحليل",
+      "author": "يحيى الجابري",
+      "journal": "مجلة الحياة الموسيقية",
+      "issue": "41-45",
+      "year": "2006-2007",
+      "pages": "23-48"
+    },
+    {
+      "id": "source-004",
+      "type": "archive",
+      "name": "منتدى سماعي للموسيقى العربية",
+      "url": "https://www.sama3y.net/forum",
+      "accessDate": "2026-02-28"
+    }
+  ],
+
+  "preservation": {
+    "challenges": [
+      "تراجع كبير بسبب القنوات الفضائية والعولمة",
+      "خطر التلاشي والضياع بسبب عدم التوثيق الكافي",
+      "قلة الاهتمام الأكاديمي"
+    ],
+    "recommendations": [
+      "تنظيم الأطوار ضمن المنهج الأكاديمي في المعاهد والجامعات الموسيقية",
+      "توثيق وحفظ في المكتبات الرقمية",
+      "دعم جاد للمشاريع الثقافية",
+      "إنشاء أرشيف وطني للموسيقى العراقية"
+    ],
+    "digitization": {
+      "totalRecordings": 1500,
+      "completed": 850,
+      "inProgress": 300,
+      "remaining": 350,
+      "completionPercentage": 56.7,
+      "estimatedCompletionDate": "2028-12-31"
+    },
+    "archiveUrls": {
+      "primary": "https://archive.maqam.world",
+      "backup": "https://backup.maqam.world"
+    }
+  },
+
+  "statistics": {
+    "totalMaqams": 170,
+    "totalAta war": 60,
+    "totalRecordings": 1500,
+    "totalArtists": 250,
+    "totalAjnas": 25,
+    "totalFamilies": 9,
+    "quarterTones": [50, 150, 350, 850, 950],
+    "mostCommonMaqams": ["الرست", "البيات", "الحجاز", "الصبا", "النهاوند"],
+    "mostCommonAta war": ["المحمداوي", "الصبي", "الحياوي"],
+    "dataSize": {
+      "jsonSizeKB": 512,
+      "totalWithMediaGB": 125,
+      "totalWithDerivativesGB": 350
+    },
+    "coverage": {
+      "iraqiMaqams": 0.95,
+      "arabicMaqams": 0.85,
+      "iraqiAta war": 0.82
+    }
   },
 
   "changelog": [
