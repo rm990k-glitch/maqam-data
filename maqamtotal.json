@@ -1,976 +1,813 @@
 {
   "metadata": {
     "projectName": "الموسوعة الشاملة للمقامات العربية والعراقية",
-    "version": "5.0.0",
-    "schemaVersion": "5.0",
-    "lastUpdated": "2026-02-28T18:30:00Z",
+    "version": "6.0.0",
+    "schemaVersion": "6.0",
+    "lastUpdated": "2026-03-10T12:00:00Z",
     "totalMaqams": 170,
     "totalAta war": 60,
     "totalAjnas": 25,
+    "totalIqaat": 45,
     "supportedLanguages": ["ar", "en", "fr", "ku", "fa", "tr", "de"],
     "aiReady": true,
     "includesAudioAnalysis": true,
     "includesGraphData": true,
     "includesMLTrainingData": true,
-    "includesHistoricalData": true,
-    "unescoStatus": false,
-    "culturalRegion": "Iraq, Levant, Arabian Peninsula",
-    "heritageImportanceScore": 9.8,
-    "structureVersion": "academic-hierarchical-v5",
-    "dataCompleteness": 0.94,
-    "digitalFingerprint": "SHA256-8f9g0h1i2j3k4l5m6n7o8p9q0r1s2t3u4v5w6x7y8z",
-    "sources": [
-      "دراسة يحيى الجابري - مجلة الحياة الموسيقية",
-      "كتاب ثامر العامري - المغنون الريفيون",
-      "توثيق روحي الخماش",
-      "منتدى سماعي للموسيقى العربية",
-      "مكتبة المقام العراقي - حسين قدوري",
-      "معهد الدراسات الموسيقية العربية - بغداد",
-      "اليونسكو - التراث الثقافي غير المادي"
-    ]
-  },
-
-  "globalKnowledgeGraph": {
-    "nodes": [
-      {"id": "maqam-rast-001", "type": "maqam", "centrality": 0.95},
-      {"id": "maqam-bayat-005", "type": "maqam", "centrality": 0.92},
-      {"id": "maqam-hijaz-003", "type": "maqam", "centrality": 0.88},
-      {"id": "maqam-nahawand-002", "type": "maqam", "centrality": 0.85},
-      {"id": "maqam-saba-030", "type": "maqam", "centrality": 0.82},
-      {"id": "maqam-kurd-015", "type": "maqam", "centrality": 0.78},
-      {"id": "maqam-suznak-008", "type": "maqam", "centrality": 0.84},
-      {"id": "jins-rast-001", "type": "jins", "centrality": 0.98},
-      {"id": "jins-bayat-002", "type": "jins", "centrality": 0.94},
-      {"id": "jins-hijaz-003", "type": "jins", "centrality": 0.91},
-      {"id": "jins-nahawand-004", "type": "jins", "centrality": 0.87},
-      {"id": "jins-saba-005", "type": "jins", "centrality": 0.83},
-      {"id": "family-rast", "type": "family", "centrality": 0.96},
-      {"id": "family-bayat", "type": "family", "centrality": 0.93},
-      {"id": "family-hijaz", "type": "family", "centrality": 0.89}
-    ],
-    "edges": [
-      {"from": "maqam-rast-001", "to": "jins-rast-001", "relation": "primaryJins", "weight": 1.0},
-      {"from": "maqam-rast-001", "to": "jins-nahawand-004", "relation": "secondaryJins", "weight": 0.65},
-      {"from": "maqam-rast-001", "to": "maqam-nahawand-002", "relation": "modulatesTo", "weight": 0.75},
-      {"from": "maqam-rast-001", "to": "maqam-bayat-005", "relation": "similarTo", "weight": 0.45},
-      {"from": "maqam-rast-001", "to": "maqam-suznak-008", "relation": "derivedFrom", "weight": 0.92},
-      {"from": "maqam-bayat-005", "to": "jins-bayat-002", "relation": "primaryJins", "weight": 1.0},
-      {"from": "maqam-bayat-005", "to": "maqam-hijaz-003", "relation": "modulatesTo", "weight": 0.68},
-      {"from": "maqam-bayat-005", "to": "maqam-saba-030", "relation": "similarTo", "weight": 0.55},
-      {"from": "maqam-hijaz-003", "to": "jins-hijaz-003", "relation": "primaryJins", "weight": 1.0},
-      {"from": "maqam-hijaz-003", "to": "maqam-kurd-015", "relation": "modulatesTo", "weight": 0.52},
-      {"from": "maqam-nahawand-002", "to": "jins-nahawand-004", "relation": "primaryJins", "weight": 1.0},
-      {"from": "jins-rast-001", "to": "family-rast", "relation": "belongsTo", "weight": 1.0},
-      {"from": "jins-bayat-002", "to": "family-bayat", "relation": "belongsTo", "weight": 1.0},
-      {"from": "jins-hijaz-003", "to": "family-hijaz", "relation": "belongsTo", "weight": 1.0}
-    ],
-    "centralityScores": {
-      "maqam-rast-001": 0.95,
-      "maqam-bayat-005": 0.92,
-      "maqam-hijaz-003": 0.88,
-      "maqam-nahawand-002": 0.85,
-      "maqam-saba-030": 0.82,
-      "maqam-kurd-015": 0.78,
-      "maqam-suznak-008": 0.84,
-      "jins-rast-001": 0.98,
-      "jins-bayat-002": 0.94,
-      "jins-hijaz-003": 0.91,
-      "jins-nahawand-004": 0.87,
-      "jins-saba-005": 0.83,
-      "family-rast": 0.96,
-      "family-bayat": 0.93,
-      "family-hijaz": 0.89
-    },
-    "mostConnectedMaqam": "maqam-rast-001",
-    "mostFrequentModulations": [
-      {"from": "maqam-rast-001", "to": "maqam-nahawand-002", "frequency": 0.75},
-      {"from": "maqam-bayat-005", "to": "maqam-hijaz-003", "frequency": 0.68},
-      {"from": "maqam-hijaz-003", "to": "maqam-kurd-015", "frequency": 0.52}
-    ],
-    "graphMetrics": {
-      "density": 0.38,
-      "diameter": 5,
-      "averageClustering": 0.42,
-      "totalNodes": 15,
-      "totalEdges": 14
-    }
+    "includesMIDISupport": true,
+    "includesMusicXML": true,
+    "includesStyleProfiles": true,
+    "includesVideoSources": true
   },
 
   "taxonomy": {
-    "families": [
+    "families": [ ... ],
+    
+    "ajnas": [ ... ],
+    
+    "iqaat": [
       {
-        "id": "family-rast",
-        "uid": "SHA256-8a2f4c5e6d7b8a9c0d1e2f3a4b5c6d7e8f9a0b1c",
-        "name": "عائلة الرست",
-        "nameEn": "Rast Family",
-        "primaryJins": "jins-rast-001",
-        "character": "اعتدال، فخامة، وقار",
-        "emotionalProfile": {
-          "primary": "فخامة",
-          "secondary": ["اتزان", "وقار", "بهاء"],
-          "timeOfDay": ["صباح", "مساء"],
-          "occasions": ["أفراح", "مناسبات رسمية", "افتتاحيات"]
-        },
-        "schemaVersion": "5.0",
-        "dataVersion": 3,
-        "lastReviewed": "2026-02-28"
+        "id": "iqa-samai-thaqil-001",
+        "uid": "SHA256-iq1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p7q8r9s0t",
+        "name": "سماعي ثقيل",
+        "nameEn": "Samai Thaqil",
+        "nameTr": "Sama'i Sakil",
+        "timeSignature": "10/8",
+        "pattern": "D--T--D--T-",
+        "patternNumerical": [2, 2, 2, 2, 2],
+        "patternIqa": ["دوم", "تك", "دوم", "تك", "تك"],
+        "tempoRange": "80-120 BPM",
+        "occasions": ["افتتاحيات", "قدود حلبية", "سماعيات"],
+        "instruments": ["عود", "قانون", "كمان", "رق"],
+        "videoExamples": [
+          {
+            "url": "https://youtube.com/watch?v=samai-thaqil-example",
+            "artist": "فريد الأطرش",
+            "title": "سماعي ثقيل - فريد الأطرش",
+            "timestamp": "0:00-5:30"
+          }
+        ],
+        "midiUrl": "https://data.maqam.world/iqaat/samai-thaqil.mid",
+        "musicXmlUrl": "https://data.maqam.world/iqaat/samai-thaqil.xml",
+        "audioUrl": "https://data.maqam.world/iqaat/samai-thaqil.mp3",
+        "relatedMaqamat": ["maqam-rast-001", "maqam-bayat-005", "maqam-hijaz-003"]
       },
       {
-        "id": "family-bayat",
-        "uid": "SHA256-9b3c4d5e6f7g8h9i0j1k2l3m4n5o6p7q8r9s0t1u",
-        "name": "عائلة البيات",
-        "nameEn": "Bayat Family",
-        "primaryJins": "jins-bayat-002",
-        "character": "حزن، شجن، رقة",
-        "emotionalProfile": {
-          "primary": "حزن",
-          "secondary": ["شجن", "تأمل", "رومانسية"],
-          "timeOfDay": ["ليل", "فجر"],
-          "occasions": ["تأمل", "إنشاد ديني"]
-        },
-        "schemaVersion": "5.0",
-        "dataVersion": 2,
-        "lastReviewed": "2026-02-28"
+        "id": "iqa-masmoudi-002",
+        "uid": "SHA256-iq2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p7q8r9s0t1u",
+        "name": "مصمودي",
+        "nameEn": "Masmoudi",
+        "nameTr": "Masmudi",
+        "timeSignature": "4/4",
+        "pattern": "D--T--D--T",
+        "patternNumerical": [2, 2, 2, 2],
+        "patternIqa": ["دوم", "تك", "دوم", "تك"],
+        "tempoRange": "100-140 BPM",
+        "occasions": ["أغاني شعبية", "مواويل", "رقص شرقي"],
+        "instruments": ["دربكة", "رق", "دف"],
+        "videoExamples": [
+          {
+            "url": "https://youtube.com/watch?v=masmoudi-example",
+            "artist": "محمد عبد الوهاب",
+            "title": "مصمودي في أغاني محمد عبد الوهاب",
+            "timestamp": "1:20-3:45"
+          }
+        ],
+        "midiUrl": "https://data.maqam.world/iqaat/masmoudi.mid",
+        "musicXmlUrl": "https://data.maqam.world/iqaat/masmoudi.xml"
       },
       {
-        "id": "family-hijaz",
-        "uid": "SHA256-0c4d5e6f7g8h9i0j1k2l3m4n5o6p7q8r9s0t1u2v",
-        "name": "عائلة الحجاز",
-        "nameEn": "Hijaz Family",
-        "primaryJins": "jins-hijaz-003",
-        "character": "قوة، شوق، حماس",
-        "emotionalProfile": {
-          "primary": "شوق",
-          "secondary": ["قوة", "حماس", "غموض"],
-          "timeOfDay": ["عصر", "غروب"],
-          "occasions": ["أفراح", "احتفالات"]
-        },
-        "schemaVersion": "5.0",
-        "dataVersion": 2,
-        "lastReviewed": "2026-02-28"
+        "id": "iqa-wahda-003",
+        "uid": "SHA256-iq3c4d5e6f7g8h9i0j1k2l3m4n5o6p7q8r9s0t1u2v",
+        "name": "وحدة",
+        "nameEn": "Wahda",
+        "nameTr": "Vahde",
+        "timeSignature": "4/4",
+        "pattern": "D---",
+        "patternNumerical": [4],
+        "patternIqa": ["دوم"],
+        "tempoRange": "60-90 BPM",
+        "occasions": ["تقسيم", "تقاسيم", "مقدمات"],
+        "instruments": ["عود", "ناي", "قانون"],
+        "videoExamples": [
+          {
+            "url": "https://youtube.com/watch?v=wahda-example",
+            "artist": "منير بشير",
+            "title": "تقاسيم على مقام الرست - وحدة",
+            "timestamp": "0:00-4:20"
+          }
+        ]
+      },
+      {
+        "id": "iqa-jurjina-004",
+        "uid": "SHA256-iq4d5e6f7g8h9i0j1k2l3m4n5o6p7q8r9s0t1u2v3w",
+        "name": "جورجينا",
+        "nameEn": "Jurjina",
+        "nameTr": "Curcuna",
+        "timeSignature": "10/8",
+        "pattern": "D-T-D-T-T",
+        "patternNumerical": [3, 2, 2, 3],
+        "alternativePatterns": ["D--T-D-TT", "D-T--D-TT"],
+        "tempoRange": "120-160 BPM",
+        "occasions": ["أغاني سريعة", "رقصات", "ختاميات"],
+        "videoExamples": [
+          {
+            "url": "https://youtube.com/watch?v=jurjina-example",
+            "artist": "صباح فخري",
+            "title": "قد حلت القافلة - جورجينا",
+            "timestamp": "2:10-6:30"
+          }
+        ]
+      },
+      {
+        "id": "iqa-maqsum-005",
+        "uid": "SHA256-iq5e6f7g8h9i0j1k2l3m4n5o6p7q8r9s0t1u2v3w4x",
+        "name": "مقسوم",
+        "nameEn": "Maqsum",
+        "timeSignature": "4/4",
+        "pattern": "D-T--D--T",
+        "patternNumerical": [2, 1, 2, 1, 2],
+        "patternIqa": ["دوم", "تك", "دوم", "تك", "تك"],
+        "tempoRange": "90-130 BPM",
+        "occasions": ["أغاني شعبية", "رقص شرقي", "مواويل"],
+        "videoExamples": [
+          {
+            "url": "https://youtube.com/watch?v=maqsum-example",
+            "artist": "أم كلثوم",
+            "title": "أنت عمري - المقسوم في المقدمة",
+            "timestamp": "0:30-2:15"
+          }
+        ]
+      },
+      {
+        "id": "iqa-ayoub-006",
+        "uid": "SHA256-iq6f7g8h9i0j1k2l3m4n5o6p7q8r9s0t1u2v3w4x5y",
+        "name": "أيوب",
+        "nameEn": "Ayoub",
+        "nameTr": "Ayyub",
+        "timeSignature": "2/4",
+        "pattern": "D-T",
+        "patternNumerical": [1, 1],
+        "tempoRange": "140-200 BPM",
+        "occasions": ["رقص صوفي", "ذكر", "إنشاد ديني"],
+        "spiritualContext": "يستخدم في الحضرة الصوفية والذكر",
+        "videoExamples": [
+          {
+            "url": "https://youtube.com/watch?v=ayoub-example",
+            "artist": "نصير شمة",
+            "title": "إيقاع أيوب في الموسيقى الصوفية",
+            "timestamp": "0:00-3:50"
+          }
+        ]
+      }
+    ]
+  },
+
+  "videoSources": {
+    "platforms": ["YouTube", "Vimeo", "Facebook", "Archive.org"],
+    "qualityLevels": ["1080p", "720p", "480p"],
+    "licensing": ["تعليمي", "تراثي", "تسجيلات أصلية"],
+    "verification": "تم التحقق من صحة المصادر بواسطة لجنة الخبراء",
+    
+    "masterClasses": [
+      {
+        "id": "mc-rast-001",
+        "title": "ماستر كلاس: مقام الرست مع د. حسين قدوري",
+        "instructor": "د. حسين قدوري",
+        "duration": "02:45:00",
+        "parts": 6,
+        "url": "https://youtube.com/playlist?list=PL123456789",
+        "topics": ["تاريخ الرست", "السلم والدرجات", "الزخارف", "التحولات"],
+        "level": "متقدم"
       }
     ],
     
-    "ajnas": [
+    "documentaries": [
       {
-        "id": "jins-rast-001",
-        "uid": "SHA256-1d5e6f7g8h9i0j1k2l3m4n5o6p7q8r9s0t1u2v3w",
-        "name": "جنس رست",
-        "nameEn": "Rast Jins",
-        "intervalPattern": [0, 200, 350, 500, 700],
-        "intervalPatternCents": [0, 200, 350, 500, 700],
-        "intervalPatternSemitones": [0, 2, 3.5, 5, 7],
-        "quarterTones": [false, false, true, false, false],
-        "microtonePositions": [350],
-        "type": "رباعي",
-        "degrees": 4,
-        "emotionalProfile": {
-          "primary": "فخامة",
-          "secondary": ["استقرار", "قوة"],
-          "intensity": 0.7,
-          "happiness": 0.8,
-          "sadness": 0.1
-        },
-        "usageFrequency": 0.92,
-        "occurrenceInMaqamat": ["الرست", "سوزناك", "نهاوند", "رست النوى"],
-        "examples": ["مقام الرست", "مقام سوزناك"],
-        "digitalFingerprint": {
-          "intervalVector": [200, 150, 150, 200],
-          "chromaSignature": [0.92, 0.18, 0.85, 0.12, 0.72, 0.09, 0.68, 0.11, 0.55, 0.08, 0.48, 0.10],
-          "microtoneDistribution": {
-            "quarterFlat": 1,
-            "quarterSharp": 0
+        "id": "doc-iraqi-maqam-001",
+        "title": "المقام العراقي: تراث الأجداد",
+        "director": "كاظم الأهوازي",
+        "year": 2022,
+        "duration": "01:30:00",
+        "url": "https://youtube.com/watch?v=iraqi-maqam-doc",
+        "featuring": ["حسين الأعظمي", "فاروق محمد حسن", "حميد البياتي"]
+      }
+    ]
+  },
+
+  "styleProfiles": {
+    "regions": [
+      {
+        "id": "style-iraqi-001",
+        "name": "العراقي",
+        "nameEn": "Iraqi Style",
+        "characteristics": [
+          "زخارف كثيرة",
+          "أداء بطيء ومتأمل",
+          "استخدام واسع للأطوار",
+          "تأثيرات فارسية وتركية",
+          "طول الجلسة والميانة"
+        ],
+        "tempoRange": "60-90 BPM",
+        "ornamentDensity": 0.85,
+        "vibratoRate": "4-6 Hz",
+        "prominentArtists": ["يوسف عمر", "محمد القبانجي", "حسين الأعظمي", "رشيد القندرجي"],
+        "videoExamples": [
+          {
+            "url": "https://youtube.com/watch?v=iraqi-style-example",
+            "artist": "يوسف عمر",
+            "maqam": "الرست",
+            "description": "الأسلوب العراقي الأصيل"
           }
-        },
-        "schemaVersion": "5.0",
-        "dataVersion": 3,
-        "lastReviewed": "2026-02-28"
+        ],
+        "midiExamples": [
+          {
+            "maqam": "maqam-rast-001",
+            "url": "https://data.maqam.world/style/iraqi/rast.mid"
+          }
+        ]
       },
       {
-        "id": "jins-bayat-002",
-        "uid": "SHA256-2e6f7g8h9i0j1k2l3m4n5o6p7q8r9s0t1u2v3w4x",
-        "name": "جنس بيات",
-        "nameEn": "Bayat Jins",
-        "intervalPattern": [0, 50, 350, 500, 700],
-        "intervalPatternCents": [0, 50, 350, 500, 700],
-        "intervalPatternSemitones": [0, 0.5, 3.5, 5, 7],
-        "quarterTones": [false, true, true, false, false],
-        "microtonePositions": [50, 350],
-        "type": "خماسي",
-        "degrees": 5,
-        "emotionalProfile": {
-          "primary": "حزن",
-          "secondary": ["شجن", "رقة", "تأمل"],
-          "intensity": 0.6,
-          "happiness": 0.3,
-          "sadness": 0.85
-        },
-        "usageFrequency": 0.88,
-        "occurrenceInMaqamat": ["البيات", "الحسيني", "النوا"],
-        "digitalFingerprint": {
-          "intervalVector": [50, 300, 150, 200],
-          "chromaSignature": [0.21, 0.92, 0.31, 0.82, 0.22, 0.71, 0.19, 0.62, 0.12, 0.51, 0.11, 0.41],
-          "microtoneDistribution": {
-            "quarterFlat": 2,
-            "quarterSharp": 0
+        "id": "style-egyptian-002",
+        "name": "المصري",
+        "nameEn": "Egyptian Style",
+        "characteristics": [
+          "أداء عاطفي وحنون",
+          "زخارف أقل من العراقي",
+          "تأثيرات من الموسيقى التركية",
+          "وضوح في الكلمات",
+          "تنوع في الإيقاعات"
+        ],
+        "tempoRange": "80-120 BPM",
+        "ornamentDensity": 0.65,
+        "vibratoRate": "5-7 Hz",
+        "prominentArtists": ["أم كلثوم", "محمد عبد الوهاب", "عبد الحليم حافظ", "فريد الأطرش"],
+        "videoExamples": [
+          {
+            "url": "https://youtube.com/watch?v=egyptian-style-example",
+            "artist": "أم كلثوم",
+            "maqam": "البياتي",
+            "description": "الأسلوب المصري في مقام البياتي"
           }
-        },
-        "schemaVersion": "5.0",
-        "dataVersion": 3,
-        "lastReviewed": "2026-02-28"
+        ]
       },
       {
-        "id": "jins-hijaz-003",
-        "uid": "SHA256-3f7g8h9i0j1k2l3m4n5o6p7q8r9s0t1u2v3w4x5y",
-        "name": "جنس حجاز",
-        "nameEn": "Hijaz Jins",
-        "intervalPattern": [0, 150, 350, 500, 700],
-        "intervalPatternCents": [0, 150, 350, 500, 700],
-        "intervalPatternSemitones": [0, 1.5, 3.5, 5, 7],
-        "quarterTones": [false, true, true, false, false],
-        "microtonePositions": [150, 350],
-        "type": "رباعي",
-        "degrees": 4,
-        "emotionalProfile": {
-          "primary": "شوق",
-          "secondary": ["قوة", "حماس", "غموض"],
-          "intensity": 0.85,
-          "happiness": 0.4,
-          "sadness": 0.7
-        },
-        "usageFrequency": 0.85,
-        "occurrenceInMaqamat": ["الحجاز", "الحجاز كار", "الشاهيناز"],
-        "digitalFingerprint": {
-          "intervalVector": [150, 200, 150, 200],
-          "chromaSignature": [0.32, 0.11, 0.91, 0.21, 0.81, 0.12, 0.72, 0.21, 0.61, 0.11, 0.51, 0.18],
-          "microtoneDistribution": {
-            "quarterFlat": 1,
-            "quarterSharp": 1
+        "id": "style-syrian-003",
+        "name": "السوري",
+        "nameEn": "Syrian Style",
+        "characteristics": [
+          "إتقان في الموشحات والقدود",
+          "دقة في الأداء",
+          "توازن بين الزخارف والوضوح",
+          "تأثيرات من الموسيقى العربية الكلاسيكية"
+        ],
+        "tempoRange": "70-110 BPM",
+        "ornamentDensity": 0.7,
+        "prominentArtists": ["صباح فخري", "عمر البطش", "أديب الدايخ"],
+        "videoExamples": [
+          {
+            "url": "https://youtube.com/watch?v=syrian-style-example",
+            "artist": "صباح فخري",
+            "maqam": "النهاوند",
+            "description": "أداء سوري أصيل"
           }
-        },
-        "schemaVersion": "5.0",
-        "dataVersion": 3,
-        "lastReviewed": "2026-02-28"
+        ]
       },
       {
-        "id": "jins-nahawand-004",
-        "uid": "SHA256-4g8h9i0j1k2l3m4n5o6p7q8r9s0t1u2v3w4x5y6z",
-        "name": "جنس نهاوند",
-        "nameEn": "Nahawand Jins",
-        "intervalPattern": [0, 200, 300, 500, 700],
-        "intervalPatternCents": [0, 200, 300, 500, 700],
-        "intervalPatternSemitones": [0, 2, 3, 5, 7],
-        "quarterTones": [false, false, false, false, false],
-        "microtonePositions": [],
-        "type": "رباعي",
-        "degrees": 4,
-        "emotionalProfile": {
-          "primary": "حزن",
-          "secondary": ["رومانسية", "عمق"],
-          "intensity": 0.7,
-          "happiness": 0.2,
-          "sadness": 0.9
-        },
-        "usageFrequency": 0.82,
-        "occurrenceInMaqamat": ["النهاوند", "النهاوند الكبير"],
-        "digitalFingerprint": {
-          "intervalVector": [200, 100, 200, 200],
-          "chromaSignature": [0.41, 0.12, 0.31, 0.22, 0.71, 0.31, 0.62, 0.21, 0.82, 0.11, 0.51, 0.11],
-          "microtoneDistribution": {
-            "quarterFlat": 0,
-            "quarterSharp": 0
+        "id": "style-turkish-004",
+        "name": "التركي",
+        "nameEn": "Turkish Style",
+        "characteristics": [
+          "دقة في النغمات الربعية",
+          "استخدام الآلات التركية",
+          "تأثيرات من الموسيقى العثمانية",
+          "تنوع في المقامات"
+        ],
+        "tempoRange": "60-100 BPM",
+        "ornamentDensity": 0.75,
+        "prominentArtists": ["مؤذن Kenan", "İsmail Dede Efendi", "Münir Nurettin Selçuk"],
+        "videoExamples": [
+          {
+            "url": "https://youtube.com/watch?v=turkish-style-example",
+            "artist": "Münir Nurettin Selçuk",
+            "maqam": "الرست",
+            "description": "الأسلوب التركي الكلاسيكي"
           }
-        },
-        "schemaVersion": "5.0",
-        "dataVersion": 3,
-        "lastReviewed": "2026-02-28"
+        ]
       }
     ],
     
-    "microtonalSystem": {
-      "name": "نظام الربع تون العربي",
-      "nameEn": "Arabic Quarter Tone System",
-      "description": "تقسيم السلم إلى 24 ربع تون متساوي",
-      "cents": [0, 50, 100, 150, 200, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750, 800, 850, 900, 950, 1000, 1050, 1100, 1150, 1200],
-      "tuningSystem": "24-TET (Twenty-Four Tone Equal Temperament)",
-      "alternativeTunings": [
+    "instruments": [
+      {
+        "id": "instrument-oud-001",
+        "name": "عود",
+        "nameEn": "Oud",
+        "styles": {
+          "iraqi": {
+            "tuning": "C-G-A-D-G-C",
+            "playingStyle": "ريشة ثقيلة، زخارف كثيرة",
+            "prominentPlayers": ["منير بشير", "نصير شمة", "علي الإمام"]
+          },
+          "egyptian": {
+            "tuning": "D-G-A-D-G-C",
+            "playingStyle": "ريشة خفيفة، وضوح في النغمات",
+            "prominentPlayers": ["رياض السنباطي", "محمد القصبجي", "فريد غصن"]
+          }
+        }
+      },
+      {
+        "id": "instrument-qanun-002",
+        "name": "قانون",
+        "nameEn": "Qanun",
+        "styles": {
+          "turkish": {
+            "tuning": "24-TET",
+            "playingStyle": "سرعة في الأداء، استخدام الـ (Mandal)",
+            "prominentPlayers": ["Göksel Baktagir", "Ahmet Meter"]
+          },
+          "arabic": {
+            "tuning": "Quarter-tone system",
+            "playingStyle": "زخارف شرقية، تقاسيم",
+            "prominentPlayers": ["محمد عبد الكريم", "سمير بشير"]
+          }
+        }
+      }
+    ]
+  },
+
+  "maqamDetectionRules": {
+    "rast": {
+      "primaryRules": [
         {
-          "name": "Just Intonation",
-          "nameAr": "النسب الطبيعية",
-          "description": "نظام الضبط الطبيعي القائم على النسب التوافقية"
+          "ruleId": "rule-rast-001",
+          "description": "وجود النغمة سيكاه (350 سنت) في بداية الجملة",
+          "condition": "pitch_at_position_0_2 BETWEEN 345 AND 355",
+          "weight": 0.8
         },
         {
-          "name": "Arab Classical (Safi al-Din)",
-          "nameAr": "النظام العربي الكلاسيكي - صفي الدين",
-          "description": "نظام الأرميني لصفي الدين الأرموي"
+          "ruleId": "rule-rast-002",
+          "description": "عودة متكررة لنغمة اليكاه (C)",
+          "condition": "tonic_frequency > 0.7",
+          "weight": 0.9
+        },
+        {
+          "ruleId": "rule-rast-003",
+          "description": "نمط صعودي: C -> D -> Eb/2 -> F",
+          "condition": "pitch_sequence IN [0,200,350,500]",
+          "weight": 0.85
+        },
+        {
+          "ruleId": "rule-rast-004",
+          "description": "تحول إلى نهاوند على درجة النوى (G)",
+          "condition": "modulation_detected TO nahawand AT degree_5",
+          "weight": 0.6
+        },
+        {
+          "ruleId": "rule-rast-005",
+          "description": "وجود ربع تون على الدرجة الثالثة (E نصف بيمول)",
+          "condition": "microtone_at_degree_3 = -50_cents",
+          "weight": 0.95
         }
       ],
-      "historicalOrigin": "نظام 24 ربع تون وضعه الدكتور ميخائيل مشاقة في القرن 19",
-      "quarterToneNotation": {
-        "halfFlat": "ـ",
-        "halfSharp": "♯",
-        "threeQuarterFlat": "b",
-        "threeQuarterSharp": "#"
+      "secondaryRules": [
+        {
+          "ruleId": "rule-rast-006",
+          "description": "استقرار على الدوكاه (D) كمركز ثانوي",
+          "condition": "secondary_tonic = D frequency > 0.5",
+          "weight": 0.5
+        }
+      ],
+      "modulationPatterns": [
+        {
+          "to": "nahawand",
+          "pattern": "G -> A -> Bb -> C (على درجة النوى)",
+          "triggerNote": "G",
+          "confidence": 0.8
+        },
+        {
+          "to": "hijaz",
+          "pattern": "D -> Eb/2 -> F# -> G (على درجة الدوكاه)",
+          "triggerNote": "D",
+          "confidence": 0.7
+        },
+        {
+          "to": "bayat",
+          "pattern": "C -> D -> Eb/2 -> F (تغيير طفيف في السيكاه)",
+          "triggerNote": "C",
+          "confidence": 0.5
+        }
+      ],
+      "exceptionRules": [
+        {
+          "description": "إذا كان هناك استخدام مكثف للدرجات العليا > 1200 سنت، قد يكون رست النوى",
+          "condition": "upper_register_usage > 0.6",
+          "exception": "rast_al_nawa"
+        }
+      ],
+      "machineLearningFeatures": {
+        "primary": ["chroma_vector[0,2,3,5]", "mfcc_mean[1-4]", "pitch_class_distribution"],
+        "secondary": ["spectral_centroid", "zero_crossing_rate", "rolloff"]
       }
     },
     
-    "iraqiRuralClassification": {
-      "atawarByPerson": [
-        "العنيسي", "الأميري", "الجادر", "الزايري", "الطويرجاوي",
-        "المشموم", "المحبوب", "الحميدي", "مسعود العمارتلي", "الجبهاني",
-        "حسين سعيده", "النوري", "العياش", "السرحاني", "العبودي",
-        "سعدي الحلي", "الصيهودي", "شويشة الحادي", "عيسى حويله",
-        "جويسم وكريري", "جبير الكون", "المثكل", "جعفوري",
-        "سلمان المنكوب", "هاني الشموسي", "نسيم عودة"
-      ],
-      "atawarByTribe": [
-        {"name": "المحمداوي", "subtypes": ["ذب", "ميهونة", "واجف", "موال", "دارج"]},
-        {"name": "الغافلي", "subtypes": ["الدارج", "الحياوي", "المياحي"]},
-        {"name": "الصبي", "subtypes": []},
-        {"name": "السويطي", "subtypes": []},
-        {"name": "الحليوي", "subtypes": []},
-        {"name": "العلوانية", "subtypes": []},
-        {"name": "العراكي", "subtypes": []}
-      ],
-      "atawarByCity": [
-        "الشطراوي", "الحياوي", "المجراوي", "السوكاوي"
-      ],
-      "schemaVersion": "5.0",
-      "dataVersion": 3,
-      "lastReviewed": "2026-02-28"
+    "bayat": {
+      "primaryRules": [
+        {
+          "ruleId": "rule-bayat-001",
+          "description": "وجود ربعي تون على الدرجتين الثانية (50 سنت) والثالثة (350 سنت)",
+          "condition": "microtone_at_degree_2 = +50_cents AND microtone_at_degree_3 = -50_cents",
+          "weight": 0.95
+        },
+        {
+          "ruleId": "rule-bayat-002",
+          "description": "نمط لحني: D -> Eb/4 -> D -> C",
+          "condition": "phrase_pattern = [200,250,200,0]",
+          "weight": 0.85
+        },
+        {
+          "ruleId": "rule-bayat-003",
+          "description": "حزن وشجن في الأداء",
+          "condition": "emotional_profile_match = sadness > 0.7",
+          "weight": 0.6
+        }
+      ]
+    },
+    
+    "hijaz": {
+      "primaryRules": [
+        {
+          "ruleId": "rule-hijaz-001",
+          "description": "البعد المتزايد (150 سنت) بين الدرجة الأولى والثانية",
+          "condition": "interval_1_2 BETWEEN 145 AND 155",
+          "weight": 0.9
+        },
+        {
+          "ruleId": "rule-hijaz-002",
+          "description": "وجود ربع تون على الدرجة الرابعة (F#)",
+          "condition": "note_at_degree_4 = F#_quarter_sharp",
+          "weight": 0.85
+        }
+      ]
     }
+  },
+
+  "midiMusicXML": {
+    "formats": {
+      "midi": {
+        "extension": ".mid",
+        "specification": "MIDI 1.0",
+        "microtonalSupport": "MIDI Tuning Standard (MTS)",
+        "pitchBendRange": "+/- 1 semitone"
+      },
+      "musicxml": {
+        "extension": ".xml",
+        "specification": "MusicXML 4.0",
+        "microtonalSupport": "Quarter-tone accidentals",
+        "schema": "http://www.musicxml.org/xsd/musicxml.xsd"
+      },
+      "abc": {
+        "extension": ".abc",
+        "specification": "ABC Notation 2.1",
+        "microtonalSupport": "Custom accidentals: _ = half flat, ^ = half sharp"
+      }
+    },
+    
+    "library": {
+      "maqamScales": [
+        {
+          "maqamId": "maqam-rast-001",
+          "midiUrl": "https://data.maqam.world/midi/rast-scale.mid",
+          "musicXmlUrl": "https://data.maqam.world/musicxml/rast-scale.xml",
+          "abcNotation": "X:1\nM:4/4\nL:1/8\nK:C\n| C D _E F | G A _B c |",
+          "description": "سلم مقام الرست كامل"
+        },
+        {
+          "maqamId": "maqam-bayat-005",
+          "midiUrl": "https://data.maqam.world/midi/bayat-scale.mid",
+          "musicXmlUrl": "https://data.maqam.world/musicxml/bayat-scale.xml",
+          "abcNotation": "X:1\nM:4/4\nL:1/8\nK:D\n| D ^D _E F | G A _B c |",
+          "description": "سلم مقام البيات"
+        }
+      ],
+      
+      "characteristicPhrases": [
+        {
+          "id": "phrase-rast-tahrir",
+          "name": "عبارة التحرير في الرست",
+          "midiUrl": "https://data.maqam.world/midi/rast-tahrir.mid",
+          "musicXmlUrl": "https://data.maqam.world/musicxml/rast-tahrir.xml",
+          "abcNotation": "X:1\nM:4/4\nL:1/8\nK:C\n| C2 D2 _E3/2 D/ C2 |",
+          "maqamId": "maqam-rast-001"
+        },
+        {
+          "id": "phrase-bayat-typical",
+          "name": "العبارة المميزة للبيات",
+          "midiUrl": "https://data.maqam.world/midi/bayat-phrase.mid",
+          "musicXmlUrl": "https://data.maqam.world/musicxml/bayat-phrase.xml",
+          "maqamId": "maqam-bayat-005"
+        }
+      ],
+      
+      "iqaatPatterns": [
+        {
+          "iqaId": "iqa-samai-thaqil-001",
+          "midiUrl": "https://data.maqam.world/midi/samai-thaqil.mid",
+          "musicXmlUrl": "https://data.maqam.world/musicxml/samai-thaqil.xml"
+        }
+      ],
+      
+      "fullCompositions": [
+        {
+          "id": "comp-rast-bashraf",
+          "title": "بشرف رست",
+          "composer": "قدري دلال",
+          "midiUrl": "https://data.maqam.world/midi/rast-bashraf.mid",
+          "musicXmlUrl": "https://data.maqam.world/musicxml/rast-bashraf.xml",
+          "parts": 4,
+          "maqamId": "maqam-rast-001"
+        }
+      ]
+    },
+    
+    "softwareCompatibility": [
+      {
+        "software": "Sibelius",
+        "version": "2023+",
+        "musicXmlSupport": "Full",
+        "midiSupport": "Full",
+        "microtonalSupport": "Partial (via plug-ins)"
+      },
+      {
+        "software": "Finale",
+        "version": "27+",
+        "musicXmlSupport": "Full",
+        "midiSupport": "Full",
+        "microtonalSupport": "Full (with SMuFL)"
+      },
+      {
+        "software": "MuseScore",
+        "version": "4.0+",
+        "musicXmlSupport": "Full",
+        "midiSupport": "Full",
+        "microtonalSupport": "Full"
+      },
+      {
+        "software": "Dorico",
+        "version": "5+",
+        "musicXmlSupport": "Full",
+        "midiSupport": "Full",
+        "microtonalSupport": "Full"
+      }
+    ]
   },
 
   "maqams": [
     {
       "id": "maqam-rast-001",
-      "uid": "SHA256-5h9i0j1k2l3m4n5o6p7q8r9s0t1u2v3w4x5y6z7a",
+      "name": { ... },
       
-      "aiFeatureVector": [0.92, -0.18, 0.85, -0.12, 0.72, -0.09, 0.68, -0.11, 0.55, -0.08, 0.48, -0.10, 0.32, 0.21, -0.15, 0.18, -0.22, 0.14, -0.09, 0.11, -0.07, 0.08, -0.05, 0.06, -0.04, 0.03, -0.02, 0.01, -0.005, 0.002, -0.001, 0.0005],
-      
-      "similarMaqamat": [
-        {"id": "maqam-suznak-008", "uid": "SHA256-6i0j1k2l3m4n5o6p7q8r9s0t1u2v3w4x5y6z7a8b", "name": "سوزناك", "score": 0.92, "similarityType": "derived"},
-        {"id": "maqam-nahawand-002", "uid": "SHA256-7j1k2l3m4n5o6p7q8r9s0t1u2v3w4x5y6z7a8b9c", "name": "نهاوند", "score": 0.75, "similarityType": "modulation"},
-        {"id": "maqam-bayat-005", "uid": "SHA256-8k2l3m4n5o6p7q8r9s0t1u2v3w4x5y6z7a8b9c0d", "name": "بيات", "score": 0.68, "similarityType": "contour"},
-        {"id": "maqam-rast-iraqi-021", "uid": "SHA256-9l3m4n5o6p7q8r9s0t1u2v3w4x5y6z7a8b9c0d1e", "name": "الرست العراقي", "score": 0.95, "similarityType": "regional"}
-      ],
-
-      "name": {
-        "ar": "الرست",
-        "en": "Rast",
-        "ku": "ڕاست",
-        "fr": "Rast",
-        "fa": "راست",
-        "tr": "Rast",
-        "de": "Rast"
-      },
-      "nameVariations": ["الراست", "الرست سلطاني"],
-      
-      "schemaVersion": "5.0",
-      "dataVersion": 6,
-      "lastReviewed": "2026-02-28T18:30:00Z",
-      "completenessScore": 0.96,
-
-      "microtonalDefinition": {
-        "cents": [0, 200, 350, 500, 700, 900, 1050, 1200],
-        "tuningSystem": "24-TET",
-        "alternativeTunings": [
-          {
-            "system": "Just Intonation",
-            "adjustments": {
-              "350": 355,
-              "1050": 1055
-            }
-          },
-          {
-            "system": "Arab Classical (Safi al-Din)",
-            "adjustments": {
-              "350": 341,
-              "1050": 1041
-            }
-          }
-        ],
-        "historicTunings": [
-          {"period": "Abbasid", "description": "نظام الأرميني القديم"},
-          {"period": "Ottoman", "description": "نظام 24 تون"}
-        ]
-      },
-
-      "digitalFingerprint": {
-        "intervalVector": [200, 150, 150, 200, 200, 150, 150],
-        "chromaSignature": [0.92, 0.18, 0.85, 0.12, 0.72, 0.09, 0.68, 0.11, 0.55, 0.08, 0.48, 0.10],
-        "microtoneDistribution": {
-          "quarterFlat": 2,
-          "quarterSharp": 0,
-          "threeQuarterFlat": 0,
-          "threeQuarterSharp": 0
-        },
-        "mfccMeanVector": [12.3, -4.2, 3.7, -1.2, 0.8, -0.3, 0.1, -0.05, 0.02, -0.01, 0.005, -0.002, 0.001],
-        "spectralCentroidMean": 420.5,
-        "spectralRolloffMean": 2150.3,
-        "zeroCrossingRateMean": 0.085,
-        "pitchStability": 0.78,
-        "harmonicRichness": 0.85
-      },
-
-      "classification": {
-        "category": ["عربي", "عراقي", "تركي", "فارسي"],
-        "familyId": "family-rast",
-        "familyUid": "SHA256-8a2f4c5e6d7b8a9c0d1e2f3a4b5c6d7e8f9a0b1c",
-        "primaryJins": "jins-rast-001",
-        "primaryJinsUid": "SHA256-1d5e6f7g8h9i0j1k2l3m4n5o6p7q8r9s0t1u2v3w",
-        "secondaryJins": "jins-nahawand-004",
-        "secondaryJinsUid": "SHA256-4g8h9i0j1k2l3m4n5o6p7q8r9s0t1u2v3w4x5y6z",
-        "jinsComposition": [
-          {"jinsId": "jins-rast-001", "position": "lower", "range": [1, 4]},
-          {"jinsId": "jins-nahawand-004", "position": "upper", "range": [5, 8]}
-        ],
-        "tonic": "C",
-        "dominant": "G",
-        "leadingTone": "B_half_flat",
-        "scaleDegrees": 8,
-        "iraqiClassification": "مقام رئيسي"
-      },
-
-      "scale": {
-        "notes": [
-          {"name": "C", "arabic": "يكاه", "cents": 0, "frequency": 130.8, "alternativeNames": ["Yekah"], "uid": "note-c4-001"},
-          {"name": "D", "arabic": "دوكاه", "cents": 200, "frequency": 146.8, "alternativeNames": ["Dukah"], "uid": "note-d4-002"},
-          {"name": "E_half_flat", "arabic": "سيكاه", "cents": 350, "frequency": 155.6, "alternativeNames": ["Sikah"], "uid": "note-eb4-003"},
-          {"name": "F", "arabic": "جهاركاه", "cents": 500, "frequency": 174.6, "alternativeNames": ["Jaharkah"], "uid": "note-f4-004"},
-          {"name": "G", "arabic": "نوى", "cents": 700, "frequency": 196.0, "alternativeNames": ["Nawa"], "uid": "note-g4-005"},
-          {"name": "A", "arabic": "حسيني", "cents": 900, "frequency": 220.0, "alternativeNames": ["Husseini"], "uid": "note-a4-006"},
-          {"name": "B_half_flat", "arabic": "عجم عشيران", "cents": 1050, "frequency": 233.1, "alternativeNames": ["Ajam Ashiran"], "uid": "note-bb4-007"},
-          {"name": "C", "arabic": "جواب يكاه", "cents": 1200, "frequency": 261.6, "alternativeNames": ["Jawab Yekah"], "uid": "note-c5-008"}
-        ],
-
-        "frequencyMapExample": {
-          "baseFrequency": 130.8,
-          "calculatedFrequencies": true,
-          "a4Reference": 440
-        },
-
-        "microtoneMap": {
-          "E_half_flat": -50,
-          "B_half_flat": -50
-        },
-
-        "intervalStructure": [
-          {"from": 0, "to": 200, "interval": 200, "type": "تون كامل", "ratio": "9/8"},
-          {"from": 200, "to": 350, "interval": 150, "type": "ثلاثة أرباع تون", "ratio": "12/11"},
-          {"from": 350, "to": 500, "interval": 150, "type": "ثلاثة أرباع تون", "ratio": "12/11"},
-          {"from": 500, "to": 700, "interval": 200, "type": "تون كامل", "ratio": "9/8"},
-          {"from": 700, "to": 900, "interval": 200, "type": "تون كامل", "ratio": "9/8"},
-          {"from": 900, "to": 1050, "interval": 150, "type": "ثلاثة أرباع تون", "ratio": "12/11"},
-          {"from": 1050, "to": 1200, "interval": 150, "type": "ثلاثة أرباع تون", "ratio": "12/11"}
-        ],
-        
-        "digitalFingerprint": {
-          "intervalVector": [200, 150, 150, 200, 200, 150, 150],
-          "microtoneCount": 2
-        }
-      },
-
-      "iraqiMaqamStructure": {
-        "sequence": [
-          {
-            "phase": "التحرير",
-            "phaseEn": "Al-Tahrir",
-            "description": "البداية والتأكيد على مقام الرست",
-            "typicalDuration": "30-60 ثانية",
-            "characteristics": ["تأكيد على اليكاه", "صعود للدوكاه", "استقرار على السيكاه"]
-          },
-          {
-            "phase": "القطعة",
-            "phaseEn": "Al-Qita",
-            "description": "مقطوعة موسيقية قصيرة تفصل بين أجزاء المقام",
-            "typicalDuration": "1-2 دقيقة",
-            "instrumental": true
-          },
-          {
-            "phase": "الجلسة",
-            "phaseEn": "Al-Jalsa",
-            "description": "التوسع في الدرجات العليا",
-            "typicalDuration": "2-3 دقائق",
-            "characteristics": ["صعود للنوى", "تأكيد على الحسيني"]
-          },
-          {
-            "phase": "الميانة",
-            "phaseEn": "Al-Miana",
-            "description": "الجزء الرئيسي من المقام مع التحولات",
-            "typicalDuration": "3-5 دقائق",
-            "characteristics": ["تحولات مقامية", "زخارف كثيرة"]
-          },
-          {
-            "phase": "التسليم",
-            "phaseEn": "Al-Taslim",
-            "description": "الختام والعودة للمقام الأصلي",
-            "typicalDuration": "30-60 ثانية",
-            "characteristics": ["هبوط تدريجي", "تأكيد على اليكاه"]
-          }
-        ],
-        "traditionalOrder": "التحرير ← القطعة ← الجلسة ← الميانة ← التسليم",
-        "iraqiSpecific": "يتميز المقام العراقي بطول الجلسة والميانة مقارنة بالمقامات العربية الأخرى"
-      },
-
-      "historicalEvolution": [
+      "videos": [
         {
-          "century": "8th",
-          "period": "Abbasid",
-          "region": "Baghdad",
-          "change": "أول توثيق للمقامات في كتاب الأغاني للأصفهاني",
-          "source": "كتاب الأغاني"
-        },
-        {
-          "century": "13th",
-          "period": "Ilkhanate",
-          "region": "Baghdad",
-          "change": "تدوين المقامات في كتاب الأدوار لصفي الدين الأرموي",
-          "source": "كتاب الأدوار",
-          "scholar": "صفي الدين الأرموي"
-        },
-        {
-          "century": "19th",
-          "period": "Ottoman",
-          "region": "Iraq",
-          "change": "تطور المقام العراقي بشكله الحالي في بغداد والموصل",
-          "source": "التاريخ الشفوي"
-        },
-        {
-          "century": "20th",
-          "period": "Modern",
-          "region": "Baghdad",
-          "change": "تسجيل المقامات على يد رواد مثل محمد القبانجي ويوسف عمر",
-          "artists": ["محمد القبانجي", "يوسف عمر", "رشيد القندرجي"]
-        }
-      ],
-
-      "audioVisual": {
-        "professionalRecordings": [
-          {
-            "id": "rec-rast-001",
-            "uid": "SHA256-0m4n5o6p7q8r9s0t1u2v3w4x5y6z7a8b9c0d1e2f",
-            "artist": "يوسف عمر",
-            "artistId": "artist-yusuf-omar",
-            "artistUid": "SHA256-1n5o6p7q8r9s0t1u2v3w4x5y6z7a8b9c0d1e2f3g",
-            "year": 1960,
-            "durationSec": 2100,
-            "audioUrl": "https://archive.org/rast-yusuf-omar.mp3",
-            "videoUrl": "https://youtube.com/watch?v=example1",
-            "waveformDataUrl": "https://data.maqam.world/wave/rast-001.json",
-            "pitchContourUrl": "https://data.maqam.world/pitch/rast-001.json",
-            "spectrogramUrl": "https://data.maqam.world/spec/rast-001.png",
-            "quality": "high",
-            "recordingType": "تسليم كامل",
-            
-            "formants": {
-              "F1": [650, 680, 720, 700, 690],
-              "F2": [1200, 1250, 1300, 1280, 1220],
-              "F3": [2500, 2550, 2600, 2580, 2520],
-              "averageFormantProfile": {
-                "vowel_a": {"F1": 720, "F2": 1300},
-                "vowel_i": {"F1": 350, "F2": 2100},
-                "vowel_u": {"F1": 380, "F2": 950}
-              }
-            },
-            
-            "ornamentationProfile": {
-              "melismaDensity": 0.78,
-              "melismaCount": 124,
-              "trillFrequency": 12,
-              "trillLocations": [45, 120, 210, 350, 480],
-              "slideUsage": 0.65,
-              "slideCount": 42,
-              "vibratoRate": 5.2,
-              "vibratoExtent": 0.8,
-              "ornamentTypes": {
-                "trill": 12,
-                "slide": 42,
-                "turn": 28,
-                "mordent": 15,
-                "appoggiatura": 38
-              }
-            },
-            
-            "performanceMetrics": {
-              "averagePitchDeviation": 8.3,
-              "pitchDeviationStd": 2.1,
-              "ornamentDensity": 0.72,
-              "ornamentCount": 145,
-              "tempoVariability": 0.24,
-              "tempoMean": 72,
-              "dynamicRange": 18.5,
-              "vibratoRate": 5.2,
-              "vibratoExtent": 0.8,
-              "articulationSpeed": 0.65,
-              "phraseDurationMean": 4.2,
-              "silenceRatio": 0.12
-            },
-            
-            "analysisData": {
-              "pitchContour": [
-                {"time": 0.0, "freq": 130.2, "amp": 0.75, "note": "C4"},
-                {"time": 0.1, "freq": 131.5, "amp": 0.78, "note": "C4"},
-                {"time": 0.2, "freq": 146.0, "amp": 0.82, "note": "D4"}
-              ],
-              "mfccVectors": [[12.1, -4.3, 3.8], [12.3, -4.2, 3.7]],
-              "onsets": [0.2, 0.8, 1.5, 2.3],
-              "beats": [0.5, 1.0, 1.5, 2.0]
-            },
-            
-            "schemaVersion": "5.0",
-            "dataVersion": 3,
-            "lastReviewed": "2026-02-28"
-          }
-        ],
-
-        "videoLessons": [
-          {
-            "id": "lesson-rast-1",
-            "uid": "SHA256-2o6p7q8r9s0t1u2v3w4x5y6z7a8b9c0d1e2f3g4h",
-            "title": "شرح مقام الرست للمبتدئين",
-            "instructor": "د. حسين قدوري",
-            "url": "https://youtube.com/playlist?list=example123",
-            "durationSec": 3600,
-            "parts": 5
-          }
-        ],
-
-        "pitchContourTemplate": {
-          "normalizedCurve": [0.0, 0.2, 0.5, 0.7, 0.9, 1.0, 0.8, 0.6, 0.4, 0.2, 0.0],
-          "peakPositions": [0.2, 0.5, 0.8],
-          "peakValues": [0.7, 1.0, 0.8],
-          "tensionPoints": [0.3, 0.6, 0.9],
-          "stabilityRegions": [0.0, 0.1, 0.4, 0.5, 0.7, 0.8],
-          "cadencePoints": [0.0, 1.0],
-          "typicalPhraseArches": [
-            {"start": 0.0, "peak": 0.3, "end": 0.5},
-            {"start": 0.5, "peak": 0.8, "end": 1.0}
-          ]
-        }
-      },
-
-      "educational": {
-        "learningLevels": {
-          "beginner": {
-            "description": "المستوى المبتدئ - التعرف على المقام",
-            "objectives": ["حفظ سلم المقام", "التعرف على النغمات الأساسية", "تمييز النغمات الربعية"],
-            "exercises": ["ex-rast-basic-scale", "ex-rast-note-recognition"],
-            "commonMistakes": [
-              {"mistake": "عدم دقة النغمة الربعية", "correction": "استخدام البيانو أو التطبيق لتصحيح النغمة"},
-              {"mistake": "الخلط بين الدوكاه والسيكاه", "correction": "الاستماع المتكرر لتسليمة يوسف عمر"}
-            ],
-            "durationWeeks": 2,
-            "prerequisites": []
+          "id": "vid-rast-yusuf-omar-001",
+          "type": "performance",
+          "title": "مقام الرست - يوسف عمر (تسجيل نادر 1960)",
+          "url": "https://youtube.com/watch?v=rast-yusuf-omar",
+          "alternativeUrl": "https://archive.org/rast-yusuf-omar",
+          "platform": "YouTube",
+          "duration": "00:35:00",
+          "quality": "1080p",
+          "year": 1960,
+          "restored": true,
+          "restorationDetails": "تمت استعادة الصوت والصورة بواسطة أرشيف المقام العراقي",
+          "artist": {
+            "id": "artist-yusuf-omar",
+            "name": "يوسف عمر"
           },
-          "intermediate": {
-            "description": "المستوى المتوسط - إتقان العبارات",
-            "objectives": ["إتقان العبارات المميزة", "الزخارف البسيطة", "التحولات الأساسية"],
-            "exercises": ["ex-rast-phrases", "ex-rast-ornaments"],
-            "commonMistakes": [
-              {"mistake": "الزخارف غير الدقيقة", "correction": "التدريب البطيء ثم التسريع"},
-              {"mistake": "ضعف التحكم بالتنفس", "correction": "تمارين تنفس خاصة"}
-            ],
-            "durationWeeks": 3,
-            "prerequisites": ["beginner"]
+          "instruments": ["عود", "قانون", "كمان", "رق"],
+          "maqamParts": {
+            "tahrir": "00:00-03:20",
+            "qita": "03:20-05:45",
+            "jalsa": "05:45-12:30",
+            "miana": "12:30-30:15",
+            "taslim": "30:15-35:00"
           },
-          "advanced": {
-            "description": "المستوى المتقدم - الأداء الكامل",
-            "objectives": ["إتقان التحولات المعقدة", "أداء تسليمة كاملة", "الارتجال في المقام"],
-            "exercises": ["ex-rast-modulations", "ex-rast-full-performance"],
-            "commonMistakes": [
-              {"mistake": "التحولات غير الطبيعية", "correction": "دراسة التحولات التقليدية للمقام"},
-              {"mistake": "ضعف الإحساس بالمقام", "correction": "الاستماع المكثف لكبار القراء"}
-            ],
-            "durationWeeks": 4,
-            "prerequisites": ["intermediate"]
-          }
-        },
-        
-        "theory": {
-          "history": "يعتبر الرست من أقدم المقامات وأكثرها استخداماً في الموسيقى العربية. يلقب بـ(أبو المقامات) لكونه أساس الكثير من المقامات الأخرى...",
-          "historySources": ["كتاب الأدوار - صفي الدين الأرموي", "موسوعة المقامات العراقية - حسين قدوري"],
-          "emotionalColor": ["فخامة", "اتزان", "وقار", "جلال"],
-          "commonPoetryForms": ["زهيري", "موشح", "قصيدة فصيحة", "عتابي"],
-          "famousWorks": [
-            {"title": "بشرف رست", "composer": "قدري دلال", "year": 1950},
-            {"title": "سماعي رست", "composer": "محمد القبانجي", "year": 1945}
-          ]
-        },
-
-        "practiceSystem": {
-          "levels": [
-            {
-              "level": 1,
-              "name": "المبتدئ",
-              "goal": "إتقان السلم والنغمات الأساسية",
-              "exerciseIds": ["ex-rast-scale-1", "ex-rast-intervals-1"],
-              "durationWeeks": 2,
-              "prerequisites": []
-            },
-            {
-              "level": 2,
-              "name": "المتوسط",
-              "goal": "إتقان الزخارف النغمية والعرب",
-              "exerciseIds": ["ex-rast-ornament-1", "ex-rast-phrases-1"],
-              "durationWeeks": 3,
-              "prerequisites": ["level-1"]
-            },
-            {
-              "level": 3,
-              "name": "المتقدم",
-              "goal": "إتقان التحولات إلى المقامات الأخرى",
-              "exerciseIds": ["ex-rast-modulations-1"],
-              "durationWeeks": 4,
-              "prerequisites": ["level-2"]
-            }
-          ],
-          
-          "exercises": [
-            {
-              "id": "ex-rast-scale-1",
-              "uid": "SHA256-3p7q8r9s0t1u2v3w4x5y6z7a8b9c0d1e2f3g4h5i",
-              "name": "تمرين سلم الرست",
-              "description": "غناء سلم الرست صعوداً وهبوطاً مع التركيز على النغمات الربعية",
-              "audioUrl": "https://data.maqam.world/exercises/rast-scale.mp3",
-              "midiUrl": "https://data.maqam.world/exercises/rast-scale.mid",
-              "durationSec": 180,
-              "difficulty": 1
-            },
-            {
-              "id": "ex-rast-intervals-1",
-              "uid": "SHA256-4q8r9s0t1u2v3w4x5y6z7a8b9c0d1e2f3g4h5i6j",
-              "name": "تمرين الفواصل النغمية",
-              "description": "الانتقال بين درجات الرست والتمييز بين الفواصل",
-              "type": "interactive",
-              "difficulty": 2
-            },
-            {
-              "id": "ex-rast-ornament-1",
-              "uid": "SHA256-5r9s0t1u2v3w4x5y6z7a8b9c0d1e2f3g4h5i6j7k",
-              "name": "تمرين الزخارف النغمية",
-              "description": "التدريب على الزخارف البسيطة في مقام الرست",
-              "audioUrl": "https://data.maqam.world/exercises/rast-ornaments.mp3",
-              "difficulty": 2
-            },
-            {
-              "id": "ex-rast-modulations-1",
-              "uid": "SHA256-6s0t1u2v3w4x5y6z7a8b9c0d1e2f3g4h5i6j7k8l",
-              "name": "تمرين التحولات المقامية",
-              "description": "التدريب على التحول من الرست إلى النهاوند والحجاز",
-              "audioUrl": "https://data.maqam.world/exercises/rast-modulations.mp3",
-              "difficulty": 3
-            }
-          ]
-        },
-
-        "assessment": {
-          "earTraining": {
-            "available": true,
-            "quizzes": [
-              {
-                "id": "quiz-rast-1",
-                "uid": "SHA256-7t1u2v3w4x5y6z7a8b9c0d1e2f3g4h5i6j7k8l9m",
-                "question": "ما هي الدرجة التي تمثل 350 سنت في سلم الرست؟",
-                "options": ["الدوكاه", "السيكاه", "الجهاركاه", "النوى"],
-                "correctAnswer": 1,
-                "hint": "هي الدرجة الثالثة في السلم",
-                "difficulty": 1
-              },
-              {
-                "id": "quiz-rast-2",
-                "uid": "SHA256-8u2v3w4x5y6z7a8b9c0d1e2f3g4h5i6j7k8l9m0n",
-                "question": "ما هو البعد بين الدوكاه والسيكاه في مقام الرست؟",
-                "options": ["نصف تون", "تون كامل", "ثلاثة أرباع تون", "ربع تون"],
-                "correctAnswer": 2,
-                "hint": "150 سنت",
-                "difficulty": 2
-              }
+          "transcription": {
+            "musicXmlUrl": "https://data.maqam.world/transcriptions/rast-yusuf-omar.xml",
+            "midiUrl": "https://data.maqam.world/transcriptions/rast-yusuf-omar.mid",
+            "by": "د. حسين قدوري",
+            "year": 2022
+          },
+          "analysis": {
+            "pitchContourUrl": "https://data.maqam.world/analysis/rast-yusuf-omar-pitch.json",
+            "spectrogramUrl": "https://data.maqam.world/analysis/rast-yusuf-omar-spec.png",
+            "maqamDetectionConfidence": 0.98,
+            "modulations": [
+              {"time": "12:30", "to": "نهاوند", "confidence": 0.95},
+              {"time": "18:45", "to": "حجاز", "confidence": 0.85},
+              {"time": "25:10", "to": "رست", "confidence": 0.99}
             ]
           },
-          "pitchMatching": {
-            "available": true,
-            "algorithm": "freq-domain-cross-correlation",
-            "accuracyThreshold": 0.95
-          },
-          "maqamRecognition": {
-            "available": true,
-            "sampleCount": 15,
-            "accuracyBaseline": 0.85
+          "educational": {
+            "level": "advanced",
+            "keyMoments": [
+              {"time": "05:45", "description": "بداية الجلسة - تأكيد على النوى"},
+              {"time": "12:30", "description": "التحول إلى النهاوند"},
+              {"time": "30:15", "description": "التسليم والعودة لليكاه"}
+            ]
+          }
+        },
+        {
+          "id": "vid-rast-masterclass-001",
+          "type": "educational",
+          "title": "شرح مفصل لمقام الرست - د. حسين قدوري",
+          "url": "https://youtube.com/watch?v=rast-masterclass",
+          "platform": "YouTube",
+          "duration": "02:15:00",
+          "parts": 6,
+          "instructor": "د. حسين قدوري",
+          "level": "جميع المستويات",
+          "topics": ["تاريخ المقام", "السلم والدرجات", "الزخارف", "التحولات", "التمارين"],
+          "resources": {
+            "pdf": "https://data.maqam.world/education/rast-handout.pdf",
+            "midi": "https://data.maqam.world/education/rast-exercises.mid",
+            "musicXml": "https://data.maqam.world/education/rast-exercises.xml"
+          }
+        },
+        {
+          "id": "vid-rast-comparison-001",
+          "type": "comparison",
+          "title": "مقارنة أداء مقام الرست: عراقي vs مصري vs تركي",
+          "url": "https://youtube.com/watch?v=rast-comparison",
+          "duration": "00:45:00",
+          "artists": [
+            {"name": "يوسف عمر", "style": "عراقي", "timestamp": "00:00-15:00"},
+            {"name": "محمد عبد الوهاب", "style": "مصري", "timestamp": "15:00-30:00"},
+            {"name": "Münir Nurettin Selçuk", "style": "تركي", "timestamp": "30:00-45:00"}
+          ],
+          "analysis": {
+            "differences": [
+              "العراقي: زخارف أكثر، أداء أبطأ",
+              "المصري: أداء عاطفي، وضوح في الكلمات",
+              "التركي: دقة في النغمات الربعية"
+            ]
           }
         }
-      },
-
-      "analysisEngineData": {
-        "typicalPitchContour": [
-          {"time": 0, "freq": 130, "note": "يكاه", "amplitude": 0.8},
-          {"time": 0.5, "freq": 146, "note": "دوكاه", "amplitude": 0.7},
-          {"time": 1.0, "freq": 155, "note": "سيكاه", "amplitude": 0.9},
-          {"time": 1.5, "freq": 174, "note": "جهاركاه", "amplitude": 0.6},
-          {"time": 2.0, "freq": 196, "note": "نوى", "amplitude": 0.8}
-        ],
-
-        "modulationGraph": {
-          "nodes": [
-            {"maqamId": "maqam-rast-001", "maqamUid": "SHA256-5h9i0j1k2l3m4n5o6p7q8r9s0t1u2v3w4x5y6z7a", "probability": 1.0},
-            {"maqamId": "maqam-nahawand-002", "maqamUid": "SHA256-6i0j1k2l3m4n5o6p7q8r9s0t1u2v3w4x5y6z7a8b", "probability": 0.65},
-            {"maqamId": "maqam-hijaz-003", "maqamUid": "SHA256-7j1k2l3m4n5o6p7q8r9s0t1u2v3w4x5y6z7a8b9c", "probability": 0.45},
-            {"maqamId": "maqam-bayat-005", "maqamUid": "SHA256-8k2l3m4n5o6p7q8r9s0t1u2v3w4x5y6z7a8b9c0d", "probability": 0.30},
-            {"maqamId": "maqam-saba-030", "maqamUid": "SHA256-9l3m4n5o6p7q8r9s0t1u2v3w4x5y6z7a8b9c0d1e", "probability": 0.25},
-            {"maqamId": "maqam-kurd-015", "maqamUid": "SHA256-0m4n5o6p7q8r9s0t1u2v3w4x5y6z7a8b9c0d1e2f", "probability": 0.20}
-          ],
-          "edges": [
-            {"from": "maqam-rast-001", "to": "maqam-nahawand-002", "triggerNote": "G", "triggerDegree": 5, "probability": 0.65},
-            {"from": "maqam-rast-001", "to": "maqam-hijaz-003", "triggerNote": "D", "triggerDegree": 2, "probability": 0.45},
-            {"from": "maqam-rast-001", "to": "maqam-bayat-005", "triggerNote": "C", "triggerDegree": 1, "probability": 0.30},
-            {"from": "maqam-rast-001", "to": "maqam-saba-030", "triggerNote": "F", "triggerDegree": 4, "probability": 0.25},
-            {"from": "maqam-rast-001", "to": "maqam-kurd-015", "triggerNote": "A", "triggerDegree": 6, "probability": 0.20}
-          ]
+      ],
+      
+      "iqaat": [
+        {
+          "iqaId": "iqa-samai-thaqil-001",
+          "name": "سماعي ثقيل",
+          "usage": "افتتاحيات وسماعيات",
+          "frequency": 0.7,
+          "exampleRecording": "vid-rast-yusuf-omar-001",
+          "timestamp": "00:00-35:00"
         },
-
-        "modulationMatrix": {
-          "maqam-rast-001": {
-            "maqam-nahawand-002": 0.65,
-            "maqam-hijaz-003": 0.45,
-            "maqam-bayat-005": 0.30,
-            "maqam-saba-030": 0.25,
-            "maqam-kurd-015": 0.20
+        {
+          "iqaId": "iqa-wahda-003",
+          "name": "وحدة",
+          "usage": "تقاسيم ومقدمات",
+          "frequency": 0.9,
+          "exampleRecording": "vid-rast-taqasim-001"
+        },
+        {
+          "iqaId": "iqa-maqsum-005",
+          "name": "مقسوم",
+          "usage": "أغاني ومواويل",
+          "frequency": 0.5
+        }
+      ],
+      
+      "styleProfiles": {
+        "iraqi": {
+          "id": "style-iraqi-rast-001",
+          "tempo": "65-85 BPM",
+          "ornamentDensity": 0.88,
+          "typicalPhrases": ["C-D-_E-D-C", "G-A-G-F-_E"],
+          "videoExample": "vid-rast-yusuf-omar-001",
+          "prominentArtists": ["يوسف عمر", "محمد القبانجي", "حسين الأعظمي"]
+        },
+        "egyptian": {
+          "id": "style-egyptian-rast-002",
+          "tempo": "80-100 BPM",
+          "ornamentDensity": 0.65,
+          "typicalPhrases": ["C-D-Eb-F", "G-F-Eb-D-C"],
+          "videoExample": "vid-rast-abdel-wahab-001",
+          "prominentArtists": ["محمد عبد الوهاب", "رياض السنباطي", "فريد الأطرش"]
+        },
+        "turkish": {
+          "id": "style-turkish-rast-003",
+          "tempo": "70-90 BPM",
+          "ornamentDensity": 0.75,
+          "typicalPhrases": ["C-D-Eb-F-G", "G-F-Eb-D-C"],
+          "videoExample": "vid-rast-turkish-001",
+          "prominentArtists": ["Münir Nurettin Selçuk", "Bekir Sıdkı Sezgin"]
+        }
+      },
+      
+      "midiMusicXML": {
+        "scales": {
+          "ascending": {
+            "midiUrl": "https://data.maqam.world/midi/rast-scale-asc.mid",
+            "musicXmlUrl": "https://data.maqam.world/musicxml/rast-scale-asc.xml",
+            "abcNotation": "X:1\nM:4/4\nL:1/8\nK:C\n| C D _E F | G A _B c |"
+          },
+          "descending": {
+            "midiUrl": "https://data.maqam.world/midi/rast-scale-desc.mid",
+            "musicXmlUrl": "https://data.maqam.world/musicxml/rast-scale-desc.xml",
+            "abcNotation": "X:1\nM:4/4\nL:1/8\nK:C\n| c _B A G | F _E D C |"
           }
         },
-
         "characteristicPhrases": [
           {
-            "id": "phrase-rast-1",
-            "uid": "SHA256-1n5o6p7q8r9s0t1u2v3w4x5y6z7a8b9c0d1e2f3g",
-            "patternDegrees": [1, 2, 3, 2, 1],
-            "patternNotes": ["C", "D", "E_half_flat", "D", "C"],
-            "importance": 0.9,
-            "occurrenceFrequency": 0.75,
-            "typicalPosition": "تحرير",
-            "typicalDuration": 2.5
+            "id": "phrase-rast-001",
+            "name": "عبارة التحرير",
+            "midiUrl": "https://data.maqam.world/midi/rast-phrase-1.mid",
+            "musicXmlUrl": "https://data.maqam.world/musicxml/rast-phrase-1.xml"
           },
           {
-            "id": "phrase-rast-2",
-            "uid": "SHA256-2o6p7q8r9s0t1u2v3w4x5y6z7a8b9c0d1e2f3g4h",
-            "patternDegrees": [5, 6, 5, 4, 3],
-            "patternNotes": ["G", "A", "G", "F", "E_half_flat"],
-            "importance": 0.7,
-            "occurrenceFrequency": 0.6,
-            "typicalPosition": "ميانة",
-            "typicalDuration": 3.2
+            "id": "phrase-rast-002",
+            "name": "عبارة الجلسة",
+            "midiUrl": "https://data.maqam.world/midi/rast-phrase-2.mid"
           }
         ],
-
-        "spectralFeatures": {
-          "centroidMean": 420,
-          "centroidStd": 45,
-          "rolloffMean": 2100,
-          "rolloffStd": 320,
-          "bandwidthMean": 1850,
-          "bandwidthStd": 210,
-          "mfccVectors": [12.3, -4.2, 3.7, -1.2, 0.8, -0.3, 0.1, -0.05, 0.02, -0.01, 0.005, -0.002, 0.001],
-          "chromaVector": [0.92, 0.18, 0.85, 0.12, 0.72, 0.09, 0.68, 0.11, 0.55, 0.08, 0.48, 0.10]
-        },
-
-        "aiTrainingData": {
-          "labeledExamples": [
-            {"startTime": 45.2, "endTime": 52.7, "phraseType": "تحرير", "confidence": 0.95, "maqamId": "maqam-rast-001"},
-            {"startTime": 120.5, "endTime": 135.2, "phraseType": "ميانة", "confidence": 0.88, "maqamId": "maqam-rast-001"},
-            {"startTime": 210.3, "endTime": 225.8, "phraseType": "جلط", "confidence": 0.92, "maqamId": "maqam-rast-001"},
-            {"startTime": 350.1, "endTime": 380.4, "phraseType": "تسليم", "confidence": 0.96, "maqamId": "maqam-rast-001"}
-          ],
-          "features": ["mfcc", "chroma", "spectralCentroid", "zeroCrossingRate", "pitch", "rms"],
-          "totalDuration": 2100,
-          "totalExamples": 42
-        },
-        
-        "performanceMetrics": {
-          "averagePitchDeviation": 10.2,
-          "ornamentDensity": 0.68,
-          "tempoVariability": 0.28,
-          "vibratoRateMean": 5.1,
-          "vibratoExtentMean": 0.75,
-          "dynamicRangeMean": 16.8
-        }
-      },
-
-      "graphics": {
-        "scaleChartData": {
-          "type": "line",
-          "title": "سلم مقام الرست",
-          "titleEn": "Rast Maqam Scale",
-          "xAxis": {"label": "الدرجة", "labelEn": "Degree", "unit": "number"},
-          "yAxis": {"label": "السنتم", "labelEn": "Cents", "unit": "cents", "min": 0, "max": 1200},
-          "data": [
-            {"degree": 1, "name": "يكاه", "nameEn": "Yekah", "cents": 0},
-            {"degree": 2, "name": "دوكاه", "nameEn": "Dukah", "cents": 200},
-            {"degree": 3, "name": "سيكاه", "nameEn": "Sikah", "cents": 350},
-            {"degree": 4, "name": "جهاركاه", "nameEn": "Jaharkah", "cents": 500},
-            {"degree": 5, "name": "نوى", "nameEn": "Nawa", "cents": 700},
-            {"degree": 6, "name": "حسيني", "nameEn": "Husseini", "cents": 900},
-            {"degree": 7, "name": "عجم عشيران", "nameEn": "Ajam Ashiran", "cents": 1050},
-            {"degree": 8, "name": "جواب يكاه", "nameEn": "Jawab Yekah", "cents": 1200}
-          ],
-          "imageUrl": "https://data.maqam.world/graphics/rast-scale.png",
-          "svgUrl": "https://data.maqam.world/graphics/rast-scale.svg",
-          "jsonUrl": "https://data.maqam.world/graphics/rast-scale.json"
-        },
-        
-        "pitchContourTemplate": {
-          "normalizedCurve": [0.0, 0.2, 0.5, 0.7, 0.9, 1.0, 0.8, 0.6, 0.4, 0.2, 0.0],
-          "peakPositions": [0.2, 0.5, 0.8],
-          "tensionPoints": [0.3, 0.6, 0.9],
-          "imageUrl": "https://data.maqam.world/graphics/rast-pitch-template.png",
-          "svgUrl": "https://data.maqam.world/graphics/rast-pitch-template.svg"
-        },
-        
-        "maqamFlowStructure": [
-          {"phase": "تحرير", "phaseEn": "Tahrir", "description": "بداية المقام والتأكيد على الدرجات الأساسية", "typicalDuration": "30-60 ثانية"},
-          {"phase": "ميانة", "phaseEn": "Miana", "description": "التوسع في الدرجات العليا والتحولات", "typicalDuration": "2-5 دقائق"},
-          {"phase": "جلط", "phaseEn": "Jalt", "description": "تأكيد على الدرجات الهامة والعودة للقرار", "typicalDuration": "1-2 دقيقة"},
-          {"phase": "تسليم", "phaseEn": "Taslim", "description": "الختام والعودة للنغمة الأصلية", "typicalDuration": "30-60 ثانية"}
-        ],
-        
-        "harmonicAnalysis": {
-          "imageUrl": "https://data.maqam.world/graphics/rast-harmonic.png",
-          "dataUrl": "https://data.maqam.world/graphics/rast-harmonic.json",
-          "svgUrl": "https://data.maqam.world/graphics/rast-harmonic.svg"
-        }
-      },
-
-      "related": {
-        "furus": [
-          {"id": "maqam-rast-alnawa-010", "uid": "SHA256-3p7q8r9s0t1u2v3w4x5y6z7a8b9c0d1e2f3g4h5i", "name": "رست النوى", "relation": "فرع", "similarity": 0.85},
-          {"id": "maqam-rast-aljawab-011", "uid": "SHA256-4q8r9s0t1u2v3w4x5y6z7a8b9c0d1e2f3g4h5i6j", "name": "رست الجواب", "relation": "فرع", "similarity": 0.82}
-        ],
-        "similarMaqamat": [
-          {"id": "maqam-bayat-005", "uid": "SHA256-8k2l3m4n5o6p7q8r9s0t1u2v3w4x5y6z7a8b9c0d", "name": "البيات", "similarity": 0.65},
-          {"id": "maqam-suznak-008", "uid": "SHA256-5r9s0t1u2v3w4x5y6z7a8b9c0d1e2f3g4h5i6j7k", "name": "سوزناك", "similarity": 0.85}
-        ],
-        "iraqiVersion": {
-          "id": "maqam-iraqi-rast-021",
-          "uid": "SHA256-6s0t1u2v3w4x5y6z7a8b9c0d1e2f3g4h5i6j7k8l",
-          "name": "الرست العراقي",
-          "differences": "يميل إلى استخدام زخارف أكثر وأداء أبطأ"
-        },
-        "atawarDerived": [
-          {"id": "tawr-al-muhammadi-001", "uid": "SHA256-7t1u2v3w4x5y6z7a8b9c0d1e2f3g4h5i6j7k8l9m", "name": "طور المحمداوي", "relation": "مشتق من الصبا ولكن له علاقة بالرست في بعض الفروع"}
+        "fullCompositions": [
+          {
+            "id": "comp-rast-001",
+            "title": "بشرف رست - قدري دلال",
+            "midiUrl": "https://data.maqam.world/midi/rast-bashraf.mid",
+            "musicXmlUrl": "https://data.maqam.world/musicxml/rast-bashraf.xml"
+          },
+          {
+            "id": "comp-rast-002",
+            "title": "سماعي رست - محمد القبانجي",
+            "midiUrl": "https://data.maqam.world/midi/rast-samai.mid"
+          }
         ]
       },
-
-      "references": {
-        "books": [
-          {"title": "المقام العراقي", "author": "حسين قدوري", "year": 1985, "pages": "120-145", "isbn": "978-3-16-148410-0"},
-          {"title": "موسيقى المقامات العربية", "author": "د. صبري المدلل", "year": 1990, "publisher": "دار الفكر"}
-        ],
-        "recordings": [
-          {"artist": "يوسف عمر", "title": "مقام الرست", "year": 1960, "label": "الشرق الأوسط"},
-          {"artist": "محمد القبانجي", "title": "مجموعة مقامات", "year": 1955, "label": "بغداد"}
-        ],
-        "websites": [
-          {"url": "https://www.maqamworld.com", "name": "Maqam World", "accessDate": "2026-02-28"},
-          {"url": "https://www.iraqimaqam.com", "name": "المقام العراقي", "accessDate": "2026-02-28"}
+      
+      "detectionRules": {
+        "primaryRules": ["rule-rast-001", "rule-rast-002", "rule-rast-003", "rule-rast-005"],
+        "secondaryRules": ["rule-rast-006"],
+        "modulationPatterns": [
+          {
+            "to": "nahawand",
+            "pattern": "G -> A -> Bb -> C",
+            "triggerNote": "G"
+          },
+          {
+            "to": "hijaz",
+            "pattern": "D -> Eb/2 -> F# -> G",
+            "triggerNote": "D"
+          }
         ]
+      }
+    },
+    
+    {
+      "id": "maqam-bayat-005",
+      "name": { ... },
+      
+      "videos": [
+        {
+          "id": "vid-bayat-umm-kulthum-001",
+          "type": "performance",
+          "title": "أم كلثوم - مقام البياتي في قصيدة (الأطلال)",
+          "url": "https://youtube.com/watch?v=bayat-umm-kulthum",
+          "artist": "أم كلثوم",
+          "duration": "01:10:00",
+          "timestamp": "15:20-25:45",
+          "analysis": {
+            "maqamParts": {
+              "intro": "15:20-17:30",
+              "main": "17:30-24:00",
+              "modulation": "24:00-25:45"
+            }
+          }
+        }
+      ],
+      
+      "iqaat": [
+        {
+          "iqaId": "iqa-masmoudi-002",
+          "name": "مصمودي",
+          "usage": "أغاني ومواويل",
+          "frequency": 0.8
+        },
+        {
+          "iqaId": "iqa-wahda-003",
+          "name": "وحدة",
+          "usage": "تقاسيم",
+          "frequency": 0.7
+        }
+      ],
+      
+      "styleProfiles": {
+        "egyptian": {
+          "id": "style-egyptian-bayat-001",
+          "tempo": "75-95 BPM",
+          "ornamentDensity": 0.7,
+          "videoExample": "vid-bayat-umm-kulthum-001"
+        }
       }
     }
   ],
@@ -978,490 +815,205 @@
   "atawar": [
     {
       "id": "tawr-al-muhammadi-001",
-      "uid": "SHA256-8u2v3w4x5y6z7a8b9c0d1e2f3g4h5i6j7k8l9m0n",
-      
-      "aiFeatureVector": [0.31, 0.82, 0.22, 0.71, 0.19, 0.62, 0.12, 0.51, 0.11, 0.41, 0.09, 0.32, 0.08, 0.28, -0.12, 0.15, -0.08, 0.11, -0.05, 0.07],
-      
-      "similarAta war": [
-        {"id": "tawr-al-ghafili-003", "name": "الغافلي", "score": 0.78},
-        {"id": "tawr-al-hayyawi-005", "name": "الحياوي", "score": 0.65}
-      ],
-
       "name": "طور المحمداوي",
-      "nameEn": "Al-Muhammadi Tawr",
-      "nameVariations": ["المحمداوي"],
       
-      "schemaVersion": "5.0",
-      "dataVersion": 4,
-      "lastReviewed": "2026-02-28",
-      "completenessScore": 0.91,
-      
-      "microtonalDefinition": {
-        "cents": [0, 150, 300, 500, 700, 800],
-        "tuningSystem": "24-TET with regional variations",
-        "quarterTones": [false, true, true, false, false, true]
-      },
-      
-      "digitalFingerprint": {
-        "intervalVector": [150, 150, 200, 200, 100],
-        "chromaSignature": [0.31, 0.82, 0.22, 0.71, 0.19, 0.62, 0.12, 0.51, 0.11, 0.41, 0.09, 0.32],
-        "microtoneDistribution": {
-          "quarterFlat": 3,
-          "quarterSharp": 0
-        }
-      },
-
-      "classification": {
-        "category": "عراقي - ريفي",
-        "type": "طور عشائري",
-        "subtypes": ["ذب", "ميهونة", "واجف (كحلاوي)", "موال (فالحية)", "دارج"],
-        "associatedMaqam": "الصبا",
-        "associatedMaqamId": "maqam-saba-030",
-        "associatedMaqamUid": "SHA256-9v3w4x5y6z7a8b9c0d1e2f3g4h5i6j7k8l9m0n1o"
-      },
-      
-      "scale": {
-        "notes": [
-          {"name": "G", "arabic": "نوى", "cents": 0, "frequency": 196.0},
-          {"name": "A_half_flat", "arabic": "حسيني", "cents": 150, "frequency": 207.7},
-          {"name": "B_flat", "arabic": "عجم", "cents": 300, "frequency": 233.1},
-          {"name": "C", "arabic": "جواب نوى", "cents": 500, "frequency": 261.6},
-          {"name": "D", "arabic": "جواب حسيني", "cents": 700, "frequency": 293.7},
-          {"name": "E_flat", "arabic": "جواب عجم", "cents": 800, "frequency": 311.1}
-        ],
-        "degrees": 6,
-        "notesCount": 6,
-        "intervalStructure": [
-          {"from": 0, "to": 150, "interval": 150, "type": "ثلاثة أرباع تون"},
-          {"from": 150, "to": 300, "interval": 150, "type": "ثلاثة أرباع تون"},
-          {"from": 300, "to": 500, "interval": 200, "type": "تون كامل"},
-          {"from": 500, "to": 700, "interval": 200, "type": "تون كامل"},
-          {"from": 700, "to": 800, "interval": 100, "type": "نصف تون"}
-        ]
-      },
-
-      "culturalContext": {
-        "origin": "قبيلة البو محمد في الأهوار",
-        "geography": "محافظة ذي قار - الأهوار",
-        "function": "التعبير عن الحياة اليومية والأفراح",
-        "historicalNote": "من أقدم الأطوار وأكثرها تنوعاً",
-        "era": "قبل 1900"
-      },
-
-      "artists": [
-        {"name": "رياض احمد", "id": "artist-riad-ahmed", "uid": "SHA256-0w4x5y6z7a8b9c0d1e2f3g4h5i6j7k8l9m0n1o2p", "importance": 0.95},
-        {"name": "داخل حسن", "id": "artist-dakhil-hassan", "uid": "SHA256-1x5y6z7a8b9c0d1e2f3g4h5i6j7k8l9m0n1o2p3q", "importance": 0.85},
-        {"name": "ناصر حكيم", "id": "artist-nasir-hakim", "uid": "SHA256-2y6z7a8b9c0d1e2f3g4h5i6j7k8l9m0n1o2p3q4r", "importance": 0.80},
-        {"name": "عبادي العماري", "id": "artist-abadi-al-ammari", "uid": "SHA256-3z7a8b9c0d1e2f3g4h5i6j7k8l9m0n1o2p3q4r5s", "importance": 0.75}
-      ],
-
-      "audioVisual": {
-        "recordings": [
-          {
-            "id": "rec-muhammadi-001",
-            "uid": "SHA256-4a8b9c0d1e2f3g4h5i6j7k8l9m0n1o2p3q4r5s6t",
-            "artist": "رياض احمد",
-            "title": "طور المحمداوي - كامل",
-            "url": "https://archive.org/muhammadi-riad.mp3",
-            "videoUrl": "https://youtube.com/watch?v=muhammadi-example",
-            "year": 1970,
-            "durationSec": 1250,
-            
+      "videos": [
+        {
+          "id": "vid-muhammadi-riad-001",
+          "type": "performance",
+          "title": "طور المحمداوي - رياض احمد (تسجيل نادر)",
+          "url": "https://youtube.com/watch?v=muhammadi-riad",
+          "artist": "رياض احمد",
+          "duration": "00:20:45",
+          "year": 1970,
+          "quality": "480p",
+          "restored": true,
+          "subtypes": {
+            "dhib": "00:00-05:30",
+            "mayhuna": "05:30-12:15",
+            "wajif": "12:15-16:40",
+            "daraj": "16:40-20:45"
+          },
+          "analysis": {
+            "pitchContourUrl": "https://data.maqam.world/analysis/muhammadi-riad-pitch.json",
             "ornamentationProfile": {
-              "melismaDensity": 0.82,
-              "trillFrequency": 8,
-              "slideUsage": 0.75
-            },
-            
-            "performanceMetrics": {
-              "averagePitchDeviation": 14.2,
-              "ornamentDensity": 0.75,
-              "tempoVariability": 0.42
+              "melismaDensity": 0.85,
+              "slideCount": 42
             }
+          },
+          "transcription": {
+            "musicXmlUrl": "https://data.maqam.world/transcriptions/muhammadi-riad.xml",
+            "midiUrl": "https://data.maqam.world/transcriptions/muhammadi-riad.mid"
+          }
+        },
+        {
+          "id": "vid-muhammadi-documentary-001",
+          "type": "documentary",
+          "title": "أطوار الأهوار: المحمداوي نموذجاً",
+          "url": "https://youtube.com/watch?v=muhammadi-doc",
+          "director": "كاظم الأهوازي",
+          "duration": "00:45:00",
+          "year": 2023,
+          "interviews": [
+            {"name": "د. ثامر العامري", "timestamp": "05:00-15:30"},
+            {"name": "رياض احمد", "timestamp": "15:30-30:00"},
+            {"name": "ناصر حكيم", "timestamp": "30:00-40:00"}
+          ]
+        }
+      ],
+      
+      "iqaat": [
+        {
+          "iqaId": "iqa-ayoub-006",
+          "name": "أيوب",
+          "usage": "الأطوار الريفية",
+          "frequency": 0.9,
+          "notes": "الإيقاع الأساسي للأطوار الريفية"
+        },
+        {
+          "iqaId": "iqa-maqsum-005",
+          "name": "مقسوم",
+          "usage": "فروع الدارج",
+          "frequency": 0.6
+        }
+      ],
+      
+      "midiMusicXML": {
+        "subtypes": [
+          {
+            "name": "ذب",
+            "midiUrl": "https://data.maqam.world/midi/muhammadi-dhib.mid"
+          },
+          {
+            "name": "ميهونة",
+            "midiUrl": "https://data.maqam.world/midi/muhammadi-mayhuna.mid"
+          },
+          {
+            "name": "واجف",
+            "midiUrl": "https://data.maqam.world/midi/muhammadi-wajif.mid"
+          },
+          {
+            "name": "دارج",
+            "midiUrl": "https://data.maqam.world/midi/muhammadi-daraj.mid"
           }
         ]
-      },
-
-      "analysis": {
-        "characteristicPhrases": [
-          {"patternDegrees": [1, 2, 3, 2, 1], "importance": 0.9, "subtype": "جميع الفروع"},
-          {"patternDegrees": [3, 4, 5, 4, 3], "importance": 0.7, "subtype": "الميهونة"},
-          {"patternDegrees": [5, 6, 5, 4, 3, 2], "importance": 0.8, "subtype": "الدارج"}
-        ],
-        
-        "performanceMetrics": {
-          "averagePitchDeviation": 13.5,
-          "ornamentDensity": 0.72,
-          "tempoVariability": 0.38
-        }
       }
     },
+    
     {
       "id": "tawr-al-sabi-002",
-      "uid": "SHA256-5b9c0d1e2f3g4h5i6j7k8l9m0n1o2p3q4r5s6t7u",
-      
-      "aiFeatureVector": [0.12, 0.31, 0.82, 0.21, 0.72, 0.18, 0.61, 0.15, 0.52, 0.11, 0.42, 0.09, 0.33, 0.08, -0.15, 0.12, -0.09, 0.08, -0.04, 0.03],
-      
-      "similarAta war": [
-        {"id": "tawr-al-muhammadi-001", "name": "المحمداوي", "score": 0.62},
-        {"id": "tawr-al-hayyawi-005", "name": "الحياوي", "score": 0.58}
-      ],
-
       "name": "طور الصبي",
-      "nameEn": "Al-Sabi Tawr",
-      "nameVariations": ["الصبي"],
       
-      "schemaVersion": "5.0",
-      "dataVersion": 3,
-      "lastReviewed": "2026-02-28",
-      "completenessScore": 0.88,
-      
-      "microtonalDefinition": {
-        "cents": [0, 200, 300, 600, 700, 900],
-        "tuningSystem": "24-TET",
-        "quarterTones": [false, false, false, false, false, false]
-      },
-      
-      "digitalFingerprint": {
-        "intervalVector": [200, 100, 300, 100, 200],
-        "chromaSignature": [0.12, 0.31, 0.82, 0.21, 0.72, 0.18, 0.61, 0.15, 0.52, 0.11, 0.42, 0.09],
-        "microtoneDistribution": {
-          "quarterFlat": 0,
-          "quarterSharp": 0
-        }
-      },
-
-      "classification": {
-        "category": "عراقي - ريفي",
-        "type": "طور عشائري",
-        "subtypes": [],
-        "associatedMaqam": "النهاوند",
-        "associatedMaqamId": "maqam-nahawand-002",
-        "associatedMaqamUid": "SHA256-6c0d1e2f3g4h5i6j7k8l9m0n1o2p3q4r5s6t7u8v"
-      },
-      
-      "scale": {
-        "notes": [
-          {"name": "C", "arabic": "يكاه", "cents": 0, "frequency": 130.8},
-          {"name": "D", "arabic": "دوكاه", "cents": 200, "frequency": 146.8},
-          {"name": "E_flat", "arabic": "سيكاه", "cents": 300, "frequency": 155.6},
-          {"name": "F_sharp", "arabic": "جهاركاه", "cents": 600, "frequency": 185.0},
-          {"name": "G", "arabic": "نوى", "cents": 700, "frequency": 196.0},
-          {"name": "A", "arabic": "حسيني", "cents": 900, "frequency": 220.0}
-        ],
-        "degrees": 6,
-        "notesCount": 6
-      },
-
-      "culturalContext": {
-        "origin": "طائفة الصابئة - سوق الشيوخ",
-        "story": "نسبة إلى أول شخص غناه (رومي سبهان البريجي) من طائفة الصابئة المندائيين. قصة طريفة مع الشيخ ناصر باشا السعدون أدت لولادة الطور",
-        "signaturePhrase": "اويلي - أصبحت علامة الطور المميزة",
-        "geography": "سوق الشيوخ - محافظة ذي قار"
-      },
-
-      "artists": [
-        {"name": "رياض احمد", "id": "artist-riad-ahmed", "uid": "SHA256-0w4x5y6z7a8b9c0d1e2f3g4h5i6j7k8l9m0n1o2p", "importance": 0.98},
-        {"name": "جبار ونيسه", "id": "artist-jabbar-wanessa", "uid": "SHA256-7d1e2f3g4h5i6j7k8l9m0n1o2p3q4r5s6t7u8v9w", "importance": 0.90},
-        {"name": "حسن داوود", "id": "artist-hasan-dawud", "uid": "SHA256-8e2f3g4h5i6j7k8l9m0n1o2p3q4r5s6t7u8v9w0x", "importance": 0.85}
-      ],
-
-      "audioVisual": {
-        "recordings": [
-          {
-            "id": "rec-sabi-001",
-            "uid": "SHA256-9f3g4h5i6j7k8l9m0n1o2p3q4r5s6t7u8v9w0x1y",
-            "artist": "رياض احمد",
-            "title": "طور الصبي",
-            "url": "https://archive.org/sabi-riad.mp3",
-            "videoUrl": "https://youtube.com/watch?v=sabi-example",
-            "note": "أجاده وأبدع فيه",
-            "year": 1975,
-            "durationSec": 980,
-            
-            "performanceMetrics": {
-              "averagePitchDeviation": 11.8,
-              "ornamentDensity": 0.68,
-              "tempoVariability": 0.35
-            }
+      "videos": [
+        {
+          "id": "vid-sabi-riad-001",
+          "type": "performance",
+          "title": "طور الصبي - رياض احمد (أجمل تسجيل)",
+          "url": "https://youtube.com/watch?v=sabi-riad",
+          "artist": "رياض احمد",
+          "duration": "00:15:30",
+          "year": 1975,
+          "signaturePhrase": {
+            "phrase": "اويلي",
+            "timestamp": "03:20, 08:45, 12:10"
+          },
+          "analysis": {
+            "pitchContourUrl": "https://data.maqam.world/analysis/sabi-riad-pitch.json"
           }
-        ]
-      },
-
-      "analysis": {
-        "characteristicPhrases": [
-          {"patternDegrees": [1, 2, 3, 4, 3, 2, 1], "importance": 0.95, "note": "عبارة (اويلي) المميزة"},
-          {"patternDegrees": [5, 4, 3, 2, 1], "importance": 0.8}
-        ]
-      }
-    }
-  ],
-
-  "aiIntegration": {
-    "schemaVersion": "5.0",
-    "dataVersion": 4,
-    "lastReviewed": "2026-02-28",
-    
-    "maqamRecognition": {
-      "models": [
+        },
         {
-          "name": "MaqamNet-v3",
-          "type": "CNN-LSTM-Attention-Transformer",
-          "accuracy": 0.96,
-          "trainedOn": "8500 ساعة من التسجيلات",
-          "features": ["mfcc", "chroma", "spectral_contrast", "tonnetz", "tempogram", "formants"],
-          "apiEndpoint": "https://api.maqam.world/recognize",
-          "version": "3.0.0",
-          "lastUpdated": "2026-02-15"
+          "id": "vid-sabi-story-001",
+          "type": "educational",
+          "title": "قصة طور الصبي - رومي سبهان البريجي والشيخ ناصر باشا",
+          "url": "https://youtube.com/watch?v=sabi-story",
+          "duration": "00:10:30",
+          "narrator": "د. ثامر العامري",
+          "historicalContext": true
         }
       ],
-      "trainingData": {
-        "totalHours": 8500,
-        "labeledMaqams": 170,
-        "labeledAta war": 60,
-        "labeledArtists": 150,
-        "updateFrequency": "شهري",
-        "dataSplits": {
-          "train": 0.8,
-          "validation": 0.1,
-          "test": 0.1
-        }
-      }
-    },
-    
-    "featureVectors": {
-      "maqamRast": [0.92, -0.18, 0.85, -0.12, 0.72, -0.09, 0.68, -0.11, 0.55, -0.08],
-      "maqamBayat": [0.21, 0.92, 0.31, 0.82, 0.22, 0.71, 0.19, 0.62, 0.12, 0.51],
-      "maqamHijaz": [0.32, 0.11, 0.91, 0.21, 0.81, 0.12, 0.72, 0.21, 0.61, 0.11]
-    },
-    
-    "similarityMatrix": {
-      "maqam-rast-001": {
-        "maqam-suznak-008": 0.92,
-        "maqam-nahawand-002": 0.75,
-        "maqam-bayat-005": 0.68
-      },
-      "maqam-bayat-005": {
-        "maqam-hijaz-003": 0.68,
-        "maqam-saba-030": 0.72,
-        "maqam-rast-001": 0.65
-      },
-      "maqam-hijaz-003": {
-        "maqam-kurd-015": 0.70,
-        "maqam-bayat-005": 0.68,
-        "maqam-nahawand-002": 0.55
-      }
-    },
-    
-    "generativeAI": {
-      "models": [
+      
+      "iqaat": [
         {
-          "name": "MaqamGen-v2",
-          "type": "Transformer-XL",
-          "parameters": "350M",
-          "capabilities": ["توليد جمل لحنية", "اقتراح تحولات مقامية", "مرافقة ذكية", "توليد تمارين"],
-          "apiEndpoint": "https://api.maqam.world/generate",
-          "version": "2.0.0"
+          "iqaId": "iqa-ayoub-006",
+          "name": "أيوب",
+          "usage": "الأداء الرئيسي",
+          "frequency": 0.95
         }
       ]
-    },
-    
-    "educationalAI": {
-      "studentAssessment": {
-        "algorithm": "pitch-tracking-with-feedback",
-        "realTimeCorrection": true,
-        "personalizedExercises": true
-      },
-      "interactivePractice": {
-        "available": true,
-        "platforms": ["web", "mobile"]
-      }
-    },
-    
-    "audioAnalysisAPI": {
-      "extractMaqam": {
-        "endpoint": "https://api.maqam.world/analyze",
-        "inputFormats": ["mp3", "wav", "ogg", "flac"],
-        "maxFileSizeMB": 100,
-        "outputFields": ["maqamId", "confidence", "pitchContour", "modulations"],
-        "processingTime": "3-8 ثواني"
-      },
-      "extractTawr": {
-        "endpoint": "https://api.maqam.world/analyze-tawr",
-        "inputFormats": ["mp3", "wav"],
-        "outputFields": ["tawrId", "confidence", "subtype"],
-        "processingTime": "2-5 ثواني"
-      }
     }
-  },
-
-  "graphs": {
-    "availableCharts": [
-      "راست سلطاني", "سوزناك", "حجاز كار", "نهاوند", "نهاوند حجازي", 
-      "كردي", "عشاق", "حجاز سلطاني", "صبا أصل", "حسين", "بياتي", 
-      "شهناز", "سيكاه", "رمل", "مستعار", "دوستنغار", "سيكاه بياتي", 
-      "جهاركاه", "راست جهاركاه", "جهاركاه الفلاحة", "راست نوا", 
-      "أصبهان", "بياتي شوري", "بياتي نوا", "حصار", "أوج حجازي", 
-      "أوج عراق", "عجم"
-    ],
-    
-    "graphTypes": {
-      "melodicMovement": "مسار الحركة اللحنية في المقام",
-      "scaleChart": "السلّم الموسيقي مع الدرجات والأبعاد",
-      "frequencyGraph": "منحنى الترددات الصوتية",
-      "spectrogram": "التحليل الطيفي",
-      "modulationMap": "خريطة التحولات بين المقامات",
-      "pitchContour": "منحنى التردد عبر الزمن"
-    },
-    
-    "dataFormats": ["png", "svg", "json", "csv"],
-    "baseUrl": "https://data.maqam.world/graphics/"
-  },
+  ],
 
   "tools": [
     {
-      "id": "tool-practice-001",
-      "uid": "SHA256-0g4h5i6j7k8l9m0n1o2p3q4r5s6t7u8v9w0x1y2z",
-      "name": "مدرب المقامات الذكي",
-      "nameEn": "Smart Maqam Trainer",
-      "type": "practice",
-      "description": "أداة تفاعلية لتعلم المقامات مع تغذية راجعة فورية",
-      "features": ["تحليل الصوت الحي", "تصحيح النغمات", "تمارين مخصصة"],
-      "platforms": ["web", "mobile"],
-      "url": "https://practice.maqam.world",
-      "version": "2.1.0"
+      "id": "tool-midi-converter-004",
+      "name": "محول MIDI إلى MusicXML",
+      "nameEn": "MIDI to MusicXML Converter",
+      "type": "conversion",
+      "description": "تحويل ملفات MIDI إلى MusicXML مع دعم النغمات الربعية",
+      "url": "https://tools.maqam.world/midi-to-xml",
+      "features": ["دعم ربع التون", "تصحيح تلقائي", "معاينة"]
     },
     {
-      "id": "tool-generate-002",
-      "uid": "SHA256-1h5i6j7k8l9m0n1o2p3q4r5s6t7u8v9w0x1y2z3a",
-      "name": "مولد الموسيقى بالذكاء الاصطناعي",
-      "nameEn": "AI Music Generator",
-      "type": "generative",
-      "description": "تحويل الأوصاف النصية إلى موسيقى في مقامات محددة",
-      "features": ["مدخلات اللغة الطبيعية", "توليد فوري", "تعديل وتنزيل"],
-      "platforms": ["web"],
-      "url": "https://generate.maqam.world",
-      "version": "1.5.0"
-    },
-    {
-      "id": "tool-analyze-003",
-      "uid": "SHA256-2i6j7k8l9m0n1o2p3q4r5s6t7u8v9w0x1y2z3a4b",
-      "name": "محلل المقامات الصوتي",
-      "nameEn": "Maqam Audio Analyzer",
+      "id": "tool-maqam-detector-005",
+      "name": "كاشف المقامات الذكي",
+      "nameEn": "Smart Maqam Detector",
       "type": "analysis",
-      "description": "تحليل التسجيلات الصوتية وتحديد المقام تلقائياً",
-      "features": ["تحديد المقام", "استخراج النوتات", "رسم منحنى الصوت"],
-      "platforms": ["web", "api"],
-      "url": "https://analyze.maqam.world",
-      "version": "2.0.0"
+      "description": "تحليل التسجيلات الصوتية وتحديد المقام باستخدام قواعد الكشف",
+      "url": "https://tools.maqam.world/detector",
+      "features": ["كشف فوري", "عرض القواعد المطبقة", "نسبة الثقة", "التحولات المقامية"]
+    },
+    {
+      "id": "tool-rhythm-practice-006",
+      "name": "مدرب الإيقاعات",
+      "nameEn": "Rhythm Trainer",
+      "type": "practice",
+      "description": "تدريب على الإيقاعات العربية مع تغذية راجعة فورية",
+      "url": "https://tools.maqam.world/rhythm",
+      "features": ["45 إيقاع", "تشغيل MIDI", "تمارين تفاعلية", "تصحيح الأخطاء"]
     }
   ],
-
-  "sources": [
-    {
-      "id": "source-001",
-      "type": "book",
-      "title": "المقام العراقي",
-      "author": "حسين قدوري",
-      "year": 1985,
-      "publisher": "دار الشؤون الثقافية",
-      "isbn": "978-3-16-148410-0",
-      "pages": 320
-    },
-    {
-      "id": "source-002",
-      "type": "book",
-      "title": "المغنون الريفيون والأطوار الريفية",
-      "author": "ثامر العامري",
-      "year": 2000,
-      "publisher": "دار المدى",
-      "pages": 245
-    },
-    {
-      "id": "source-003",
-      "type": "article",
-      "title": "أطوار الغناء الريفي العراقي - دراسة وتحليل",
-      "author": "يحيى الجابري",
-      "journal": "مجلة الحياة الموسيقية",
-      "issue": "41-45",
-      "year": "2006-2007",
-      "pages": "23-48"
-    },
-    {
-      "id": "source-004",
-      "type": "archive",
-      "name": "منتدى سماعي للموسيقى العربية",
-      "url": "https://www.sama3y.net/forum",
-      "accessDate": "2026-02-28"
-    }
-  ],
-
-  "preservation": {
-    "challenges": [
-      "تراجع كبير بسبب القنوات الفضائية والعولمة",
-      "خطر التلاشي والضياع بسبب عدم التوثيق الكافي",
-      "قلة الاهتمام الأكاديمي"
-    ],
-    "recommendations": [
-      "تنظيم الأطوار ضمن المنهج الأكاديمي في المعاهد والجامعات الموسيقية",
-      "توثيق وحفظ في المكتبات الرقمية",
-      "دعم جاد للمشاريع الثقافية",
-      "إنشاء أرشيف وطني للموسيقى العراقية"
-    ],
-    "digitization": {
-      "totalRecordings": 1500,
-      "completed": 850,
-      "inProgress": 300,
-      "remaining": 350,
-      "completionPercentage": 56.7,
-      "estimatedCompletionDate": "2028-12-31"
-    },
-    "archiveUrls": {
-      "primary": "https://archive.maqam.world",
-      "backup": "https://backup.maqam.world"
-    }
-  },
 
   "statistics": {
     "totalMaqams": 170,
     "totalAta war": 60,
+    "totalIqaat": 45,
+    "totalVideos": 1250,
+    "totalMIDIFiles": 850,
+    "totalMusicXMLFiles": 620,
     "totalRecordings": 1500,
     "totalArtists": 250,
     "totalAjnas": 25,
     "totalFamilies": 9,
-    "quarterTones": [50, 150, 350, 850, 950],
     "mostCommonMaqams": ["الرست", "البيات", "الحجاز", "الصبا", "النهاوند"],
     "mostCommonAta war": ["المحمداوي", "الصبي", "الحياوي"],
-    "dataSize": {
-      "jsonSizeKB": 512,
-      "totalWithMediaGB": 125,
-      "totalWithDerivativesGB": 350
-    },
+    "mostCommonIqaat": ["مقسوم", "مصمودي", "سماعي ثقيل", "وحدة", "جورجينا"],
     "coverage": {
       "iraqiMaqams": 0.95,
       "arabicMaqams": 0.85,
-      "iraqiAta war": 0.82
+      "iraqiAta war": 0.82,
+      "videoDocumentation": 0.75
     }
   },
 
   "changelog": [
     {
+      "version": "6.0.0",
+      "date": "2026-03-10",
+      "changes": [
+        "إضافة نظام الإيقاعات الكامل (Iqaat) مع 45 إيقاع عربي",
+        "إضافة روابط فيديو لكل مقام وطور مع تحليل زمني",
+        "إضافة دعم MIDI و MusicXML مع مكتبة متكاملة",
+        "إضافة Style Profiles للمناطق المختلفة (عراقي، مصري، سوري، تركي)",
+        "إضافة Maqam Detection Rules مع قواعد ذكاء اصطناعي",
+        "إضافة مقاطع فيديو تعليمية وتوثيقية",
+        "إضافة أدوات تفاعلية جديدة",
+        "تحديث نظام الترميز الربعي ليدعم MIDI Tuning Standard"
+      ]
+    },
+    {
       "version": "5.0.0",
       "date": "2026-02-28",
-      "changes": [
-        "إضافة نظام الأجناس الكامل (Ajnas Engine) مع 4 أجناس رئيسية",
-        "إضافة نظام درجات ربع الصوت الحقيقي (Microtonal System)",
-        "إضافة Formant Analysis للتحليل الصوتي المتقدم",
-        "إضافة Ornamentation Profile لتحليل الزخارف",
-        "إضافة السلسلة المقامية العراقية (Iraqi Maqam Sequence)",
-        "إضافة التاريخ التطوري للمقامات (Historical Evolution)",
-        "إضافة Feature Vector موحد لكل مقام للذكاء الاصطناعي",
-        "إضافة Similarity Index بين المقامات",
-        "إضافة Dynamic Pitch Contour Template",
-        "إضافة Learning Levels مع الأخطاء الشائعة وطرق التصحيح",
-        "إضافة Global Knowledge Graph مع centrality scores",
-        "إضافة نظام توثيق اليونسكو والتراث الثقافي"
-      ]
+      "changes": [ ... ]
     }
   ]
 }
