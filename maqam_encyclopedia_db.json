@@ -1,0 +1,3622 @@
+{
+  "metadata.json": {
+    "projectName": "موسوعة المقامات العربية",
+    "version": "2.0.0",
+    "lastUpdated": "2024-01-15",
+    "description": "موسوعة شاملة للمقامات العربية والأطوار والمطربين مع تحليلات متقدمة وتفاعل ذكي",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "tr"
+    ],
+    "author": "مشروع الموسوعة العربية للموسيقى",
+    "license": "CC-BY-NC-SA-4.0",
+    "totalMaqams": 156,
+    "totalSingers": 287,
+    "totalAtwar": 43,
+    "totalRecordings": 1250,
+    "aiModels": 12,
+    "features": [
+      "تحليل صوتي متقدم",
+      "كشف المشاعر",
+      "تحليل الزخارف",
+      "مقارنة العصر الذهبي",
+      "تحديات تفاعلية",
+      "تعليم مخصص",
+      "واقع معزز",
+      "استنساخ صوت"
+    ],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/maqam-encyclopedia/data"
+    },
+    "contact": {
+      "email": "info@maqam-encyclopedia.org",
+      "website": "https://www.maqam-encyclopedia.org"
+    }
+  },
+  "ids-index.json": {
+    "version": "2.0.0",
+    "lastUpdated": "2024-01-15",
+    "idPattern": "MQM-{type}-{number}",
+    "counters": {
+      "maqam": 1001,
+      "singer": 2001,
+      "atwar": 3001,
+      "recording": 4001,
+      "analysis": 5001,
+      "aiModel": 6001,
+      "challenge": 7001,
+      "lesson": 8001
+    },
+    "mappings": {
+      "maqam:rast": "MQM-MAQ-1001",
+      "maqam:bayat": "MQM-MAQ-1002",
+      "maqam:hijaz": "MQM-MAQ-1003",
+      "maqam:saba": "MQM-MAQ-1004",
+      "maqam:nahawand": "MQM-MAQ-1005",
+      "singer:yusuf-omar": "MQM-SNG-2001",
+      "singer:umm-kulthum": "MQM-SNG-2002"
+    },
+    "reverseMappings": {
+      "MQM-MAQ-1001": "maqam:rast",
+      "MQM-MAQ-1002": "maqam:bayat",
+      "MQM-MAQ-1003": "maqam:hijaz",
+      "MQM-MAQ-1004": "maqam:saba",
+      "MQM-MAQ-1005": "maqam:nahawand"
+    }
+  },
+  "knowledge-graph-index.json": {
+    "version": "2.0.0",
+    "lastUpdated": "2024-01-15",
+    "graphs": [
+      {
+        "name": "singer-graph",
+        "path": "/graph/singer-graph.json",
+        "nodeCount": 287,
+        "edgeCount": 1243
+      },
+      {
+        "name": "maqam-graph",
+        "path": "/graph/maqam-graph.json",
+        "nodeCount": 156,
+        "edgeCount": 892
+      },
+      {
+        "name": "recording-graph",
+        "path": "/graph/recording-graph.json",
+        "nodeCount": 1250,
+        "edgeCount": 3456
+      }
+    ],
+    "relationships": {
+      "sang": "singer -> recording",
+      "composed": "singer -> maqam",
+      "belongs_to": "recording -> maqam",
+      "analyzed_by": "recording -> analysis"
+    }
+  },
+  "quick-links.json": {
+    "version": "2.0.0",
+    "lastUpdated": "2024-01-15",
+    "popularMaqams": [
+      {
+        "name": "راست",
+        "path": "/maqams/rast/rast.json",
+        "recordings": "/multi-track-recordings/complete-maqams/rast/"
+      },
+      {
+        "name": "بيات",
+        "path": "/maqams/bayat/bayat.json",
+        "recordings": "/multi-track-recordings/complete-maqams/bayat/"
+      }
+    ],
+    "famousSingers": [
+      {
+        "name": "يوسف عمر",
+        "path": "/singers/iraqi/yusuf-omar.json",
+        "recordings": "/multi-track-recordings/complete-maqams/rast/?singer=yusuf-omar"
+      },
+      {
+        "name": "أم كلثوم",
+        "path": "/singers/egyptian/umm-kulthum.json",
+        "recordings": "/multi-track-recordings/complete-maqams/bayat/?singer=umm-kulthum"
+      }
+    ],
+    "aiTools": [
+      {
+        "name": "مؤلف مقامات",
+        "path": "/ai-models/ai-maqam-composer/"
+      },
+      {
+        "name": "مدرب صوتي",
+        "path": "/ai-models/ai-singing-tutor/"
+      }
+    ],
+    "interactive": {
+      "maqamPlayer": "/interactive-explorer/maqam-player/",
+      "emotionSync": "/interactive-explorer/emotion-sync-visualization/"
+    },
+    "gamification": {
+      "dailyChallenges": "/gamification/challenges/",
+      "leaderboard": "/gamification/leaderboards/weekly-challenge.json"
+    }
+  },
+  "system-health.json": {
+    "status": "operational",
+    "lastCheck": "2024-01-15T10:30:00Z",
+    "components": {
+      "database": {
+        "status": "healthy",
+        "responseTime": 45,
+        "connections": 128,
+        "lastBackup": "2024-01-14"
+      },
+      "ai-models": {
+        "status": "operational",
+        "modelsLoaded": 12,
+        "averageInferenceTime": 120
+      },
+      "api": {
+        "status": "operational",
+        "requestsPerMinute": 350,
+        "errorRate": 0.02,
+        "endpointsAvailable": 45
+      },
+      "storage": {
+        "status": "healthy",
+        "usedSpaceGB": 1250,
+        "totalSpaceGB": 5000,
+        "fileCount": 8750
+      }
+    },
+    "alerts": [],
+    "maintenance": {
+      "scheduled": false,
+      "nextMaintenance": null
+    },
+    "metrics": {
+      "uptime": 99.97,
+      "totalRequests": 12500000,
+      "averageResponseTime": 89
+    }
+  },
+  "taxonomy/families.json": {
+    "version": "2.0.0",
+    "lastUpdated": "2024-01-15",
+    "families": [
+      {
+        "id": "family-rast",
+        "name": "عائلة راست",
+        "nameEn": "Rast Family",
+        "description": "المقامات التي تبدأ بجنس راست على الدرجة الأولى",
+        "rootNote": "C",
+        "mainJins": "rast",
+        "maqams": [
+          "rast",
+          "rast-suznak",
+          "rast-al-nawa",
+          "sikah",
+          "huzam"
+        ],
+        "emotionalCharacter": [
+          "ثبات",
+          "وقار",
+          "تفاؤل"
+        ],
+        "colorCode": "#8B4513"
+      },
+      {
+        "id": "family-bayat",
+        "name": "عائلة بيات",
+        "nameEn": "Bayat Family",
+        "description": "المقامات التي تبدأ بجنس بيات على الدرجة الأولى",
+        "rootNote": "D",
+        "mainJins": "bayati",
+        "maqams": [
+          "bayat",
+          "bayat-husseini",
+          "bayat-nawa",
+          "husseini"
+        ],
+        "emotionalCharacter": [
+          "حنين",
+          "شوق",
+          "رقة"
+        ],
+        "colorCode": "#4A708B"
+      },
+      {
+        "id": "family-hijaz",
+        "name": "عائلة حجاز",
+        "nameEn": "Hijaz Family",
+        "description": "المقامات التي تحتوي على جنس حجاز",
+        "rootNote": "D",
+        "mainJins": "hijaz",
+        "maqams": [
+          "hijaz",
+          "hijaz-kar",
+          "shad-araban",
+          "suzidil"
+        ],
+        "emotionalCharacter": [
+          "قوة",
+          "شجاعة",
+          "حماس"
+        ],
+        "colorCode": "#8B0000"
+      }
+    ]
+  },
+  "taxonomy/ajnas.json": {
+    "version": "2.0.0",
+    "lastUpdated": "2024-01-15",
+    "ajnas": [
+      {
+        "id": "jins-rast",
+        "name": "جنس راست",
+        "nameEn": "Jins Rast",
+        "intervals": [
+          4,
+          4,
+          2,
+          4
+        ],
+        "notes": [
+          "C",
+          "D",
+          "E",
+          "F",
+          "G"
+        ],
+        "quarterTones": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "root": "C",
+        "emotionalQuality": [
+          "استقرار",
+          "ثبات",
+          "وقار"
+        ],
+        "color": "#8B4513"
+      },
+      {
+        "id": "jins-bayati",
+        "name": "جنس بياتي",
+        "nameEn": "Jins Bayati",
+        "intervals": [
+          4,
+          3,
+          4,
+          4
+        ],
+        "notes": [
+          "D",
+          "E",
+          "F",
+          "G",
+          "A"
+        ],
+        "quarterTones": [
+          0,
+          0,
+          -0.5,
+          0,
+          0
+        ],
+        "root": "D",
+        "emotionalQuality": [
+          "حنين",
+          "شوق",
+          "رقة"
+        ],
+        "color": "#4A708B"
+      },
+      {
+        "id": "jins-hijaz",
+        "name": "جنس حجاز",
+        "nameEn": "Jins Hijaz",
+        "intervals": [
+          2,
+          6,
+          2,
+          4
+        ],
+        "notes": [
+          "D",
+          "E-half-flat",
+          "F#",
+          "G",
+          "A"
+        ],
+        "quarterTones": [
+          0,
+          -0.5,
+          0,
+          0,
+          0
+        ],
+        "root": "D",
+        "emotionalQuality": [
+          "قوة",
+          "شجاعة",
+          "فخر"
+        ],
+        "color": "#8B0000"
+      }
+    ]
+  },
+  "taxonomy/iqaat.json": {
+    "version": "2.0.0",
+    "lastUpdated": "2024-01-15",
+    "iqaat": [
+      {
+        "id": "iqa-wahda",
+        "name": "وحدة",
+        "nameEn": "Wahda",
+        "pattern": "DUM - TAK",
+        "beats": 2,
+        "strongBeats": [
+          1
+        ],
+        "weakBeats": [
+          2
+        ],
+        "description": "إيقاع ثنائي بسيط",
+        "tempo": "80-140"
+      },
+      {
+        "id": "iqa-maqsum",
+        "name": "مقسوم",
+        "nameEn": "Maqsum",
+        "pattern": "DUM - TAK - TAK - DUM - TAK",
+        "beats": 4,
+        "strongBeats": [
+          1,
+          4
+        ],
+        "weakBeats": [
+          2,
+          3
+        ],
+        "description": "إيقاع رباعي مشهور",
+        "tempo": "80-120"
+      },
+      {
+        "id": "iqa-baladi",
+        "name": "بلدي",
+        "nameEn": "Baladi",
+        "pattern": "DUM - TAK - DUM - TAK - TAK",
+        "beats": 4,
+        "strongBeats": [
+          1,
+          3
+        ],
+        "weakBeats": [
+          2,
+          4
+        ],
+        "description": "إيقاع بلدي مصري",
+        "tempo": "100-130"
+      }
+    ]
+  },
+  "taxonomy/microtonalSystem.json": {
+    "version": "2.0.0",
+    "lastUpdated": "2024-01-15",
+    "name": "نظام الأرباع الصوتية العربية",
+    "nameEn": "Arabic Quarter-Tone System",
+    "description": "النظام الموسيقي العربي المعتمد على تقسيم الأوكتاف إلى 24 ربع صوت",
+    "baseFrequency": 440,
+    "octaveDivision": 24,
+    "notes": [
+      {
+        "name": "دو",
+        "nameEn": "C",
+        "quarterTone": 0,
+        "frequency": 261.63,
+        "midiNote": 60
+      },
+      {
+        "name": "دو ربع",
+        "nameEn": "C half sharp",
+        "quarterTone": 0.5,
+        "frequency": 269.3,
+        "midiNote": 60.5
+      },
+      {
+        "name": "ري",
+        "nameEn": "D",
+        "quarterTone": 0,
+        "frequency": 293.66,
+        "midiNote": 62
+      }
+    ],
+    "intervalRatios": [
+      {
+        "interval": "ربع تون",
+        "quarterTones": 1,
+        "ratio": 1.0293
+      },
+      {
+        "interval": "نصف تون",
+        "quarterTones": 2,
+        "ratio": 1.0595
+      }
+    ]
+  },
+  "maqams/index.json": {
+    "version": "2.0.0",
+    "lastUpdated": "2024-01-15",
+    "totalMaqams": 156,
+    "totalFamilies": 7,
+    "mainMaqams": [
+      {
+        "id": "maqam-rast",
+        "name": "راست",
+        "nameEn": "Rast",
+        "path": "/maqams/rast/rast.json",
+        "family": "rast",
+        "popularity": 5
+      },
+      {
+        "id": "maqam-bayat",
+        "name": "بيات",
+        "nameEn": "Bayat",
+        "path": "/maqams/bayat/bayat.json",
+        "family": "bayat",
+        "popularity": 5
+      },
+      {
+        "id": "maqam-hijaz",
+        "name": "حجاز",
+        "nameEn": "Hijaz",
+        "path": "/maqams/hijaz/hijaz.json",
+        "family": "hijaz",
+        "popularity": 5
+      }
+    ],
+    "byFamily": {
+      "rast": [
+        "rast",
+        "rast-suznak",
+        "rast-al-nawa"
+      ],
+      "bayat": [
+        "bayat",
+        "bayat-husseini",
+        "bayat-nawa"
+      ],
+      "hijaz": [
+        "hijaz",
+        "hijaz-kar",
+        "shad-araban"
+      ]
+    }
+  },
+  "maqams/maqams-master-list.json": {
+    "version": "2.0.0",
+    "lastUpdated": "2024-01-15",
+    "maqams": [
+      {
+        "id": "rast",
+        "name": "راست",
+        "nameEn": "Rast",
+        "family": "rast",
+        "rootNote": "C",
+        "scale": [
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "A",
+          "B",
+          "C"
+        ],
+        "quarterTones": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "emotionalCharacter": [
+          "ثبات",
+          "وقار",
+          "تفاؤل"
+        ],
+        "popularSingers": [
+          "yusuf-omar",
+          "mohammed-al-qubanchi",
+          "sabah-fakhri"
+        ],
+        "path": "/maqams/rast/rast.json"
+      },
+      {
+        "id": "bayat",
+        "name": "بيات",
+        "nameEn": "Bayat",
+        "family": "bayat",
+        "rootNote": "D",
+        "scale": [
+          "D",
+          "E",
+          "F-half-flat",
+          "G",
+          "A",
+          "B-half-flat",
+          "C",
+          "D"
+        ],
+        "quarterTones": [
+          0,
+          0,
+          -0.5,
+          0,
+          0,
+          -0.5,
+          0,
+          0
+        ],
+        "emotionalCharacter": [
+          "حنين",
+          "شوق",
+          "رقة"
+        ],
+        "popularSingers": [
+          "umm-kulthum",
+          "yusuf-omar",
+          "fairuz"
+        ],
+        "path": "/maqams/bayat/bayat.json"
+      }
+    ]
+  },
+  "maqams/rast/rast.json": {
+    "id": "rast",
+    "name": "راست",
+    "nameEn": "Rast",
+    "idCode": "MQM-MAQ-1001",
+    "family": "rast",
+    "rootNote": "C",
+    "scale": {
+      "notes": [
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "A",
+        "B",
+        "C"
+      ],
+      "quarterTones": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "jinsComposition": [
+      {
+        "jins": "rast",
+        "position": "1-5",
+        "notes": [
+          "C",
+          "D",
+          "E",
+          "F",
+          "G"
+        ]
+      }
+    ],
+    "emotionalProfile": {
+      "primary": [
+        "ثبات",
+        "وقار",
+        "استقرار"
+      ],
+      "secondary": [
+        "تفاؤل",
+        "أمل",
+        "قوة"
+      ],
+      "colorCode": "#8B4513"
+    },
+    "history": {
+      "origin": "العراق",
+      "era": "القرن السابع",
+      "firstDocumentation": "كتاب الأغاني لأبي الفرج الأصفهاني"
+    },
+    "famousWorks": [
+      {
+        "title": "مقام راست كامل",
+        "singer": "يوسف عمر",
+        "year": 1960,
+        "recordingId": "MQM-REC-4001"
+      }
+    ],
+    "popularSingers": [
+      "yusuf-omar",
+      "mohammed-al-qubanchi",
+      "sabah-fakhri"
+    ]
+  },
+  "maqams/rast/rast-iraqi.json": {
+    "id": "rast-iraqi",
+    "name": "راست عراقي",
+    "nameEn": "Rast Iraqi",
+    "idCode": "MQM-MAQ-1101",
+    "family": "rast",
+    "rootNote": "C",
+    "scale": {
+      "notes": [
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "A",
+        "B-half-flat",
+        "C"
+      ],
+      "quarterTones": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -0.5,
+        0
+      ]
+    },
+    "emotionalProfile": {
+      "primary": [
+        "عمق",
+        "روحانية",
+        "فخر"
+      ],
+      "secondary": [
+        "شموخ",
+        "عزة",
+        "جلال"
+      ],
+      "colorCode": "#654321"
+    },
+    "famousSingers": [
+      "يوسف عمر",
+      "حسين الأعظمي",
+      "فاروق محمد"
+    ]
+  },
+  "maqams/rast/rast-popular.json": {
+    "id": "rast-popular",
+    "name": "راست شعبي",
+    "nameEn": "Rast Popular",
+    "idCode": "MQM-MAQ-1102",
+    "family": "rast",
+    "rootNote": "C",
+    "type": "folk",
+    "scale": {
+      "notes": [
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "A",
+        "B-half-flat",
+        "C"
+      ],
+      "quarterTones": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -0.5,
+        0
+      ]
+    },
+    "emotionalProfile": {
+      "primary": [
+        "فرح",
+        "حماسة",
+        "عفوية"
+      ],
+      "secondary": [
+        "اجتماعية",
+        "رقص",
+        "احتفال"
+      ],
+      "colorCode": "#CD853F"
+    },
+    "folkCharacteristics": {
+      "tempo": "سريع (120-160)",
+      "instruments": [
+        "طبلة",
+        "دف",
+        "ربابة",
+        "مزمار"
+      ],
+      "contexts": [
+        "أفراح",
+        "مهرجانات",
+        "سهرات شعبية"
+      ]
+    },
+    "popularSingers": [
+      "رياض أحمد",
+      "داخل حسن",
+      "ناصر حكيم"
+    ]
+  },
+  "maqams/rast/rast-regional-variants.json": {
+    "id": "rast-regional-variants",
+    "name": "الأنماط الإقليمية لمقام راست",
+    "nameEn": "Rast Regional Variants",
+    "lastUpdated": "2024-01-15",
+    "variants": [
+      {
+        "region": "العراق",
+        "name": "راست بغدادي",
+        "characteristics": {
+          "scale": [
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "A",
+            "B-half-flat",
+            "C"
+          ],
+          "quarterTones": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -0.5,
+            0
+          ],
+          "ornaments": [
+            "تحريرات مطولة",
+            "زخارف معقدة",
+            "اهتزازات عميقة"
+          ],
+          "representativeSingers": [
+            "يوسف عمر",
+            "محمد القبانجي",
+            "حسين الأعظمي"
+          ]
+        }
+      },
+      {
+        "region": "مصر",
+        "name": "راست مصري",
+        "characteristics": {
+          "scale": [
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "A",
+            "B",
+            "C"
+          ],
+          "quarterTones": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "ornaments": [
+            "زخارف سريعة",
+            "سلاسل نغمية",
+            "تلوينات"
+          ],
+          "representativeSingers": [
+            "أم كلثوم",
+            "محمد عبد الوهاب",
+            "عبد الحليم حافظ"
+          ]
+        }
+      }
+    ]
+  },
+  "maqams/rast/rast-historical-origins.json": {
+    "id": "rast-historical-origins",
+    "name": "الأصول التاريخية لمقام راست",
+    "nameEn": "Historical Origins of Rast Maqam",
+    "lastUpdated": "2024-01-15",
+    "origins": [
+      {
+        "era": "العصر الجاهلي",
+        "period": "500-622 م",
+        "evidence": [
+          "ذكر في الشعر الجاهلي",
+          "ارتباط بالغناء العربي القديم"
+        ],
+        "description": "يعتقد أن جذور الراست تعود إلى ألحان العرب في الجاهلية"
+      },
+      {
+        "era": "العصر العباسي",
+        "period": "750-1258 م",
+        "evidence": [
+          "تدوين في كتب الموسيقى",
+          "ذكر في كتاب الأغاني"
+        ],
+        "description": "شهد العصر العباسي التدوين الأول للمقامات",
+        "keyFigures": [
+          "إسحاق الموصلي",
+          "إبراهيم الموصلي",
+          "الفارابي"
+        ]
+      }
+    ]
+  },
+  "maqams/rast/rast-composers.json": {
+    "id": "rast-composers",
+    "name": "مؤلفو مقام راست",
+    "nameEn": "Rast Maqam Composers",
+    "lastUpdated": "2024-01-15",
+    "composers": [
+      {
+        "id": "mohammed-al-qubanchi",
+        "name": "محمد القبانجي",
+        "period": "1900-1989",
+        "nationality": "عراقي",
+        "compositions": [
+          {
+            "title": "مقام راست كامل",
+            "year": 1955,
+            "type": "مقام كامل"
+          }
+        ],
+        "style": "عراقي كلاسيكي"
+      },
+      {
+        "id": "riad-al-sunbati",
+        "name": "رياض السنباطي",
+        "period": "1906-1981",
+        "nationality": "مصري",
+        "compositions": [
+          {
+            "title": "الأطلال",
+            "year": 1966,
+            "type": "قصيدة",
+            "singer": "أم كلثوم"
+          }
+        ],
+        "style": "مصري كلاسيكي"
+      }
+    ]
+  },
+  "maqams/rast/vocal-phrases/tahrir.json": {
+    "id": "rast-tahrir",
+    "name": "تحرير مقام راست",
+    "nameEn": "Rast Tahrir",
+    "maqam": "rast",
+    "phraseType": "tahrir",
+    "description": "التحرير هو الانتقال من الجواب إلى القرار بشكل زخرفي مميز",
+    "characteristics": [
+      "يبدأ عادة من الجواب (صول)",
+      "حركة نزولية سريعة",
+      "زخارف صوتية مكثفة"
+    ],
+    "variants": [
+      {
+        "name": "تحرير عراقي",
+        "region": "العراق",
+        "notes": [
+          "G",
+          "F",
+          "E",
+          "D",
+          "C"
+        ],
+        "exampleSinger": "يوسف عمر"
+      },
+      {
+        "name": "تحرير مصري",
+        "region": "مصر",
+        "notes": [
+          "G",
+          "F",
+          "E",
+          "D",
+          "C"
+        ],
+        "exampleSinger": "أم كلثوم"
+      }
+    ]
+  },
+  "maqams/rast/vocal-phrases/miana.json": {
+    "id": "rast-miana",
+    "name": "ميانة مقام راست",
+    "nameEn": "Rast Miana",
+    "maqam": "rast",
+    "phraseType": "miana",
+    "description": "الميانة هي القسم الأوسط من المقام حيث يتم التوسع والتطوير",
+    "characteristics": [
+      "تبدأ بعد التحرير الأول",
+      "تمتد على مساحة صوتية واسعة",
+      "تتنقل بين الأجناس المختلفة"
+    ],
+    "modulations": [
+      {
+        "to": "نهاوند",
+        "onNote": "G",
+        "technique": "تحويل درجة السي إلى سي بيمول"
+      },
+      {
+        "to": "بيات",
+        "onNote": "A",
+        "technique": "تسطح درجة الفا"
+      }
+    ]
+  },
+  "maqams/rast/vocal-phrases/taslim.json": {
+    "id": "rast-taslim",
+    "name": "تسليم مقام راست",
+    "nameEn": "Rast Taslim",
+    "maqam": "rast",
+    "phraseType": "taslim",
+    "description": "التسليم هو الخاتمة التي تعيد المقام إلى قراره الأساسي",
+    "characteristics": [
+      "تأتي في نهاية المقام",
+      "تعود إلى درجة القرار (دو)",
+      "تحل التوتر الناتج عن الميانة"
+    ],
+    "phrases": [
+      {
+        "name": "تسليم بسيط",
+        "notes": [
+          "C",
+          "D",
+          "C",
+          "G",
+          "C"
+        ]
+      },
+      {
+        "name": "تسليم مزخرف",
+        "notes": [
+          "C",
+          "D",
+          "E",
+          "D",
+          "C",
+          "B-half-flat",
+          "C"
+        ]
+      }
+    ]
+  },
+  "maqams/rast/links.json": {
+    "maqam": "rast",
+    "id": "MQM-MAQ-1001",
+    "links": {
+      "self": "/maqams/rast/rast.json",
+      "variants": {
+        "iraqi": "/maqams/rast/rast-iraqi.json",
+        "suznak": "/maqams/rast/rast-suznak.json",
+        "popular": "/maqams/rast/rast-popular.json",
+        "regional": "/maqams/rast/rast-regional-variants.json"
+      },
+      "historical": {
+        "origins": "/maqams/rast/rast-historical-origins.json",
+        "composers": "/maqams/rast/rast-composers.json"
+      },
+      "phrases": {
+        "tahrir": "/maqams/rast/vocal-phrases/tahrir.json",
+        "miana": "/maqams/rast/vocal-phrases/miana.json",
+        "taslim": "/maqams/rast/vocal-phrases/taslim.json"
+      },
+      "recordings": "/multi-track-recordings/complete-maqams/rast/"
+    }
+  },
+  "maqams/bayat/bayat.json": {
+    "id": "bayat",
+    "name": "بيات",
+    "nameEn": "Bayat",
+    "idCode": "MQM-MAQ-1002",
+    "family": "bayat",
+    "rootNote": "D",
+    "scale": {
+      "notes": [
+        "D",
+        "E",
+        "F-half-flat",
+        "G",
+        "A",
+        "B-half-flat",
+        "C",
+        "D"
+      ],
+      "quarterTones": [
+        0,
+        0,
+        -0.5,
+        0,
+        0,
+        -0.5,
+        0,
+        0
+      ]
+    },
+    "emotionalProfile": {
+      "primary": [
+        "حنين",
+        "شوق",
+        "رقة"
+      ],
+      "secondary": [
+        "وجد",
+        "عاطفة",
+        "جمال"
+      ],
+      "colorCode": "#4A708B"
+    },
+    "history": {
+      "origin": "العراق - الحجاز",
+      "era": "القرن السابع"
+    },
+    "famousWorks": [
+      {
+        "title": "الأطلال",
+        "singer": "أم كلثوم",
+        "composer": "رياض السنباطي",
+        "year": 1966
+      }
+    ],
+    "popularSingers": [
+      "yusuf-omar",
+      "umm-kulthum",
+      "fairuz",
+      "sabah-fakhri"
+    ]
+  },
+  "maqams/bayat/bayat-husseini.json": {
+    "id": "bayat-husseini",
+    "name": "بيات حسيني",
+    "nameEn": "Bayat Husseini",
+    "idCode": "MQM-MAQ-1201",
+    "family": "bayat",
+    "rootNote": "D",
+    "scale": {
+      "notes": [
+        "D",
+        "E",
+        "F-half-flat",
+        "G",
+        "A",
+        "B-half-flat",
+        "C-half-flat",
+        "D"
+      ],
+      "quarterTones": [
+        0,
+        0,
+        -0.5,
+        0,
+        0,
+        -0.5,
+        -0.5,
+        0
+      ]
+    },
+    "emotionalProfile": {
+      "primary": [
+        "عمق",
+        "تأمل",
+        "روحانية"
+      ],
+      "secondary": [
+        "حزن نبيل",
+        "خشوع",
+        "وقار"
+      ],
+      "colorCode": "#2F4F4F"
+    },
+    "famousSingers": [
+      "يوسف عمر",
+      "محمد القبانجي",
+      "ناظم الغزالي"
+    ]
+  },
+  "maqams/bayat/bayat-popular.json": {
+    "id": "bayat-popular",
+    "name": "بيات شعبي",
+    "nameEn": "Bayat Popular",
+    "idCode": "MQM-MAQ-1202",
+    "family": "bayat",
+    "rootNote": "D",
+    "type": "folk",
+    "scale": {
+      "notes": [
+        "D",
+        "E",
+        "F",
+        "G",
+        "A",
+        "B-flat",
+        "C",
+        "D"
+      ],
+      "quarterTones": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        -1,
+        0,
+        0
+      ]
+    },
+    "emotionalProfile": {
+      "primary": [
+        "فرح",
+        "عفوية",
+        "اجتماعية"
+      ],
+      "secondary": [
+        "رقص",
+        "حماسة",
+        "ابتهاج"
+      ],
+      "colorCode": "#6495ED"
+    },
+    "folkCharacteristics": {
+      "tempo": "سريع (120-160)",
+      "instruments": [
+        "طبلة",
+        "دف",
+        "مزمار",
+        "ربابة"
+      ],
+      "contexts": [
+        "أفراح",
+        "مهرجانات",
+        "سهرات شعبية"
+      ]
+    },
+    "popularSingers": [
+      "رياض أحمد",
+      "داخل حسن",
+      "أحمد عدوية"
+    ]
+  },
+  "maqams/bayat/bayat-regional-variants.json": {
+    "id": "bayat-regional-variants",
+    "name": "الأنماط الإقليمية لمقام بيات",
+    "nameEn": "Bayat Regional Variants",
+    "lastUpdated": "2024-01-15",
+    "variants": [
+      {
+        "region": "العراق",
+        "name": "بيات عراقي",
+        "characteristics": {
+          "scale": [
+            "D",
+            "E",
+            "F-half-flat",
+            "G",
+            "A",
+            "B-half-flat",
+            "C-half-flat",
+            "D"
+          ],
+          "quarterTones": [
+            0,
+            0,
+            -0.5,
+            0,
+            0,
+            -0.5,
+            -0.5,
+            0
+          ],
+          "ornaments": [
+            "تحريرات طويلة",
+            "اهتزازات عميقة"
+          ],
+          "representativeSingers": [
+            "يوسف عمر",
+            "محمد القبانجي",
+            "حسين الأعظمي"
+          ]
+        }
+      },
+      {
+        "region": "مصر",
+        "name": "بيات مصري",
+        "characteristics": {
+          "scale": [
+            "D",
+            "E",
+            "F-half-flat",
+            "G",
+            "A",
+            "B-half-flat",
+            "C",
+            "D"
+          ],
+          "quarterTones": [
+            0,
+            0,
+            -0.5,
+            0,
+            0,
+            -0.5,
+            0,
+            0
+          ],
+          "ornaments": [
+            "سلاسل نغمية",
+            "تلوينات",
+            "قفلات مصرية"
+          ],
+          "representativeSingers": [
+            "أم كلثوم",
+            "محمد عبد الوهاب",
+            "عبد الحليم حافظ"
+          ]
+        }
+      }
+    ]
+  },
+  "maqams/bayat/bayat-historical-origins.json": {
+    "id": "bayat-historical-origins",
+    "name": "الأصول التاريخية لمقام بيات",
+    "nameEn": "Historical Origins of Bayat Maqam",
+    "lastUpdated": "2024-01-15",
+    "origins": [
+      {
+        "era": "العصر الجاهلي",
+        "period": "500-622 م",
+        "evidence": [
+          "ذكر في الشعر الجاهلي",
+          "ارتباط بالغناء الحجازي"
+        ],
+        "description": "يعتبر البيات من أقدم الألحان العربية"
+      },
+      {
+        "era": "العصر العباسي",
+        "period": "750-1258 م",
+        "evidence": [
+          "تدوين في كتب الموسيقى",
+          "ذكر في كتاب الأغاني"
+        ],
+        "description": "تطور البيات في بغداد",
+        "keyFigures": [
+          "إسحاق الموصلي",
+          "إبراهيم الموصلي"
+        ]
+      }
+    ]
+  },
+  "maqams/regional-maqams/index.json": {
+    "id": "regional-maqams-index",
+    "name": "المقامات الإقليمية",
+    "nameEn": "Regional Maqams Index",
+    "lastUpdated": "2024-01-15",
+    "regions": [
+      {
+        "id": "north-african",
+        "name": "مقامات شمال أفريقيا",
+        "nameEn": "North African Maqams",
+        "path": "/maqams/regional-maqams/north-african/",
+        "maqams": [
+          "maqam-mazmum",
+          "maqam-maya",
+          "maqam-rasd"
+        ]
+      },
+      {
+        "id": "gulf",
+        "name": "مقامات الخليج",
+        "nameEn": "Gulf Maqams",
+        "path": "/maqams/regional-maqams/gulf/",
+        "maqams": [
+          "maqam-samri",
+          "maqam-khaleeji"
+        ]
+      }
+    ]
+  },
+  "maqams/regional-maqams/north-african/maqam-mazmum.json": {
+    "id": "maqam-mazmum",
+    "name": "مزموم",
+    "nameEn": "Mazmum",
+    "idCode": "MQM-MAQ-3001",
+    "family": "hijaz",
+    "region": "north-africa",
+    "rootNote": "D",
+    "scale": {
+      "notes": [
+        "D",
+        "E-half-flat",
+        "F#",
+        "G",
+        "A-half-flat",
+        "B",
+        "C",
+        "D"
+      ],
+      "quarterTones": [
+        0,
+        -0.5,
+        0,
+        0,
+        -0.5,
+        0,
+        0,
+        0
+      ]
+    },
+    "emotionalProfile": {
+      "primary": [
+        "غموض",
+        "عمق",
+        "حزن"
+      ],
+      "secondary": [
+        "شجن",
+        "تأمل",
+        "روحانية"
+      ],
+      "colorCode": "#2F4F4F"
+    },
+    "northAfricanCharacteristics": {
+      "region": "تونس، الجزائر، المغرب",
+      "instruments": [
+        "عود",
+        "رباب",
+        "كمنجة",
+        "طار"
+      ],
+      "tempo": "بطئ إلى معتدل (50-80)"
+    }
+  },
+  "maqams/folk-maqams/index.json": {
+    "id": "folk-maqams-index",
+    "name": "المقامات الشعبية",
+    "nameEn": "Folk Maqams Index",
+    "lastUpdated": "2024-01-15",
+    "folkMaqams": [
+      {
+        "id": "maqam-bedouin",
+        "name": "مقام بدوي",
+        "nameEn": "Bedouin Maqam",
+        "region": "البادية العربية",
+        "path": "/maqams/folk-maqams/maqam-bedouin.json"
+      },
+      {
+        "id": "maqam-nubian",
+        "name": "مقام نوبي",
+        "nameEn": "Nubian Maqam",
+        "region": "النوبة - جنوب مصر",
+        "path": "/maqams/folk-maqams/maqam-nubian.json"
+      }
+    ],
+    "commonCharacteristics": {
+      "simplifiedQuarterTones": "تميل لتسفيه الأرباع الصوتية",
+      "fastRhythms": "إيقاعات سريعة",
+      "danceConnection": "مرتبطة بالرقص"
+    }
+  },
+  "maqams/folk-maqams/maqam-bedouin.json": {
+    "id": "maqam-bedouin",
+    "name": "مقام بدوي",
+    "nameEn": "Bedouin Maqam",
+    "idCode": "MQM-MAQ-4001",
+    "family": "bayat",
+    "region": "folk",
+    "rootNote": "D",
+    "scale": {
+      "notes": [
+        "D",
+        "E",
+        "F",
+        "G",
+        "A",
+        "B-flat",
+        "C",
+        "D"
+      ],
+      "quarterTones": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        -1,
+        0,
+        0
+      ]
+    },
+    "emotionalProfile": {
+      "primary": [
+        "فخر",
+        "عزة",
+        "شموخ"
+      ],
+      "secondary": [
+        "قوة",
+        "صمود",
+        "كرامة"
+      ],
+      "colorCode": "#8B4513"
+    },
+    "folkCharacteristics": {
+      "origin": "البادية العربية",
+      "tempo": "معتدل إلى سريع (90-130)",
+      "rhythms": [
+        "هجيني",
+        "حداء",
+        "مسحوب"
+      ],
+      "instruments": [
+        "ربابة",
+        "طبلة",
+        "دف"
+      ]
+    }
+  },
+  "singers/index.json": {
+    "version": "2.0.0",
+    "lastUpdated": "2024-01-15",
+    "totalSingers": 287,
+    "categories": [
+      {
+        "id": "iraqi",
+        "name": "مطربون عراقيون",
+        "count": 35,
+        "path": "/singers/iraqi/",
+        "representativeSingers": [
+          "yusuf-omar",
+          "mohammed-al-qubanchi",
+          "nazem-al-ghazali"
+        ]
+      },
+      {
+        "id": "egyptian",
+        "name": "مطربون مصريون",
+        "count": 42,
+        "path": "/singers/egyptian/",
+        "representativeSingers": [
+          "umm-kulthum",
+          "mohammed-abdel-wahab",
+          "abdel-halim-hafez"
+        ]
+      },
+      {
+        "id": "golden-age",
+        "name": "مطربو العصر الذهبي",
+        "count": 45,
+        "path": "/singers/golden-age-singers/"
+      }
+    ],
+    "statistics": {
+      "mostRecorded": "umm-kulthum",
+      "mostAnalyzed": "yusuf-omar"
+    }
+  },
+  "singers/singers-master-list.json": {
+    "version": "2.0.0",
+    "lastUpdated": "2024-01-15",
+    "singers": [
+      {
+        "id": "yusuf-omar",
+        "name": "يوسف عمر",
+        "nameEn": "Yusuf Omar",
+        "nationality": "عراقي",
+        "period": "1918-1987",
+        "school": "العراقية",
+        "specialization": "مقام عراقي",
+        "keyMaqams": [
+          "rast",
+          "bayat",
+          "hijaz",
+          "sikah"
+        ],
+        "path": "/singers/iraqi/yusuf-omar.json"
+      },
+      {
+        "id": "umm-kulthum",
+        "name": "أم كلثوم",
+        "nameEn": "Umm Kulthum",
+        "nationality": "مصرية",
+        "period": "1904-1975",
+        "school": "المصرية",
+        "specialization": "غناء كلاسيكي",
+        "keyMaqams": [
+          "bayat",
+          "rast",
+          "saba",
+          "nahawand"
+        ],
+        "path": "/singers/egyptian/umm-kulthum.json"
+      },
+      {
+        "id": "sabah-fakhri",
+        "name": "صباح فخري",
+        "nameEn": "Sabah Fakhri",
+        "nationality": "سوري",
+        "period": "1933-2024",
+        "school": "الحلبية",
+        "specialization": "موشحات وقدود",
+        "keyMaqams": [
+          "rast",
+          "bayat",
+          "hijaz",
+          "sikah"
+        ],
+        "path": "/singers/syrian/sabah-fakhri.json"
+      },
+      {
+        "id": "fairuz",
+        "name": "فيروز",
+        "nameEn": "Fairuz",
+        "nationality": "لبنانية",
+        "period": "1934-حتى الآن",
+        "school": "اللبنانية",
+        "specialization": "أغنية لبنانية",
+        "keyMaqams": [
+          "bayat",
+          "nahawand",
+          "rast"
+        ],
+        "path": "/singers/lebanese/fairuz.json"
+      }
+    ]
+  },
+  "singers/iraqi/yusuf-omar.json": {
+    "id": "yusuf-omar",
+    "name": "يوسف عمر",
+    "nameEn": "Yusuf Omar",
+    "idCode": "MQM-SNG-2001",
+    "nationality": "عراقي",
+    "birthDate": "1918-05-15",
+    "deathDate": "1987-03-20",
+    "birthPlace": "بغداد، العراق",
+    "era": "القرن العشرين",
+    "school": "العراقية",
+    "specialization": "مقام عراقي",
+    "voiceType": "جهوري عميق",
+    "biography": {
+      "arabic": "يوسف عمر (1918-1987) مطرب عراقي كبير، أحد أعلام المقام العراقي في القرن العشرين.",
+      "keyEvents": [
+        {
+          "year": 1935,
+          "event": "بداية الدراسة على يد شيوخ المقام"
+        },
+        {
+          "year": 1945,
+          "event": "أول تسجيل للإذاعة العراقية"
+        },
+        {
+          "year": 1960,
+          "event": "تسجيل مقام راست الشهير"
+        }
+      ]
+    },
+    "repertoire": {
+      "totalMaqams": 45,
+      "completeRecordings": 32,
+      "famousMaqams": [
+        {
+          "maqam": "راست",
+          "recordingId": "MQM-REC-4001",
+          "year": 1960
+        },
+        {
+          "maqam": "بيات حسيني",
+          "recordingId": "MQM-REC-4203",
+          "year": 1962
+        }
+      ]
+    }
+  },
+  "singers/egyptian/umm-kulthum.json": {
+    "id": "umm-kulthum",
+    "name": "أم كلثوم",
+    "nameEn": "Umm Kulthum",
+    "idCode": "MQM-SNG-2002",
+    "nationality": "مصرية",
+    "birthDate": "1904-05-04",
+    "deathDate": "1975-02-03",
+    "birthPlace": "طماي الزهايرة، الدقهلية، مصر",
+    "era": "القرن العشرين",
+    "school": "المصرية",
+    "specialization": "غناء كلاسيكي",
+    "voiceType": "كونترالتو",
+    "biography": {
+      "arabic": "أم كلثوم (1904-1975) مطربة مصرية عظيمة، تعتبر أيقونة الغناء العربي في القرن العشرين.",
+      "keyEvents": [
+        {
+          "year": 1923,
+          "event": "الانتقال إلى القاهرة"
+        },
+        {
+          "year": 1928,
+          "event": "أول تسجيل أسطوانة"
+        },
+        {
+          "year": 1966,
+          "event": "غناء قصيدة الأطلال"
+        }
+      ]
+    },
+    "repertoire": {
+      "totalSongs": 320,
+      "famousMaqams": [
+        {
+          "maqam": "بيات",
+          "songs": [
+            "الأطلال",
+            "رباعيات الخيام"
+          ]
+        },
+        {
+          "maqam": "راست",
+          "songs": [
+            "أنت عمري",
+            "سيرة الحب"
+          ]
+        }
+      ]
+    }
+  },
+  "singers/golden-age-singers/index.json": {
+    "id": "golden-age-index",
+    "name": "مطربو العصر الذهبي",
+    "nameEn": "Golden Age Singers Index",
+    "lastUpdated": "2024-01-15",
+    "period": "1930-1970",
+    "singers": [
+      {
+        "id": "umm-kulthum",
+        "name": "أم كلثوم",
+        "nationality": "مصر",
+        "years": "1904-1975",
+        "path": "/singers/egyptian/umm-kulthum.json"
+      },
+      {
+        "id": "mohammed-abdel-wahab",
+        "name": "محمد عبد الوهاب",
+        "nationality": "مصر",
+        "years": "1902-1991",
+        "path": "/singers/egyptian/mohammed-abdel-wahab.json"
+      },
+      {
+        "id": "farid-al-atrash",
+        "name": "فريد الأطرش",
+        "nationality": "سوريا-مصر",
+        "years": "1910-1974",
+        "path": "/singers/egyptian/farid-al-atrash.json"
+      },
+      {
+        "id": "yusuf-omar",
+        "name": "يوسف عمر",
+        "nationality": "العراق",
+        "years": "1918-1987",
+        "path": "/singers/iraqi/yusuf-omar.json"
+      },
+      {
+        "id": "sabah-fakhri",
+        "name": "صباح فخري",
+        "nationality": "سوريا",
+        "years": "1933-2024",
+        "path": "/singers/syrian/sabah-fakhri.json"
+      },
+      {
+        "id": "fairuz",
+        "name": "فيروز",
+        "nationality": "لبنان",
+        "years": "1934-حتى الآن",
+        "path": "/singers/lebanese/fairuz.json"
+      }
+    ]
+  },
+  "atwar/index.json": {
+    "version": "2.0.0",
+    "lastUpdated": "2024-01-15",
+    "totalAtwar": 43,
+    "mainAtwar": [
+      {
+        "id": "muhammadi",
+        "name": "محمّدي",
+        "nameEn": "Muhammadi",
+        "path": "/atwar/muhammadi/muhammadi.json",
+        "emotionalCharacter": [
+          "روحاني",
+          "عميق",
+          "مهيب"
+        ],
+        "popularSingers": [
+          "رياض أحمد",
+          "داخل حسن",
+          "ناصر حكيم"
+        ]
+      },
+      {
+        "id": "sabi",
+        "name": "صابي",
+        "nameEn": "Sabi",
+        "path": "/atwar/sabi/sabi.json",
+        "emotionalCharacter": [
+          "حزين",
+          "شجي",
+          "بكائي"
+        ],
+        "popularSingers": [
+          "رياض أحمد",
+          "عبادي العماري"
+        ]
+      },
+      {
+        "id": "ghafili",
+        "name": "غافلي",
+        "nameEn": "Ghafili",
+        "path": "/atwar/ghafili/ghafili.json",
+        "emotionalCharacter": [
+          "خفيف",
+          "مرح",
+          "راقص"
+        ],
+        "popularSingers": [
+          "داخل حسن",
+          "حسن داود"
+        ]
+      }
+    ],
+    "relationToMaqams": {
+      "muhammadi": "قريب من مقام راست",
+      "sabi": "قريب من مقام بيات حسيني",
+      "ghafili": "قريب من مقام حجاز"
+    }
+  },
+  "atwar/atwar-master-list.json": {
+    "version": "2.0.0",
+    "lastUpdated": "2024-01-15",
+    "atwar": [
+      {
+        "id": "muhammadi",
+        "name": "محمّدي",
+        "nameEn": "Muhammadi",
+        "family": "rast-like",
+        "rootNote": "C",
+        "emotionalCharacter": [
+          "روحاني",
+          "عميق",
+          "مهيب"
+        ],
+        "popularSingers": [
+          "رياض أحمد",
+          "داخل حسن",
+          "ناصر حكيم"
+        ],
+        "path": "/atwar/muhammadi/muhammadi.json",
+        "subtypes": [
+          "dhib",
+          "mayhuna",
+          "wajif",
+          "daraj"
+        ]
+      },
+      {
+        "id": "sabi",
+        "name": "صابي",
+        "nameEn": "Sabi",
+        "family": "bayat-like",
+        "rootNote": "D",
+        "emotionalCharacter": [
+          "حزين",
+          "شجي",
+          "بكائي"
+        ],
+        "popularSingers": [
+          "رياض أحمد",
+          "عبادي العماري"
+        ],
+        "path": "/atwar/sabi/sabi.json"
+      },
+      {
+        "id": "ghafili",
+        "name": "غافلي",
+        "nameEn": "Ghafili",
+        "family": "hijaz-like",
+        "rootNote": "D",
+        "emotionalCharacter": [
+          "خفيف",
+          "مرح",
+          "راقص"
+        ],
+        "popularSingers": [
+          "داخل حسن",
+          "حسن داود"
+        ],
+        "path": "/atwar/ghafili/ghafili.json"
+      },
+      {
+        "id": "suwayti",
+        "name": "سويطي",
+        "nameEn": "Suwayti",
+        "family": "kurd-like",
+        "rootNote": "D",
+        "emotionalCharacter": [
+          "سريع",
+          "حماسي",
+          "مثير"
+        ],
+        "popularSingers": [
+          "جبار ونيسة",
+          "حسن داود"
+        ],
+        "path": "/atwar/suwayti.json"
+      }
+    ]
+  },
+  "atwar/muhammadi/muhammadi.json": {
+    "id": "muhammadi",
+    "name": "محمّدي",
+    "nameEn": "Muhammadi",
+    "idCode": "MQM-ATW-3001",
+    "family": "rast-like",
+    "rootNote": "C",
+    "scale": {
+      "notes": [
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "A",
+        "B-half-flat",
+        "C"
+      ],
+      "quarterTones": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -0.5,
+        0
+      ]
+    },
+    "emotionalProfile": {
+      "primary": [
+        "روحاني",
+        "عميق",
+        "مهيب"
+      ],
+      "secondary": [
+        "خاشع",
+        "وقور",
+        "صوفي"
+      ],
+      "colorCode": "#8B4513"
+    },
+    "subtypes": [
+      {
+        "id": "dhib",
+        "name": "ذيب",
+        "description": "نوع سريع من المحمّدي"
+      },
+      {
+        "id": "mayhuna",
+        "name": "ميهونة",
+        "description": "نوع حزين وبطيء"
+      }
+    ],
+    "popularSingers": [
+      "رياض أحمد",
+      "داخل حسن",
+      "ناصر حكيم"
+    ]
+  },
+  "atwar/muhammadi/muhammadi-popular.json": {
+    "id": "muhammadi-popular",
+    "name": "محمّدي شعبي",
+    "nameEn": "Muhammadi Popular",
+    "type": "folk-variant",
+    "scale": {
+      "notes": [
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "A",
+        "B-flat",
+        "C"
+      ],
+      "quarterTones": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -1,
+        0
+      ]
+    },
+    "emotionalProfile": {
+      "primary": [
+        "فرح",
+        "حماسة",
+        "اجتماعية"
+      ],
+      "energyLevel": 8
+    },
+    "folkCharacteristics": {
+      "tempo": "سريع (120-150)",
+      "instruments": [
+        "طبلة",
+        "دف",
+        "ربابة"
+      ],
+      "contexts": [
+        "أفراح",
+        "مهرجانات",
+        "سهرات"
+      ]
+    }
+  },
+  "atwar/muhammadi/subtypes/dhib.json": {
+    "id": "dhib",
+    "name": "ذيب",
+    "nameEn": "Dhib",
+    "parent": "muhammadi",
+    "description": "نوع سريع من المحمّدي",
+    "characteristics": {
+      "tempo": "سريع (130-160)",
+      "mood": "حماسي",
+      "context": "أفراح، سهرات"
+    }
+  },
+  "atwar/sabi/sabi.json": {
+    "id": "sabi",
+    "name": "صابي",
+    "nameEn": "Sabi",
+    "idCode": "MQM-ATW-3002",
+    "family": "bayat-like",
+    "rootNote": "D",
+    "scale": {
+      "notes": [
+        "D",
+        "E",
+        "F-half-flat",
+        "G",
+        "A",
+        "B-half-flat",
+        "C",
+        "D"
+      ],
+      "quarterTones": [
+        0,
+        0,
+        -0.5,
+        0,
+        0,
+        -0.5,
+        0,
+        0
+      ]
+    },
+    "emotionalProfile": {
+      "primary": [
+        "حزين",
+        "شجي",
+        "بكائي"
+      ],
+      "secondary": [
+        "وجع",
+        "أسى",
+        "فراق"
+      ],
+      "colorCode": "#2F4F4F",
+      "sadnessLevel": 9
+    },
+    "famousSingers": [
+      "رياض أحمد",
+      "عبادي العماري"
+    ]
+  },
+  "atwar/sabi/story.json": {
+    "id": "sabi-story",
+    "title": "قصة طور صابي",
+    "story": {
+      "arabic": "يحكى أن شاباً بدوياً من جنوب العراق يُدعى 'صابي' كان يحب فتاة من قبيلته. وفي يوم من الأيام، هاجمت قبيلة أخرى منطقتهم، وفي الهجوم فقد حبيبته. جلس صابي على ضفاف الأهوار يبكي حبيبته وينشد ألحاناً حزينة. ومع الزمن، تطور هذا الغناء ليصبح طوراً يحمل اسمه: 'صابي'."
+    }
+  },
+  "atwar/ghafili/ghafili.json": {
+    "id": "ghafili",
+    "name": "غافلي",
+    "nameEn": "Ghafili",
+    "idCode": "MQM-ATW-3003",
+    "family": "hijaz-like",
+    "rootNote": "D",
+    "scale": {
+      "notes": [
+        "D",
+        "E-half-flat",
+        "F#",
+        "G",
+        "A",
+        "B-half-flat",
+        "C",
+        "D"
+      ],
+      "quarterTones": [
+        0,
+        -0.5,
+        0,
+        0,
+        0,
+        -0.5,
+        0,
+        0
+      ]
+    },
+    "emotionalProfile": {
+      "primary": [
+        "خفيف",
+        "مرح",
+        "راقص"
+      ],
+      "secondary": [
+        "بهجة",
+        "انطلاق",
+        "اجتماعي"
+      ],
+      "colorCode": "#20B2AA"
+    },
+    "subtypes": [
+      "daraj",
+      "hayyawi",
+      "mayyahi"
+    ],
+    "famousSingers": [
+      "داخل حسن",
+      "حسن داود"
+    ]
+  },
+  "atwar/by-city/shatraawi.json": {
+    "id": "shatraawi",
+    "name": "شطّراوي",
+    "nameEn": "Shatraawi",
+    "city": "الشطرة",
+    "province": "ذي قار",
+    "region": "جنوب العراق",
+    "family": "bayat-like",
+    "scale": {
+      "notes": [
+        "D",
+        "E",
+        "F",
+        "G",
+        "A",
+        "B-flat",
+        "C",
+        "D"
+      ],
+      "quarterTones": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        -1,
+        0,
+        0
+      ]
+    },
+    "emotionalProfile": {
+      "primary": [
+        "شعبي",
+        "حماسي",
+        "اجتماعي"
+      ],
+      "energyLevel": 8
+    },
+    "famousSingers": [
+      "داخل حسن",
+      "حسن داود"
+    ]
+  },
+  "atwar/by-city/hayyawi.json": {
+    "id": "hayyawi",
+    "name": "حيّاوي",
+    "nameEn": "Hayyawi",
+    "city": "الحي",
+    "province": "واسط",
+    "region": "وسط العراق",
+    "family": "hijaz-like",
+    "scale": {
+      "notes": [
+        "D",
+        "E-half-flat",
+        "F#",
+        "G",
+        "A",
+        "B-half-flat",
+        "C",
+        "D"
+      ],
+      "quarterTones": [
+        0,
+        -0.5,
+        0,
+        0,
+        0,
+        -0.5,
+        0,
+        0
+      ]
+    },
+    "emotionalProfile": {
+      "primary": [
+        "قوي",
+        "شجاع",
+        "فخور"
+      ],
+      "energyLevel": 8
+    },
+    "famousSingers": [
+      "ناصر حكيم",
+      "حسن داود"
+    ]
+  },
+  "multi-track-recordings/index.json": {
+    "version": "2.0.0",
+    "lastUpdated": "2024-01-15",
+    "totalRecordings": 1250,
+    "categories": [
+      {
+        "id": "complete-maqams",
+        "name": "مقامات كاملة",
+        "count": 350,
+        "path": "/multi-track-recordings/complete-maqams/"
+      },
+      {
+        "id": "golden-age",
+        "name": "تسجيلات العصر الذهبي",
+        "count": 280,
+        "path": "/multi-track-recordings/golden-age-recordings/"
+      }
+    ],
+    "byMaqam": {
+      "rast": 156,
+      "bayat": 245,
+      "hijaz": 189
+    },
+    "bySinger": {
+      "umm-kulthum": 320,
+      "yusuf-omar": 156
+    }
+  },
+  "multi-track-recordings/complete-maqams/rast/yusuf-omar-rast-1960/metadata.json": {
+    "id": "yusuf-omar-rast-1960",
+    "recordingId": "MQM-REC-4001",
+    "title": "مقام راست كامل",
+    "singer": "yusuf-omar",
+    "singerName": "يوسف عمر",
+    "maqam": "rast",
+    "maqamVariant": "iraqi",
+    "year": 1960,
+    "venue": "الإذاعة العراقية - بغداد",
+    "duration": "75:23",
+    "quality": "master",
+    "sections": [
+      {
+        "name": "تسليم أول",
+        "start": "00:00",
+        "end": "05:00"
+      },
+      {
+        "name": "ميانة أولى",
+        "start": "05:00",
+        "end": "15:30"
+      },
+      {
+        "name": "تحرير أول",
+        "start": "15:30",
+        "end": "16:00"
+      }
+    ]
+  },
+  "multi-track-recordings/complete-maqams/rast/yusuf-omar-rast-1960/phrase-annotations.json": {
+    "recordingId": "MQM-REC-4001",
+    "phrases": [
+      {
+        "id": "phrase-001",
+        "type": "taslim",
+        "start": "00:00",
+        "end": "00:45",
+        "emotionalTag": "مهيب"
+      },
+      {
+        "id": "phrase-002",
+        "type": "taslim",
+        "start": "00:45",
+        "end": "02:00",
+        "emotionalTag": "ثابت"
+      },
+      {
+        "id": "phrase-004",
+        "type": "miana",
+        "start": "05:00",
+        "end": "08:00",
+        "emotionalTag": "منطلق"
+      }
+    ]
+  },
+  "multi-track-recordings/golden-age-recordings/index.json": {
+    "id": "golden-age-recordings",
+    "name": "تسجيلات العصر الذهبي",
+    "period": "1930-1970",
+    "totalRecordings": 280,
+    "featuredRecordings": [
+      {
+        "id": "umm-kulthum-atlal-1966",
+        "title": "الأطلال",
+        "singer": "أم كلثوم",
+        "year": 1966,
+        "maqam": "bayat"
+      },
+      {
+        "id": "yusuf-omar-rast-1960",
+        "title": "مقام راست",
+        "singer": "يوسف عمر",
+        "year": 1960,
+        "maqam": "rast"
+      }
+    ]
+  },
+  "vocal-analysis/index.json": {
+    "version": "2.0.0",
+    "lastUpdated": "2024-01-15",
+    "analysisTypes": [
+      {
+        "id": "pitch-analysis",
+        "name": "تحليل طبقة الصوت",
+        "path": "/vocal-analysis/pitch-analysis/",
+        "totalAnalyses": 450
+      },
+      {
+        "id": "emotional-analysis",
+        "name": "تحليل المشاعر",
+        "path": "/vocal-analysis/emotional-analysis/",
+        "totalAnalyses": 280
+      },
+      {
+        "id": "ornament-analysis",
+        "name": "تحليل الزخارف",
+        "path": "/vocal-analysis/ornament-analysis/",
+        "totalAnalyses": 320
+      }
+    ]
+  },
+  "vocal-analysis/pitch-analysis/by-singer/yusuf-omar-pitch.json": {
+    "singerId": "yusuf-omar",
+    "singerName": "يوسف عمر",
+    "totalRecordings": 89,
+    "pitchCharacteristics": {
+      "averagePitch": 180,
+      "pitchRange": {
+        "lowest": 80,
+        "highest": 320
+      },
+      "vibrato": {
+        "averageRate": 5.2,
+        "averageDepth": 0.8
+      },
+      "accuracy": 0.95
+    }
+  },
+  "vocal-analysis/emotional-analysis/emotion-curves.json": {
+    "recordingId": "yusuf-omar-rast-1960",
+    "emotionCurves": {
+      "spirituality": [
+        {
+          "time": 0,
+          "intensity": 7
+        },
+        {
+          "time": 300,
+          "intensity": 6
+        },
+        {
+          "time": 600,
+          "intensity": 5
+        }
+      ],
+      "pride": [
+        {
+          "time": 0,
+          "intensity": 5
+        },
+        {
+          "time": 300,
+          "intensity": 6
+        },
+        {
+          "time": 600,
+          "intensity": 7
+        }
+      ]
+    }
+  },
+  "ai-models/index.json": {
+    "version": "2.0.0",
+    "lastUpdated": "2024-01-15",
+    "totalModels": 12,
+    "models": [
+      {
+        "id": "singer-identification",
+        "name": "التعرف على المطربين",
+        "status": "operational",
+        "accuracy": 0.94,
+        "path": "/ai-models/singer-identification/"
+      },
+      {
+        "id": "maqam-classification",
+        "name": "تصنيف المقامات",
+        "status": "operational",
+        "accuracy": 0.91,
+        "path": "/ai-models/maqam-classification/"
+      },
+      {
+        "id": "ornament-detection",
+        "name": "كشف الزخارف",
+        "status": "operational",
+        "accuracy": 0.87,
+        "path": "/ai-models/ornament-detection/"
+      },
+      {
+        "id": "emotion-recognition",
+        "name": "التعرف على المشاعر",
+        "status": "operational",
+        "accuracy": 0.85,
+        "path": "/ai-models/emotion-recognition/"
+      }
+    ]
+  },
+  "ai-models/emotion-recognition/emotion-predictions/rast-predictions.json": {
+    "maqam": "rast",
+    "totalRecordings": 156,
+    "emotionPredictions": {
+      "averageProfile": {
+        "happiness": 6.2,
+        "sadness": 2.8,
+        "spirituality": 7.5,
+        "pride": 6.8
+      },
+      "byRecording": [
+        {
+          "recordingId": "MQM-REC-4001",
+          "title": "يوسف عمر - راست 1960",
+          "dominant": "spirituality"
+        }
+      ]
+    }
+  },
+  "ai-models/ai-maqam-composer/generated-compositions/rast-new-composition.json": {
+    "id": "ai-rast-composition-001",
+    "title": "تأليف راست جديد بالذكاء الاصطناعي",
+    "maqam": "rast",
+    "modelVersion": "maqam-composer-v2.1",
+    "generated": "2024-01-15T10:30:00Z",
+    "composition": {
+      "phrases": [
+        {
+          "id": "phrase-01",
+          "type": "opening",
+          "notes": [
+            "C",
+            "E",
+            "G",
+            "C",
+            "B",
+            "C"
+          ],
+          "duration": 8
+        },
+        {
+          "id": "phrase-02",
+          "type": "taslim",
+          "notes": [
+            "C",
+            "D",
+            "E",
+            "D",
+            "C",
+            "B-half-flat",
+            "C"
+          ],
+          "duration": 12
+        }
+      ]
+    },
+    "evaluation": {
+      "authenticityScore": 0.85,
+      "maqamAdherence": 0.92
+    }
+  },
+  "ai-models/ai-singing-tutor/exercises.json": {
+    "version": "2.0.0",
+    "exercises": [
+      {
+        "id": "ex-001",
+        "name": "تمرين سلم راست",
+        "level": "beginner",
+        "maqam": "rast",
+        "steps": [
+          {
+            "step": 1,
+            "instruction": "استمع لدرجة الراست (دو)"
+          },
+          {
+            "step": 2,
+            "instruction": "كرر درجة الراست"
+          },
+          {
+            "step": 3,
+            "instruction": "استمع لدرجة الري"
+          }
+        ]
+      },
+      {
+        "id": "ex-002",
+        "name": "تمرين التسليم في راست",
+        "level": "intermediate",
+        "maqam": "rast",
+        "steps": [
+          {
+            "step": 1,
+            "instruction": "استمع للتسليم النموذجي"
+          },
+          {
+            "step": 2,
+            "instruction": "تعلم النوتات"
+          },
+          {
+            "step": 3,
+            "instruction": "تدرب على التسليم ببطء"
+          }
+        ]
+      }
+    ]
+  },
+  "ai-models/voice-authenticity-detection/authenticity-scores.json": {
+    "version": "2.0.0",
+    "lastUpdated": "2024-01-15",
+    "totalAnalyzed": 1250,
+    "authenticityScores": [
+      {
+        "recordingId": "MQM-REC-4001",
+        "title": "يوسف عمر - راست 1960",
+        "authenticityScore": 98.5,
+        "status": "authentic"
+      },
+      {
+        "recordingId": "AI-GEN-001",
+        "title": "تأليف ذكاء اصطناعي - راست",
+        "authenticityScore": 12.5,
+        "status": "ai-generated"
+      }
+    ],
+    "statistics": {
+      "authentic": 980,
+      "ai-generated": 45,
+      "suspicious": 180
+    }
+  },
+  "timeline/index.json": {
+    "version": "2.0.0",
+    "lastUpdated": "2024-01-15",
+    "timelines": [
+      {
+        "id": "singer-timelines",
+        "name": "خطوط زمنية للمطربين",
+        "path": "/timeline/singer-timelines/",
+        "count": 45
+      },
+      {
+        "id": "maqam-timelines",
+        "name": "خطوط زمنية للمقامات",
+        "path": "/timeline/maqam-timelines/",
+        "count": 25
+      }
+    ],
+    "featured": {
+      "yusuf-omar": "/timeline/singer-timelines/yusuf-omar-timeline.json",
+      "umm-kulthum": "/timeline/singer-timelines/umm-kulthum-timeline.json",
+      "rast": "/timeline/maqam-timelines/rast-timeline.json"
+    }
+  },
+  "timeline/singer-timelines/yusuf-omar-timeline.json": {
+    "singerId": "yusuf-omar",
+    "singerName": "يوسف عمر",
+    "birth": "1918-05-15",
+    "death": "1987-03-20",
+    "events": [
+      {
+        "date": "1918-05-15",
+        "type": "birth",
+        "title": "الميلاد",
+        "location": "بغداد، العراق"
+      },
+      {
+        "date": "1935-01-01",
+        "type": "education",
+        "title": "بداية الدراسة",
+        "location": "بغداد، العراق"
+      },
+      {
+        "date": "1945-03-15",
+        "type": "recording",
+        "title": "أول تسجيل إذاعي",
+        "location": "الإذاعة العراقية"
+      },
+      {
+        "date": "1960-11-20",
+        "type": "recording",
+        "title": "تسجيل مقام راست الشهير",
+        "location": "الإذاعة العراقية"
+      },
+      {
+        "date": "1987-03-20",
+        "type": "death",
+        "title": "الوفاة",
+        "location": "بغداد، العراق"
+      }
+    ]
+  },
+  "timeline/singer-timelines/umm-kulthum-timeline.json": {
+    "singerId": "umm-kulthum",
+    "singerName": "أم كلثوم",
+    "birth": "1904-05-04",
+    "death": "1975-02-03",
+    "events": [
+      {
+        "date": "1904-05-04",
+        "type": "birth",
+        "title": "الميلاد",
+        "location": "طماي الزهايرة، مصر"
+      },
+      {
+        "date": "1923-01-01",
+        "type": "career",
+        "title": "الانتقال إلى القاهرة",
+        "location": "القاهرة، مصر"
+      },
+      {
+        "date": "1928-03-15",
+        "type": "recording",
+        "title": "أول أسطوانة",
+        "location": "القاهرة، مصر"
+      },
+      {
+        "date": "1966-01-01",
+        "type": "recording",
+        "title": "الأطلال",
+        "location": "القاهرة، مصر"
+      },
+      {
+        "date": "1975-02-03",
+        "type": "death",
+        "title": "الوفاة",
+        "location": "القاهرة، مصر"
+      }
+    ]
+  },
+  "timeline/maqam-timelines/rast-timeline.json": {
+    "maqamId": "rast",
+    "maqamName": "راست",
+    "timeline": [
+      {
+        "era": "العصر الجاهلي",
+        "period": "500-622 م",
+        "events": [
+          {
+            "title": "جذور قديمة",
+            "description": "استخدام ألحان قريبة من الراست في الغناء الجاهلي"
+          }
+        ]
+      },
+      {
+        "era": "العصر العباسي",
+        "period": "750-1258 م",
+        "events": [
+          {
+            "title": "أول تدوين",
+            "year": 850,
+            "description": "ذكر الراست في كتاب الأغاني"
+          },
+          {
+            "title": "تحليل نظري",
+            "year": 900,
+            "description": "تحليل الفارابي للراست"
+          }
+        ]
+      },
+      {
+        "era": "العصر الحديث",
+        "period": "1920-2024 م",
+        "events": [
+          {
+            "title": "تسجيلات مبكرة",
+            "year": 1925,
+            "description": "أول تسجيلات للراست على أسطوانات"
+          },
+          {
+            "title": "تسجيل يوسف عمر",
+            "year": 1960,
+            "description": "تسجيل يوسف عمر لمقام راست كامل"
+          }
+        ]
+      }
+    ]
+  },
+  "interactive-explorer/index.json": {
+    "version": "2.0.0",
+    "lastUpdated": "2024-01-15",
+    "name": "المستكشف التفاعلي للمقامات",
+    "modules": [
+      {
+        "id": "maqam-player",
+        "name": "مشغل المقامات التفاعلي",
+        "path": "/interactive-explorer/maqam-player/"
+      },
+      {
+        "id": "emotion-sync",
+        "name": "تصور مزامنة العاطفة",
+        "path": "/interactive-explorer/emotion-sync-visualization/"
+      },
+      {
+        "id": "ar-vr",
+        "name": "تجارب الواقع المعزز والافتراضي",
+        "path": "/interactive-explorer/ar-vr-experiences/"
+      }
+    ]
+  },
+  "interactive-explorer/maqam-player/config.json": {
+    "version": "2.0.0",
+    "defaultSettings": {
+      "tempo": 100,
+      "pitch": 440,
+      "ornaments": true,
+      "visualization": true
+    },
+    "availableMaqams": [
+      {
+        "id": "rast",
+        "name": "راست",
+        "path": "/interactive-explorer/maqam-player/rast-interactive.json"
+      },
+      {
+        "id": "bayat",
+        "name": "بيات",
+        "path": "/interactive-explorer/maqam-player/bayat-interactive.json"
+      }
+    ]
+  },
+  "interactive-explorer/maqam-player/rast-interactive.json": {
+    "maqamId": "rast",
+    "name": "راست",
+    "scale": {
+      "notes": [
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "A",
+        "B",
+        "C"
+      ],
+      "quarterTones": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "interactiveElements": [
+      {
+        "type": "note",
+        "note": "C",
+        "name": "دو - قرار الراست",
+        "audio": "/assets/audio/rast/note-c.mp3"
+      },
+      {
+        "type": "note",
+        "note": "D",
+        "name": "ري",
+        "audio": "/assets/audio/rast/note-d.mp3"
+      },
+      {
+        "type": "ornament",
+        "name": "اهتزاز على الراست",
+        "note": "C",
+        "audio": "/assets/audio/rast/ornament-vibrato.mp3"
+      }
+    ]
+  },
+  "interactive-explorer/emotion-sync-visualization/config.json": {
+    "version": "2.0.0",
+    "emotions": [
+      {
+        "id": "happiness",
+        "name": "فرح",
+        "color": "#FFD700"
+      },
+      {
+        "id": "sadness",
+        "name": "حزن",
+        "color": "#2F4F4F"
+      },
+      {
+        "id": "spirituality",
+        "name": "روحانية",
+        "color": "#8B4513"
+      },
+      {
+        "id": "pride",
+        "name": "فخر",
+        "color": "#8B0000"
+      }
+    ],
+    "availableRecordings": [
+      {
+        "id": "yusuf-omar-rast-1960",
+        "name": "يوسف عمر - راست 1960",
+        "path": "/interactive-explorer/emotion-sync-visualization/rast-emotion-curves.json"
+      }
+    ]
+  },
+  "interactive-explorer/emotion-sync-visualization/rast-emotion-curves.json": {
+    "recordingId": "yusuf-omar-rast-1960",
+    "maqam": "rast",
+    "singer": "يوسف عمر",
+    "emotionCurves": {
+      "happiness": [
+        {
+          "time": 0,
+          "intensity": 3
+        },
+        {
+          "time": 300,
+          "intensity": 4
+        },
+        {
+          "time": 600,
+          "intensity": 5
+        }
+      ],
+      "spirituality": [
+        {
+          "time": 0,
+          "intensity": 7
+        },
+        {
+          "time": 300,
+          "intensity": 6
+        },
+        {
+          "time": 600,
+          "intensity": 5
+        }
+      ]
+    },
+    "dominantEmotions": [
+      {
+        "timeRange": [
+          "00:00",
+          "05:00"
+        ],
+        "emotion": "spirituality",
+        "intensity": 7
+      }
+    ]
+  },
+  "interactive-explorer/ar-vr-experiences/config.json": {
+    "version": "2.0.0",
+    "experiences": [
+      {
+        "id": "maqam-square",
+        "name": "ساحة المقامات",
+        "type": "vr",
+        "path": "/interactive-explorer/ar-vr-experiences/maqam-square/"
+      },
+      {
+        "id": "singer-hologram",
+        "name": "هولوجرام المطربين",
+        "type": "ar",
+        "path": "/interactive-explorer/ar-vr-experiences/singer-hologram/"
+      }
+    ]
+  },
+  "interactive-explorer/ar-vr-experiences/maqam-square/scene-config.json": {
+    "id": "maqam-square",
+    "scene": {
+      "environment": "night",
+      "lighting": "soft",
+      "background": "stars"
+    },
+    "maqamPositions": [
+      {
+        "id": "rast",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      },
+      {
+        "id": "bayat",
+        "position": {
+          "x": 5,
+          "y": 0,
+          "z": 0
+        }
+      },
+      {
+        "id": "hijaz",
+        "position": {
+          "x": -5,
+          "y": 0,
+          "z": 0
+        }
+      }
+    ]
+  },
+  "interactive-explorer/ar-vr-experiences/maqam-square/maqam-positions.json": {
+    "scene": "ساحة المقامات",
+    "maqams": [
+      {
+        "id": "rast",
+        "name": "راست",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "color": "#8B4513"
+      },
+      {
+        "id": "bayat",
+        "name": "بيات",
+        "position": {
+          "x": 5,
+          "y": 0,
+          "z": 0
+        },
+        "color": "#4A708B"
+      },
+      {
+        "id": "hijaz",
+        "name": "حجاز",
+        "position": {
+          "x": -5,
+          "y": 0,
+          "z": 0
+        },
+        "color": "#8B0000"
+      }
+    ],
+    "audioZones": [
+      {
+        "center": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "radius": 3,
+        "audio": "/assets/audio/rast/ambient.mp3"
+      }
+    ]
+  },
+  "gamification/index.json": {
+    "version": "2.0.0",
+    "lastUpdated": "2024-01-15",
+    "activeUsers": 2340,
+    "totalChallenges": 45,
+    "challengeCategories": [
+      {
+        "id": "maqam-identification",
+        "name": "التعرف على المقامات",
+        "challenges": 12,
+        "path": "/gamification/challenges/maqam-identification/"
+      },
+      {
+        "id": "singer-identification",
+        "name": "التعرف على المطربين",
+        "challenges": 10,
+        "path": "/gamification/challenges/singer-identification/"
+      },
+      {
+        "id": "emotion-recognition",
+        "name": "التعرف على المشاعر",
+        "challenges": 8,
+        "path": "/gamification/challenges/emotion-recognition/"
+      }
+    ]
+  },
+  "gamification/challenges/maqam-identification/challenge-001-beginner.json": {
+    "id": "challenge-maqam-001",
+    "title": "تحدي التعرف على المقامات - مستوى مبتدئ",
+    "type": "maqam-identification",
+    "level": "beginner",
+    "points": 100,
+    "questions": [
+      {
+        "id": "q1",
+        "type": "audio",
+        "question": "ما اسم هذا المقام؟",
+        "options": [
+          "راست",
+          "بيات",
+          "حجاز",
+          "صبا"
+        ],
+        "correctAnswer": "راست"
+      },
+      {
+        "id": "q2",
+        "type": "audio",
+        "question": "ما اسم هذا المقام؟",
+        "options": [
+          "راست",
+          "بيات",
+          "نهاوند",
+          "كرد"
+        ],
+        "correctAnswer": "بيات"
+      }
+    ],
+    "reward": {
+      "points": 100,
+      "badge": "مبتدئ المقامات"
+    }
+  },
+  "gamification/challenges/emotion-recognition/challenge-001.json": {
+    "id": "challenge-emotion-001",
+    "title": "تحدي التعرف على المشاعر - مستوى مبتدئ",
+    "type": "emotion-recognition",
+    "level": "beginner",
+    "points": 120,
+    "questions": [
+      {
+        "id": "q1",
+        "type": "audio",
+        "question": "ما المشاعر التي تثيرها هذه العبارة الموسيقية؟",
+        "options": [
+          "فرح",
+          "حزن",
+          "روحانية",
+          "فخر"
+        ],
+        "correctAnswer": "روحانية"
+      },
+      {
+        "id": "q2",
+        "type": "audio",
+        "question": "ما المشاعر التي تثيرها هذه العبارة؟",
+        "options": [
+          "حنين",
+          "فرح",
+          "غضب",
+          "خوف"
+        ],
+        "correctAnswer": "حنين"
+      }
+    ],
+    "reward": {
+      "points": 120,
+      "badge": "مستشعر المشاعر"
+    }
+  },
+  "gamification/leaderboards/weekly-challenge.json": {
+    "challenge": "تحدي الأسبوع - التعرف على المقامات",
+    "week": "2024-01-08 to 2024-01-15",
+    "leaderboard": [
+      {
+        "rank": 1,
+        "userId": "user_abdullah",
+        "username": "عبدالله",
+        "score": 980,
+        "country": "السعودية"
+      },
+      {
+        "rank": 2,
+        "userId": "user_fatima",
+        "username": "فاطمة",
+        "score": 950,
+        "country": "مصر"
+      },
+      {
+        "rank": 3,
+        "userId": "user_ahmed",
+        "username": "أحمد",
+        "score": 920,
+        "country": "العراق"
+      }
+    ]
+  },
+  "gamification/user-profiles/progress-tracking.json": {
+    "userId": "user_abdullah",
+    "username": "عبدالله",
+    "level": 12,
+    "totalPoints": 3450,
+    "challenges": {
+      "completed": 34,
+      "attempted": 45,
+      "successRate": 75.6
+    },
+    "badges": [
+      {
+        "id": "badge-maqam-beginner",
+        "name": "مبتدئ المقامات",
+        "earned": "2023-07-01"
+      },
+      {
+        "id": "badge-emotion-detector",
+        "name": "كاشف المشاعر",
+        "earned": "2023-09-20"
+      }
+    ],
+    "weakPoints": [
+      {
+        "category": "ornament-detection",
+        "score": 78
+      }
+    ]
+  },
+  "educational/index.json": {
+    "version": "2.0.0",
+    "lastUpdated": "2024-01-15",
+    "totalLessons": 35,
+    "totalCourses": 8,
+    "lessons": {
+      "beginner": 12,
+      "intermediate": 15,
+      "advanced": 8
+    },
+    "courses": [
+      {
+        "id": "maqam-fundamentals",
+        "name": "أساسيات المقامات",
+        "level": "beginner",
+        "lessons": 8,
+        "path": "/educational/courses/course-001-maqam-fundamentals.json"
+      },
+      {
+        "id": "iraqi-school",
+        "name": "المدرسة العراقية",
+        "level": "intermediate",
+        "lessons": 6,
+        "path": "/educational/courses/course-002-iraqi-school.json"
+      }
+    ],
+    "learningPaths": [
+      {
+        "id": "beginner",
+        "name": "المسار للمبتدئين",
+        "path": "/educational/learning-paths/path-001-beginner.json"
+      }
+    ]
+  },
+  "educational/lessons/lesson-001-rast-beginner.json": {
+    "id": "lesson-001",
+    "title": "مقام راست للمبتدئين",
+    "level": "beginner",
+    "duration": "45 دقيقة",
+    "maqam": "rast",
+    "objectives": [
+      "التعرف على سلم مقام راست",
+      "تمييز درجات السلم",
+      "غناء السلم البسيط"
+    ],
+    "sections": [
+      {
+        "id": "intro",
+        "title": "مقدمة عن مقام راست",
+        "content": "مقام راست هو أحد أقدم المقامات العربية."
+      },
+      {
+        "id": "scale",
+        "title": "سلم راست",
+        "notes": [
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "A",
+          "B",
+          "C"
+        ]
+      }
+    ]
+  },
+  "educational/courses/course-001-maqam-fundamentals.json": {
+    "id": "course-001",
+    "title": "أساسيات المقامات",
+    "level": "beginner",
+    "duration": "4 أسابيع",
+    "lessonsCount": 8,
+    "objectives": [
+      "فهم مفهوم المقام",
+      "التعرف على 5 مقامات رئيسية",
+      "تمييز السلالم الموسيقية"
+    ],
+    "syllabus": [
+      {
+        "week": 1,
+        "title": "مقدمة في المقامات",
+        "lessons": [
+          "lesson-intro-001"
+        ]
+      },
+      {
+        "week": 2,
+        "title": "مقام راست",
+        "lessons": [
+          "lesson-001-rast-beginner"
+        ]
+      }
+    ]
+  },
+  "copyright-dashboard/index.json": {
+    "version": "2.0.0",
+    "lastUpdated": "2024-01-15",
+    "overview": {
+      "totalRecordings": 1250,
+      "cleared": 980,
+      "pending": 180,
+      "restricted": 90
+    },
+    "byCategory": {
+      "publicDomain": 320,
+      "licensed": 560,
+      "fairUse": 100
+    },
+    "bySinger": [
+      {
+        "singer": "يوسف عمر",
+        "total": 156,
+        "cleared": 145
+      },
+      {
+        "singer": "أم كلثوم",
+        "total": 320,
+        "cleared": 280
+      }
+    ]
+  },
+  "data-quality/index.json": {
+    "version": "2.0.0",
+    "lastUpdated": "2024-01-15",
+    "overallScore": 94.5,
+    "metrics": {
+      "completeness": 96.2,
+      "accuracy": 97.8,
+      "consistency": 93.5
+    },
+    "byCategory": {
+      "maqams": {
+        "completeness": 98.5,
+        "accuracy": 99.2
+      },
+      "singers": {
+        "completeness": 97.2,
+        "accuracy": 98.5
+      },
+      "recordings": {
+        "completeness": 95.8,
+        "accuracy": 96.7
+      }
+    }
+  },
+  "links/index.json": {
+    "version": "2.0.0",
+    "lastUpdated": "2024-01-15",
+    "totalLinks": 15420,
+    "sections": {
+      "byEntity": {
+        "singerLinks": "/links/by-entity/singer-links.json",
+        "maqamLinks": "/links/by-entity/maqam-links.json"
+      },
+      "byRelationship": {
+        "singerToRecording": "/links/by-relationship/singer-to-recording.json",
+        "emotionToRecording": "/links/by-relationship/emotion-to-recording.json"
+      }
+    }
+  },
+  "api/v2/endpoints.json": {
+    "version": "2.0.0",
+    "baseUrl": "https://api.maqam-encyclopedia.org/v2",
+    "endpoints": {
+      "maqams": {
+        "list": "/maqams",
+        "get": "/maqams/{id}",
+        "search": "/maqams/search"
+      },
+      "singers": {
+        "list": "/singers",
+        "get": "/singers/{id}",
+        "search": "/singers/search"
+      },
+      "ai": {
+        "classify-maqam": "/ai/classify-maqam",
+        "identify-singer": "/ai/identify-singer",
+        "detect-ornaments": "/ai/detect-ornaments"
+      }
+    }
+  },
+  "api/swagger/openapi.json": {
+    "openapi": "3.0.0",
+    "info": {
+      "title": "موسوعة المقامات العربية API",
+      "version": "2.0.0"
+    },
+    "servers": [
+      {
+        "url": "https://api.maqam-encyclopedia.org/v2"
+      }
+    ],
+    "paths": {
+      "/maqams": {
+        "get": {
+          "summary": "قائمة المقامات",
+          "responses": {
+            "200": {
+              "description": "قائمة المقامات"
+            }
+          }
+        }
+      }
+    }
+  },
+  "quality/validation-rules.json": {
+    "version": "2.0.0",
+    "rules": [
+      {
+        "id": "rule-001",
+        "name": "معرف فريد للمقام",
+        "entity": "maqam",
+        "field": "id",
+        "type": "required",
+        "severity": "error"
+      },
+      {
+        "id": "rule-002",
+        "name": "اسم المقام بالعربية",
+        "entity": "maqam",
+        "field": "name",
+        "type": "required",
+        "severity": "error"
+      },
+      {
+        "id": "rule-003",
+        "name": "سلم المقام",
+        "entity": "maqam",
+        "field": "scale.notes",
+        "type": "required",
+        "severity": "error"
+      }
+    ]
+  },
+  "3d-visualization/maqam-square/maqam-positions.json": {
+    "scene": "ساحة المقامات",
+    "maqams": [
+      {
+        "id": "rast",
+        "name": "راست",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "color": "#8B4513",
+        "model": "/assets/3d/maqams/rast.glb"
+      },
+      {
+        "id": "bayat",
+        "name": "بيات",
+        "position": {
+          "x": 5,
+          "y": 0,
+          "z": 0
+        },
+        "color": "#4A708B",
+        "model": "/assets/3d/maqams/bayat.glb"
+      }
+    ],
+    "lighting": {
+      "ambient": 0.5,
+      "directional": {
+        "intensity": 0.8,
+        "position": {
+          "x": 10,
+          "y": 20,
+          "z": 10
+        }
+      }
+    }
+  },
+  "web-demo/config.json": {
+    "version": "2.0.0",
+    "demos": [
+      {
+        "id": "interactive-explorer",
+        "name": "المستكشف التفاعلي",
+        "path": "/web-demo/interactive-explorer/"
+      },
+      {
+        "id": "ai-playground",
+        "name": "ملعب الذكاء الاصطناعي",
+        "path": "/web-demo/ai-playground/"
+      },
+      {
+        "id": "gamification-demo",
+        "name": "عرض الألعاب",
+        "path": "/web-demo/gamification-demo/"
+      }
+    ]
+  },
+  "exports/index.json": {
+    "version": "2.0.0",
+    "lastUpdated": "2024-01-15",
+    "availableFormats": [
+      "csv",
+      "json",
+      "sql"
+    ],
+    "exports": [
+      {
+        "id": "export-maqams",
+        "name": "بيانات المقامات",
+        "formats": {
+          "json": "/exports/formats/json/maqams.json",
+          "csv": "/exports/formats/csv/maqams.csv"
+        }
+      },
+      {
+        "id": "export-singers",
+        "name": "بيانات المطربين",
+        "formats": {
+          "json": "/exports/formats/json/singers.json",
+          "csv": "/exports/formats/csv/singers.csv"
+        }
+      }
+    ]
+  },
+  "quick-reference/index.json": {
+    "version": "2.0.0",
+    "lastUpdated": "2024-01-15",
+    "sections": [
+      {
+        "id": "maqams",
+        "name": "المقامات",
+        "path": "/quick-reference/maqams-quick.json"
+      },
+      {
+        "id": "singers",
+        "name": "المطربين",
+        "path": "/quick-reference/singers-quick.json"
+      }
+    ]
+  },
+  "quick-reference/maqams-quick.json": {
+    "version": "2.0.0",
+    "maqams": [
+      {
+        "id": "rast",
+        "name": "راست",
+        "scale": "C D E F G A B C",
+        "emotional": "ثبات، وقار، تفاؤل",
+        "path": "/maqams/rast/rast.json"
+      },
+      {
+        "id": "bayat",
+        "name": "بيات",
+        "scale": "D E F G A B C D",
+        "quarterTones": "0 0 -0.5 0 0 -0.5 0 0",
+        "emotional": "حنين، شوق، رقة",
+        "path": "/maqams/bayat/bayat.json"
+      },
+      {
+        "id": "hijaz",
+        "name": "حجاز",
+        "scale": "D E F# G A B C D",
+        "emotional": "قوة، شجاعة، فخر",
+        "path": "/maqams/hijaz/hijaz.json"
+      }
+    ]
+  },
+  "quick-reference/singers-quick.json": {
+    "version": "2.0.0",
+    "singers": [
+      {
+        "id": "yusuf-omar",
+        "name": "يوسف عمر",
+        "nationality": "عراقي",
+        "period": "1918-1987",
+        "famousMaqams": [
+          "راست",
+          "بيات"
+        ],
+        "path": "/singers/iraqi/yusuf-omar.json"
+      },
+      {
+        "id": "umm-kulthum",
+        "name": "أم كلثوم",
+        "nationality": "مصرية",
+        "period": "1904-1975",
+        "famousMaqams": [
+          "بيات",
+          "راست"
+        ],
+        "path": "/singers/egyptian/umm-kulthum.json"
+      },
+      {
+        "id": "sabah-fakhri",
+        "name": "صباح فخري",
+        "nationality": "سوري",
+        "period": "1933-2024",
+        "famousMaqams": [
+          "راست",
+          "بيات"
+        ],
+        "path": "/singers/syrian/sabah-fakhri.json"
+      }
+    ]
+  },
+  "preservation/index.json": {
+    "version": "2.0.0",
+    "lastUpdated": "2024-01-15",
+    "overview": {
+      "totalItems": 3250,
+      "preserved": 2450,
+      "inProgress": 650,
+      "atRisk": 150
+    },
+    "categories": {
+      "audioRecordings": {
+        "total": 1250,
+        "preserved": 980
+      },
+      "sheetMusic": {
+        "total": 850,
+        "preserved": 620
+      },
+      "documents": {
+        "total": 650,
+        "preserved": 500
+      }
+    },
+    "digitization": {
+      "standards": {
+        "audio": "96kHz/24bit FLAC",
+        "images": "600dpi TIFF"
+      }
+    },
+    "risks": [
+      {
+        "item": "iraqi-radio-1950s",
+        "risk": "تلف الأشرطة الأصلية",
+        "priority": "critical"
+      }
+    ]
+  },
+  "tools.json": {
+    "version": "2.0.0",
+    "lastUpdated": "2024-01-15",
+    "tools": [
+      {
+        "id": "maqam-analyzer",
+        "name": "محلل المقامات",
+        "type": "analysis",
+        "description": "تحليل المقامات من التسجيلات الصوتية",
+        "url": "/tools/maqam-analyzer"
+      },
+      {
+        "id": "singer-identifier",
+        "name": "متعرف على المطربين",
+        "type": "analysis",
+        "description": "التعرف على المطرب من صوته",
+        "url": "/tools/singer-identifier"
+      },
+      {
+        "id": "maqam-composer",
+        "name": "مؤلف مقامات",
+        "type": "generation",
+        "description": "تأليف مقامات جديدة بالذكاء الاصطناعي",
+        "url": "/tools/maqam-composer"
+      }
+    ]
+  },
+  "statistics.json": {
+    "version": "2.0.0",
+    "lastUpdated": "2024-01-15",
+    "general": {
+      "totalMaqams": 156,
+      "totalSingers": 287,
+      "totalAtwar": 43,
+      "totalRecordings": 1250,
+      "totalAnalyses": 1405
+    },
+    "maqams": {
+      "mostPopular": "بيات",
+      "mostRecorded": "بيات (245 تسجيل)",
+      "mostAnalyzed": "راست (156 تحليل)"
+    },
+    "singers": {
+      "mostRecorded": "فيروز (800 تسجيل)",
+      "mostAnalyzed": "يوسف عمر (89 تحليل)"
+    },
+    "aiModels": {
+      "total": 12,
+      "operational": 10,
+      "totalInferences": 1250000
+    }
+  },
+  "preservation.json": {
+    "version": "2.0.0",
+    "lastUpdated": "2024-01-15",
+    "status": "active",
+    "strategy": {
+      "shortTerm": "رقمنة التسجيلات النادرة",
+      "mediumTerm": "ترميم المواد المتدهورة",
+      "longTerm": "حفظ رقمي مستدام"
+    },
+    "priorities": [
+      {
+        "item": "iraqi-radio-1940s",
+        "priority": 1,
+        "status": "in-progress"
+      },
+      {
+        "item": "egyptian-78rpm-1920s",
+        "priority": 2,
+        "status": "planned"
+      }
+    ]
+  }
+}
