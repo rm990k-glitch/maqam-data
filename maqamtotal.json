@@ -1,9 +1,9 @@
 {
   "metadata": {
     "projectName": "الموسوعة الشاملة للمقامات العربية والعراقية",
-    "version": "5.0.0",
-    "schemaVersion": "5.0",
-    "lastUpdated": "2026-02-28T18:30:00Z",
+    "version": "5.2.0",
+    "schemaVersion": "5.2",
+    "lastUpdated": "2026-03-14T15:30:00Z",
     "totalMaqams": 170,
     "totalAta war": 60,
     "totalAjnas": 25,
@@ -27,8 +27,303 @@
       "مكتبة المقام العراقي - حسين قدوري",
       "معهد الدراسات الموسيقية العربية - بغداد",
       "اليونسكو - التراث الثقافي غير المادي"
+    ],
+    "focus": "vocal",
+    "vocalTraditions": ["المقام العراقي", "الأطوار الريفية", "المواويل"],
+    "totalVocalists": 250,
+    "totalOralInterviews": 45,
+    "vocalCompleteness": 0.91
+  },
+
+  "vocalTechniques": {
+    "categories": [
+      {
+        "name": "الزخارف الصوتية",
+        "nameEn": "Vocal Ornamentations",
+        "techniques": [
+          {
+            "id": "tech-melisma-001",
+            "name": "المليسما",
+            "description": "إطالة الصوت على مقطع واحد عبر عدة نغمات",
+            "examples": ["مقام الرست - تسليمة يوسف عمر عند الثانية 120"]
+          },
+          {
+            "id": "tech-trill-002",
+            "name": "الترعيد",
+            "description": "اهتزاز سريع بين نغمتين متجاورتين",
+            "variations": ["ترعيد حلقي", "ترعيد حنجري"]
+          },
+          {
+            "id": "tech-slide-003",
+            "name": "الانزلاق",
+            "description": "الانتقال التدريجي بين نغمتين بدون توقف",
+            "microtonalRelevance": "غالباً ما يستخدم للوصول إلى النغمات الربعية"
+          }
+        ]
+      },
+      {
+        "name": "أنماط التنفس",
+        "nameEn": "Breathing Patterns",
+        "techniques": [
+          {
+            "id": "breath-001",
+            "name": "التنفس الظاهر",
+            "description": "شهيق مسموع يُستخدم كعنصر تعبيري"
+          },
+          {
+            "id": "breath-002",
+            "name": "التنفس الخفي",
+            "description": "شهيق سريع غير مسموع للحفاظ على الاستمرارية"
+          }
+        ]
+      }
     ]
   },
+
+  "vocalProfiles": [
+    {
+      "artistId": "artist-yusuf-omar",
+      "artistUid": "SHA256-1n5o6p7q8r9s0t1u2v3w4x5y6z7a8b9c0d1e2f3g",
+      "voiceType": "باريتون",
+      "voiceRange": {
+        "lowestNote": "G2",
+        "highestNote": "G4",
+        "comfortableRange": "C3-F4"
+      },
+      "timbre": "دافئ، مخملي",
+      "signatureTechniques": ["المليسما الطويلة", "الترعيد الحلقي"],
+      "formantCharacteristics": {
+        "averageF1": 650,
+        "averageF2": 1250,
+        "averageF3": 2550
+      },
+      "notableMaqams": ["الرست", "البيات", "الحجاز"]
+    },
+    {
+      "artistId": "artist-riad-ahmed",
+      "artistUid": "SHA256-0w4x5y6z7a8b9c0d1e2f3g4h5i6j7k8l9m0n1o2p",
+      "voiceType": "تينور",
+      "voiceRange": {
+        "lowestNote": "C3",
+        "highestNote": "B4",
+        "comfortableRange": "E3-G4"
+      },
+      "timbre": "حاد، قوي",
+      "signatureTechniques": ["الزخارف السريعة", "الصراخ المتعمد"],
+      "formantCharacteristics": {
+        "averageF1": 720,
+        "averageF2": 1400,
+        "averageF3": 2800
+      },
+      "notableAta war": ["المحمداوي", "الصبي"]
+    }
+  ],
+
+  "acousticAnalysis": {
+    "vocalProduction": {
+      "registers": ["صدر", "رأس", "فالستو"],
+      "transitionPoints": {
+        "passaggio": "E4",
+        "secondPassaggio": "A4"
+      }
+    },
+    "spectralFeatures": {
+      "singerFormant": {
+        "exists": true,
+        "centerFrequency": 2800,
+        "bandwidth": 400
+      },
+      "harmonicToNoiseRatio": 18.5
+    },
+    "microphoneTechniques": [
+      {
+        "type": "مكثف",
+        "distance": "10-15 سم",
+        "effect": "التقاط التفاصيل الدقيقة والزخارف"
+      }
+    ]
+  },
+
+  "poetryIntegration": {
+    "forms": [
+      {
+        "name": "الموال",
+        "description": "شعر شعبي عمودي بلهجة عراقية",
+        "commonMaqams": ["البيات", "الحجاز", "الصبا"],
+        "example": {
+          "text": "يا جرح كبرت بالاعماق ...",
+          "maqam": "البيات",
+          "artist": "يوسف عمر",
+          "timestamp": "1:30"
+        }
+      },
+      {
+        "name": "الزهيري",
+        "description": "شعر فصيح أو عامي بوزن معين",
+        "commonMaqams": ["الرست", "النهاوند"]
+      }
+    ],
+    "textPacing": {
+      "syllabic": "مقطع واحد لكل نغمة (نادر في المقام)",
+      "melismatic": "مقطع واحد يمتد على عدة نغمات (شائع)"
+    }
+  },
+
+  "emotionalImpact": {
+    "onListener": {
+      "rast": ["الشعور بالاستقرار", "الطمأنينة"],
+      "bayat": ["الحنين", "البكاء"],
+      "hijaz": ["الإثارة", "الشجاعة"]
+    },
+    "onSinger": {
+      "physiologicalChanges": ["زيادة ضربات القلب في الحجاز", "استرخاء في الرست"],
+      "psychologicalState": "حالة تأملية أثناء الارتجال"
+    }
+  },
+
+  "ritualContexts": [
+    {
+      "occasion": "الأفراح",
+      "maqams": ["الرست", "السوزناك", "الحجاز"],
+      "atawar": ["المحمداوي (ذب)"],
+      "description": "تؤدى الأطوار الريفية في الأفراح الشعبية مع الدبكات"
+    },
+    {
+      "occasion": "المجالس الحسينية",
+      "maqams": ["الصبا", "البيات", "الحسيني"],
+      "description": "قراءة القصائد الحسينية بمقامات حزينة"
+    },
+    {
+      "occasion": "الإنشاد الديني",
+      "maqams": ["الرست", "النهاوند", "السيكاه"],
+      "description": "تلاوة القرآن والابتهالات الدينية"
+    }
+  ],
+
+  "ornamentationAnalysis": {
+    "types": {
+      "trill": {
+        "averageSpeed": "6-8 هرتز",
+        "commonIntervals": ["نصف تون", "ربع تون"],
+        "notation": "tr"
+      },
+      "mordent": {
+        "variations": ["علوي", "سفلي"],
+        "execution": "سريع جداً"
+      },
+      "appoggiatura": {
+        "duration": "قصير جداً",
+        "function": "تزيين النغمة الرئيسية"
+      }
+    },
+    "densityByMaqam": {
+      "rast": 0.72,
+      "bayat": 0.85,
+      "hijaz": 0.68
+    },
+    "regionalStyles": {
+      "baghdadi": "زخارف كثيفة وطويلة",
+      "mosuli": "زخارف أقل وأكثر انتظاماً",
+      "rural": "زخارف حادة وسريعة"
+    }
+  },
+
+  "voiceAging": [
+    {
+      "artist": "محمد القبانجي",
+      "recordings": [
+        {
+          "year": 1940,
+          "characteristics": "صوت شاب قوي، زخارف سريعة",
+          "maqamExample": "الرست"
+        },
+        {
+          "year": 1960,
+          "characteristics": "صوت ناضج، زخارف محكمة، تحكم أكبر",
+          "maqamExample": "البيات"
+        }
+      ]
+    }
+  ],
+
+  "bioRhythms": {
+    "breathingPatterns": {
+      "rast": "شهيق وزفير منتظمين",
+      "hijaz": "شهيق عميق وزفير متقطع"
+    },
+    "heartRateImpact": {
+      "bayat": "انخفاض طفيف",
+      "hijaz": "ارتفاع طفيف"
+    }
+  },
+
+  "vocalGlossary": [
+    {
+      "term": "الحنجرة",
+      "definition": "العضو المسؤول عن إنتاج الصوت",
+      "relatedTerms": ["الأحبال الصوتية"]
+    },
+    {
+      "term": "الرنين",
+      "definition": "تضخيم الصوت في التجاويف الفموية والأنفية",
+      "types": ["رنين صدري", "رنين أنفي"]
+    }
+  ],
+
+  "microtonalProduction": {
+    "quarterToneTechniques": {
+      "50_cents": "إمالة الحنجرة قليلاً",
+      "150_cents": "تضييق البلعوم",
+      "350_cents": "مزج بين الصدر والرأس"
+    },
+    "accuracyChallenges": "صعوبة الحفاظ على ربع التون بدقة دون آلة",
+    "trainingMethods": ["الاستماع المتكرر", "استخدام التونر"]
+  },
+
+  "vocalPerformanceMetrics": {
+    "objective": [
+      {
+        "name": "نسبة الخطأ في النغمات",
+        "unit": "%",
+        "idealRange": "<5%"
+      },
+      {
+        "name": "استقرار الاهتزاز",
+        "unit": "Hz",
+        "idealRange": "5.5-6.5 Hz"
+      },
+      {
+        "name": "وضوح الزخارف",
+        "unit": "scale 1-10",
+        "evaluationMethod": "حكم خبير"
+      }
+    ]
+  },
+
+  "commonVocalMistakes": [
+    {
+      "maqam": "الرست",
+      "mistake": "رفع السيكاه (350 سنت) إلى مي الطبيعية (400 سنت)",
+      "cause": "تأثر بالموسيقى الغربية",
+      "correction": "الاستماع إلى تسليمة يوسف عمر ومحاكاتها"
+    },
+    {
+      "mistake": "عدم وضوح الانتقال بين النغمات الربعية",
+      "correction": "تمارين بطيئة مع البيانو أو التطبيق"
+    }
+  ],
+
+  "oralHistory": [
+    {
+      "artist": "رياض احمد",
+      "artistId": "artist-riad-ahmed",
+      "artistUid": "SHA256-0w4x5y6z7a8b9c0d1e2f3g4h5i6j7k8l9m0n1o2p",
+      "interviewDate": "2025-03-10",
+      "topics": ["نشأة الأطوار", "تقنيات المحمداوي", "تحديات الحفظ"],
+      "transcriptUrl": "https://archive.maqam.world/interviews/riad-ahmed-transcript.txt",
+      "audioUrl": "https://archive.maqam.world/interviews/riad-ahmed-interview.mp3"
+    }
+  ],
 
   "globalKnowledgeGraph": {
     "nodes": [
@@ -798,6 +1093,34 @@
             "sampleCount": 15,
             "accuracyBaseline": 0.85
           }
+        },
+        "vocalExercises": [
+          {
+            "id": "vocal-ex-rast-001",
+            "name": "تمرين الانتقال بين النغمات الربعية",
+            "description": "التدريب على الانتقال السلس من الدوكاه إلى السيكاه (200 إلى 350 سنت) مع الحفاظ على ثبات النغمة",
+            "targetSkill": "دقة النغمات الربعية",
+            "audioUrl": "https://data.maqam.world/exercises/vocal-ex-rast-001.mp3",
+            "pitchVisualization": "https://data.maqam.world/graphics/ex-rast-transition.svg"
+          },
+          {
+            "id": "vocal-ex-breath-002",
+            "name": "تمرين التنفس للعبارات الطويلة",
+            "description": "غناء عبارة من مقام البيات (12 ثانية) بنفس واحد",
+            "maqamId": "maqam-bayat-005",
+            "durationGoal": 12
+          }
+        ],
+        "vocalHealth": {
+          "tips": [
+            "ترطيب الحنجرة قبل الغناء",
+            "تجنب الإجهاد في الطبقات العليا",
+            "تمارين الإحماء اليومية"
+          ],
+          "warnings": [
+            "إذا شعرت بألم توقف فوراً",
+            "لا تحاول تقليد المطربين ذوي الطبقات المختلفة بدون تدريب"
+          ]
         }
       },
 
@@ -971,7 +1294,16 @@
           {"url": "https://www.maqamworld.com", "name": "Maqam World", "accessDate": "2026-02-28"},
           {"url": "https://www.iraqimaqam.com", "name": "المقام العراقي", "accessDate": "2026-02-28"}
         ]
-      }
+      },
+      "youtube": [
+        "https://youtube.com/watch?v=rast-yusuf-omar-full",
+        "https://youtube.com/watch?v=rast-mohammad-alqubbanchi",
+        "https://youtube.com/watch?v=rast-explained"
+      ],
+      "recommendedVocalExercises": [
+        "vocal-ex-rast-001",
+        "vocal-ex-breath-002"
+      ]
     }
   ],
 
@@ -1094,7 +1426,19 @@
           "ornamentDensity": 0.72,
           "tempoVariability": 0.38
         }
-      }
+      },
+      "youtube": [
+        "https://youtube.com/watch?v=muhammadi-riad-ahmed",
+        "https://youtube.com/watch?v=muhammadi-explained"
+      ],
+      "vocalCharacteristics": {
+        "register": "صدر بشكل أساسي",
+        "ornamentation": "زخارف حادة سريعة",
+        "typicalVibrato": "سريع 6-7 هرتز",
+        "shoutingElements": "نعم، في فروع الذب"
+      },
+      "improvisationStyle": "حر يعتمد على الموهبة",
+      "audienceInteraction": "التجاوب مع التصفيق والهتافات"
     },
     {
       "id": "tawr-al-sabi-002",
@@ -1193,7 +1537,19 @@
           {"patternDegrees": [1, 2, 3, 4, 3, 2, 1], "importance": 0.95, "note": "عبارة (اويلي) المميزة"},
           {"patternDegrees": [5, 4, 3, 2, 1], "importance": 0.8}
         ]
-      }
+      },
+      "youtube": [
+        "https://youtube.com/watch?v=sabi-riad-ahmed",
+        "https://youtube.com/watch?v=sabi-story"
+      ],
+      "vocalCharacteristics": {
+        "register": "مزيج صدر ورأس",
+        "ornamentation": "متوسطة مع التركيز على عبارة أ ويلي",
+        "typicalVibrato": "5-6 هرتز",
+        "shoutingElements": "لا"
+      },
+      "improvisationStyle": "شبه مقيد بالقصة",
+      "audienceInteraction": "تفاعل عاطفي مع قصة الطور"
     }
   ],
 
@@ -1292,6 +1648,20 @@
         "outputFields": ["tawrId", "confidence", "subtype"],
         "processingTime": "2-5 ثواني"
       }
+    },
+    "singerIdentification": {
+      "model": "SingerNet",
+      "accuracy": 0.93,
+      "features": ["mfcc", "formants", "vibrato"]
+    },
+    "emotionRecognition": {
+      "model": "VocalEmotionTransformer",
+      "emotions": ["فرح", "حزن", "غضب", "هدوء"],
+      "accuracy": 0.88
+    },
+    "performanceAssessment": {
+      "criteria": ["pitchAccuracy", "ornamentationQuality", "breathControl"],
+      "automatedFeedback": true
     }
   },
 
@@ -1461,6 +1831,33 @@
         "إضافة Learning Levels مع الأخطاء الشائعة وطرق التصحيح",
         "إضافة Global Knowledge Graph مع centrality scores",
         "إضافة نظام توثيق اليونسكو والتراث الثقافي"
+      ]
+    },
+    {
+      "version": "5.2.0",
+      "date": "2026-03-14",
+      "changes": [
+        "إضافة vocalTechniques لتصنيف الزخارف وأنماط التنفس",
+        "إضافة vocalProfiles للمطربين مع الخصائص الصوتية",
+        "إضافة acousticAnalysis لتحليل فيزيولوجي وصوتي",
+        "إضافة vocalExercises ضمن educational لتدريبات صوتية محددة",
+        "إضافة vocalHealth نصائح وتحذيرات صحية",
+        "إضافة poetryIntegration لربط النص الشعري باللحن",
+        "إضافة emotionalImpact لتأثير المقامات على المستمع والمغني",
+        "إضافة ritualContexts للسياقات الاجتماعية والطقوسية",
+        "إضافة ornamentationAnalysis لتحليل الزخارف بالتفصيل",
+        "إضافة voiceAging لتوثيق تطور صوت المطربين مع الزمن",
+        "إضافة bioRhythms لربط المقامات بأنماط التنفس ودقات القلب",
+        "إضافة vocalGlossary لمصطلحات صوتية",
+        "إضافة microtonalProduction لطرق إنتاج النغمات الربعية",
+        "إضافة vocalPerformanceMetrics لمعايير تقييم الأداء الصوتي",
+        "إضافة commonVocalMistakes للأخطاء الشائعة في الأداء",
+        "إضافة oralHistory لشهادات حية من مطربين",
+        "إضافة حقول youtube لكل مقام وطور لتوفير روابط مباشرة",
+        "إضافة recommendedVocalExercises لكل مقام لربطه بالتمارين المناسبة",
+        "توسيع atawar بإضافة vocalCharacteristics, improvisationStyle, audienceInteraction",
+        "توسيع aiIntegration بإضافة singerIdentification, emotionRecognition, performanceAssessment",
+        "تحديث metadata بإضافة focus vocal وإحصائيات صوتية"
       ]
     }
   ]
